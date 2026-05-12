@@ -1,0 +1,2685 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mastologia 2025</title>
+<style>
+/* === VARIÁVEIS GLOBAIS (usadas pelos HTMLs originais) === */
+:root {
+  --color-text-primary: #1a1917;
+  --color-text-secondary: #6b6963;
+  --color-text-danger: #b91c1c;
+  --color-background-primary: #ffffff;
+  --color-background-secondary: #f7f6f3;
+  --color-background-warning: #fef9eb;
+  --color-border-primary: #7c5fc8;
+  --color-border-secondary: #d1cfc8;
+  --color-border-tertiary: #e8e6e0;
+  --border-radius-md: 5px;
+  --border-radius-lg: 8px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #f4f3ef;
+  color: var(--color-text-primary);
+  min-height: 100vh;
+}
+
+/* TABS */
+#tab-bar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #fff;
+  border-bottom: 1px solid var(--color-border-tertiary);
+  padding: 0 1rem;
+  display: flex;
+  gap: 2px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+#tab-bar::-webkit-scrollbar { display: none; }
+
+.tab-btn {
+  flex-shrink: 0;
+  padding: .7rem .85rem;
+  font-size: 12.5px;
+  font-weight: 500;
+  border: none;
+  background: none;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: all .15s;
+  white-space: nowrap;
+}
+.tab-btn:hover { color: var(--color-text-primary); }
+.tab-btn.active {
+  color: #5b3fc8;
+  border-bottom-color: #5b3fc8;
+}
+
+/* CONTEÚDO */
+#content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1.25rem 3rem;
+}
+
+/* === ESTILOS DOS ARQUIVOS ORIGINAIS === */
+*{box-sizing:border-box}
+.sec{font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--color-text-secondary);margin:2rem 0 .65rem;padding-bottom:.35rem;border-bottom:.5px solid var(--color-border-tertiary)}
+.card{background:var(--color-background-primary);border:.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);padding:.9rem 1.1rem;margin-bottom:.6rem}
+.card-title{font-size:14px;font-weight:500;color:var(--color-text-primary);margin:0 0 .15rem}
+.card-sub{font-size:12px;color:var(--color-text-secondary);margin:0 0 .65rem}
+.badge{display:inline-block;font-size:11px;padding:2px 7px;border-radius:var(--border-radius-md);font-weight:500;white-space:nowrap;margin:2px 2px 2px 0}
+.b-purple{background:#EEEDFE;color:#3C3489}
+.b-teal{background:#E1F5EE;color:#085041}
+.b-coral{background:#FAECE7;color:#712B13}
+.b-amber{background:#FAEEDA;color:#633806}
+.b-blue{background:#E6F1FB;color:#0C447C}
+.b-gray{background:#F1EFE8;color:#444441}
+.b-green{background:#EAF3DE;color:#27500A}
+.b-red{background:#FCEBEB;color:#791F1F}
+.b-pink{background:#FBEAF0;color:#72243E}
+.row{font-size:13px;color:var(--color-text-secondary);line-height:1.65;margin:.25rem 0}
+.row strong{font-weight:500;color:var(--color-text-primary)}
+.info{background:var(--color-background-secondary);border-left:3px solid #1D9E75;border-radius:0;padding:.55rem .9rem;margin:.5rem 0;font-size:12px;color:var(--color-text-secondary);line-height:1.6}
+.warn{background:var(--color-background-warning);border-left:3px solid #BA7517;border-radius:0;padding:.55rem .9rem;margin:.5rem 0;font-size:12px;color:var(--color-text-primary);line-height:1.6}
+.danger{background:var(--color-background-danger);border-left:3px solid #A32D2D;border-radius:0;padding:.55rem .9rem;margin:.5rem 0;font-size:12px;color:var(--color-text-primary);line-height:1.6}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:.5rem 0}
+.grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin:.5rem 0}
+.box{background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:.6rem .8rem}
+.box-label{font-size:11px;font-weight:500;color:var(--color-text-secondary);margin-bottom:3px}
+.box-val{font-size:12px;color:var(--color-text-primary);line-height:1.5}
+table{width:100%;border-collapse:collapse;font-size:12px;margin:.5rem 0}
+th{text-align:left;padding:7px 9px;font-weight:500;font-size:11px;color:var(--color-text-secondary);border-bottom:.5px solid var(--color-border-secondary);background:var(--color-background-secondary)}
+td{padding:8px 9px;border-bottom:.5px solid var(--color-border-tertiary);vertical-align:top;color:var(--color-text-primary);line-height:1.5}
+tr:last-child td{border-bottom:none}
+tr:hover td{background:var(--color-background-secondary)}
+.ferida-card{border:.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);padding:.9rem 1.1rem;margin-bottom:.6rem;border-left-width:3px}
+.phase-row{display:flex;align-items:flex-start;gap:10px;margin:.4rem 0}
+.phase-num{width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:500;flex-shrink:0;margin-top:2px}
+.phase-content{font-size:13px;color:var(--color-text-secondary);line-height:1.6;flex:1}
+*{box-sizing:border-box}
+input[type=text]{width:100%;padding:8px 12px;font-size:13px;border:.5px solid var(--color-border-secondary);border-radius:var(--border-radius-md);background:var(--color-background-primary);color:var(--color-text-primary);margin-bottom:1rem;outline:none}
+input[type=text]:focus{border-color:var(--color-border-primary)}
+.filter-row{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:1rem}
+.filter-btn{font-size:11px;padding:4px 10px;border-radius:99px;border:.5px solid var(--color-border-secondary);background:var(--color-background-secondary);color:var(--color-text-secondary);cursor:pointer;transition:all .15s}
+.filter-btn.active{background:#EEEDFE;color:#3C3489;border-color:#AFA9EC}
+.drug-card{border:.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);padding:.8rem 1rem;margin-bottom:.5rem;display:grid;grid-template-columns:160px 1fr 1fr 1fr;gap:10px;align-items:start}
+.drug-name{font-size:13px;font-weight:500;color:var(--color-text-primary)}
+.drug-brand{font-size:11px;color:var(--color-text-secondary);margin-top:2px}
+.drug-col-label{font-size:10px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--color-text-secondary);margin-bottom:3px}
+.drug-col-val{font-size:12px;color:var(--color-text-primary);line-height:1.5}
+.badge{display:inline-block;font-size:10px;padding:1px 6px;border-radius:var(--border-radius-md);font-weight:500;white-space:nowrap;margin:1px}
+.b-purple{background:#EEEDFE;color:#3C3489}
+.b-teal{background:#E1F5EE;color:#085041}
+.b-coral{background:#FAECE7;color:#712B13}
+.b-amber{background:#FAEEDA;color:#633806}
+.b-blue{background:#E6F1FB;color:#0C447C}
+.b-gray{background:#F1EFE8;color:#444441}
+.b-green{background:#EAF3DE;color:#27500A}
+.b-red{background:#FCEBEB;color:#791F1F}
+.b-pink{background:#FBEAF0;color:#72243E}
+.hidden{display:none}
+.count{font-size:12px;color:var(--color-text-secondary);margin-bottom:.75rem}
+@media(max-width:600px){.drug-card{grid-template-columns:1fr 1fr;gap:8px}.drug-card>div:first-child{grid-column:1/-1}}
+.section-label {
+    font-size: 11px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--color-text-secondary); margin: 1.5rem 0 0.6rem;
+    padding-bottom: 0.35rem; border-bottom: 0.5px solid var(--color-border-tertiary);
+  }
+  table { width: 100%; border-collapse: collapse; table-layout: fixed; font-size: 13px; }
+  th {
+    text-align: left; padding: 8px 10px; font-weight: 500; font-size: 12px;
+    color: var(--color-text-secondary); border-bottom: 0.5px solid var(--color-border-secondary);
+    background: var(--color-background-secondary);
+  }
+  td { padding: 9px 10px; border-bottom: 0.5px solid var(--color-border-tertiary); vertical-align: top; color: var(--color-text-primary); line-height: 1.5; }
+  tr:last-child td { border-bottom: none; }
+  tr:hover td { background: var(--color-background-secondary); }
+  .drug { font-weight: 500; font-size: 13px; }
+  .brand { font-size: 12px; color: var(--color-text-secondary); margin-top: 2px; }
+  .badge {
+    display: inline-block; font-size: 11px; padding: 2px 7px;
+    border-radius: var(--border-radius-md); font-weight: 500; white-space: nowrap; margin-top: 3px;
+  }
+  .b-purple { background: #EEEDFE; color: #3C3489; }
+  .b-teal   { background: #E1F5EE; color: #085041; }
+  .b-coral  { background: #FAECE7; color: #712B13; }
+  .b-amber  { background: #FAEEDA; color: #633806; }
+  .b-gray   { background: #F1EFE8; color: #444441; }
+  .b-pink   { background: #FBEAF0; color: #72243E; }
+  .b-red    { background: #FCEBEB; color: #791F1F; }
+  .note { font-size: 12px; color: var(--color-text-secondary); font-style: italic; margin: 0.4rem 0 0; }
+  .alert-box {
+    background: var(--color-background-warning);
+    border-left: 3px solid #BA7517;
+    border-radius: 0;
+    padding: 0.65rem 1rem; margin: 1rem 0 0;
+    font-size: 13px; color: var(--color-text-primary); line-height: 1.6;
+  }
+  .info-box {
+    background: var(--color-background-secondary);
+    border-left: 3px solid #1D9E75;
+    border-radius: 0;
+    padding: 0.65rem 1rem; margin: 1rem 0 0;
+    font-size: 13px; color: var(--color-text-secondary); line-height: 1.6;
+  }
+.sec{font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--color-text-secondary);margin:2rem 0 .6rem;padding-bottom:.35rem;border-bottom:.5px solid var(--color-border-tertiary)}
+.card{background:var(--color-background-primary);border:.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);padding:1rem 1.2rem;margin-bottom:.85rem}
+.card-title{font-size:15px;font-weight:500;color:var(--color-text-primary);margin:0 0 .15rem}
+.card-sub{font-size:12px;color:var(--color-text-secondary);margin:0 0 .75rem}
+.prop-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:8px;margin:.6rem 0}
+.prop-box{background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:.5rem .75rem}
+.prop-label{font-size:11px;color:var(--color-text-secondary);margin-bottom:2px}
+.prop-val{font-size:13px;font-weight:500;color:var(--color-text-primary)}
+.badge{display:inline-block;font-size:11px;padding:2px 7px;border-radius:var(--border-radius-md);font-weight:500;white-space:nowrap;margin:2px 2px 2px 0}
+.b-purple{background:#EEEDFE;color:#3C3489}
+.b-teal{background:#E1F5EE;color:#085041}
+.b-coral{background:#FAECE7;color:#712B13}
+.b-amber{background:#FAEEDA;color:#633806}
+.b-blue{background:#E6F1FB;color:#0C447C}
+.b-gray{background:#F1EFE8;color:#444441}
+.b-green{background:#EAF3DE;color:#27500A}
+.b-red{background:#FCEBEB;color:#791F1F}
+.b-pink{background:#FBEAF0;color:#72243E}
+.info{background:var(--color-background-secondary);border-left:3px solid #1D9E75;border-radius:0;padding:.65rem 1rem;margin:.65rem 0;font-size:13px;color:var(--color-text-secondary);line-height:1.6}
+.warn{background:var(--color-background-warning);border-left:3px solid #BA7517;border-radius:0;padding:.65rem 1rem;margin:.65rem 0;font-size:13px;color:var(--color-text-primary);line-height:1.6}
+.landmark{background:var(--color-background-info);border-left:3px solid #185FA5;border-radius:0;padding:.65rem 1rem;margin:.65rem 0;font-size:13px;color:var(--color-text-info);line-height:1.6}
+.result-row{display:flex;align-items:baseline;gap:8px;margin:.3rem 0}
+.result-label{font-size:12px;color:var(--color-text-secondary);min-width:120px;flex-shrink:0}
+.result-val{font-size:13px;font-weight:500;color:var(--color-text-primary)}
+.arrow{color:var(--color-text-secondary);font-size:12px}
+table{width:100%;border-collapse:collapse;font-size:13px;margin-top:.5rem}
+th{text-align:left;padding:7px 10px;font-weight:500;font-size:12px;color:var(--color-text-secondary);border-bottom:.5px solid var(--color-border-secondary);background:var(--color-background-secondary)}
+td{padding:8px 10px;border-bottom:.5px solid var(--color-border-tertiary);vertical-align:top;color:var(--color-text-primary);line-height:1.5}
+tr:last-child td{border-bottom:none}
+tr:hover td{background:var(--color-background-secondary)}
+.new-badge{background:#EEEDFE;color:#3C3489;font-size:10px;font-weight:500;padding:1px 6px;border-radius:var(--border-radius-md);margin-left:4px;vertical-align:middle}
+.sec{font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--color-text-secondary);margin:2rem 0 .6rem;padding-bottom:.35rem;border-bottom:.5px solid var(--color-border-tertiary)}
+.card{background:var(--color-background-primary);border:.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);padding:1rem 1.2rem;margin-bottom:.75rem}
+.card-title{font-size:15px;font-weight:500;color:var(--color-text-primary);margin:0 0 .15rem}
+.card-sub{font-size:12px;color:var(--color-text-secondary);margin:0 0 .75rem}
+.prop-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:8px;margin:.75rem 0}
+.prop-box{background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:.55rem .75rem}
+.prop-label{font-size:11px;color:var(--color-text-secondary);margin-bottom:3px}
+.prop-val{font-size:13px;font-weight:500;color:var(--color-text-primary)}
+.badge{display:inline-block;font-size:11px;padding:2px 7px;border-radius:var(--border-radius-md);font-weight:500;white-space:nowrap;margin:2px 2px 2px 0}
+.b-purple{background:#EEEDFE;color:#3C3489}
+.b-teal{background:#E1F5EE;color:#085041}
+.b-coral{background:#FAECE7;color:#712B13}
+.b-amber{background:#FAEEDA;color:#633806}
+.b-blue{background:#E6F1FB;color:#0C447C}
+.b-gray{background:#F1EFE8;color:#444441}
+.b-green{background:#EAF3DE;color:#27500A}
+.b-red{background:#FCEBEB;color:#791F1F}
+.b-pink{background:#FBEAF0;color:#72243E}
+.info{background:var(--color-background-secondary);border-left:3px solid #1D9E75;border-radius:0;padding:.65rem 1rem;margin:.75rem 0;font-size:13px;color:var(--color-text-secondary);line-height:1.6}
+.warn{background:var(--color-background-warning);border-left:3px solid #BA7517;border-radius:0;padding:.65rem 1rem;margin:.75rem 0;font-size:13px;color:var(--color-text-primary);line-height:1.6}
+.drug-header{display:flex;align-items:center;gap:10px;margin-bottom:.5rem}
+.drug-icon{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:500;flex-shrink:0;text-align:center;line-height:1.2}
+table{width:100%;border-collapse:collapse;table-layout:fixed;font-size:13px}
+th{text-align:left;padding:8px 10px;font-weight:500;font-size:12px;color:var(--color-text-secondary);border-bottom:.5px solid var(--color-border-secondary);background:var(--color-background-secondary)}
+td{padding:9px 10px;border-bottom:.5px solid var(--color-border-tertiary);vertical-align:top;color:var(--color-text-primary);line-height:1.55}
+tr:last-child td{border-bottom:none}
+tr:hover td{background:var(--color-background-secondary)}
+.check{color:#1D9E75;font-weight:500}
+.cross{color:#A32D2D;font-weight:500}
+.partial{color:#BA7517;font-weight:500}
+.sec { font-size: 11px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--color-text-secondary); margin: 1.75rem 0 0.6rem;
+    padding-bottom: 0.35rem; border-bottom: 0.5px solid var(--color-border-tertiary); }
+  table { width: 100%; border-collapse: collapse; table-layout: fixed; font-size: 13px; }
+  th { text-align: left; padding: 8px 10px; font-weight: 500; font-size: 12px;
+    color: var(--color-text-secondary); border-bottom: 0.5px solid var(--color-border-secondary);
+    background: var(--color-background-secondary); }
+  td { padding: 9px 10px; border-bottom: 0.5px solid var(--color-border-tertiary);
+    vertical-align: top; color: var(--color-text-primary); line-height: 1.55; }
+  tr:last-child td { border-bottom: none; }
+  tr:hover td { background: var(--color-background-secondary); }
+  .drug { font-weight: 500; font-size: 13px; }
+  .badge { display: inline-block; font-size: 11px; padding: 2px 7px;
+    border-radius: var(--border-radius-md); font-weight: 500; white-space: nowrap; margin-top: 3px; }
+  .b-purple { background: #EEEDFE; color: #3C3489; }
+  .b-teal   { background: #E1F5EE; color: #085041; }
+  .b-coral  { background: #FAECE7; color: #712B13; }
+  .b-amber  { background: #FAEEDA; color: #633806; }
+  .b-gray   { background: #F1EFE8; color: #444441; }
+  .b-pink   { background: #FBEAF0; color: #72243E; }
+  .b-blue   { background: #E6F1FB; color: #0C447C; }
+  .b-red    { background: #FCEBEB; color: #791F1F; }
+  .b-green  { background: #EAF3DE; color: #27500A; }
+  .note { font-size: 12px; color: var(--color-text-secondary); font-style: italic; margin: 0.4rem 0 0; }
+  .info { background: var(--color-background-secondary); border-left: 3px solid #1D9E75;
+    border-radius: 0; padding: 0.65rem 1rem; margin: 0.75rem 0;
+    font-size: 13px; color: var(--color-text-secondary); line-height: 1.6; }
+  .warn { background: var(--color-background-warning); border-left: 3px solid #BA7517;
+    border-radius: 0; padding: 0.65rem 1rem; margin: 0.75rem 0;
+    font-size: 13px; color: var(--color-text-primary); line-height: 1.6; }
+  .study-row { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 4px; }
+*{box-sizing:border-box}
+.sec{font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--color-text-secondary);margin:2.5rem 0 .75rem;padding-bottom:.35rem;border-bottom:.5px solid var(--color-border-tertiary)}
+.subtipo-header{display:flex;align-items:center;gap:10px;margin:2.5rem 0 1rem;padding:1rem 1.2rem;border-radius:var(--border-radius-lg);border:.5px solid var(--color-border-secondary)}
+.subtipo-icon{width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:500;flex-shrink:0;text-align:center;line-height:1.2}
+.subtipo-title{font-size:16px;font-weight:500;color:var(--color-text-primary);margin:0 0 2px}
+.subtipo-sub{font-size:12px;color:var(--color-text-secondary);margin:0}
+.step{border:.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);margin-bottom:.65rem;overflow:hidden}
+.step-header{display:flex;align-items:center;gap:10px;padding:.75rem 1rem;background:var(--color-background-secondary)}
+.step-num{width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:500;flex-shrink:0}
+.step-title{font-size:13px;font-weight:500;color:var(--color-text-primary)}
+.step-body{padding:.75rem 1rem;background:var(--color-background-primary)}
+.badge{display:inline-block;font-size:11px;padding:2px 7px;border-radius:var(--border-radius-md);font-weight:500;white-space:nowrap;margin:2px 2px 2px 0}
+.b-purple{background:#EEEDFE;color:#3C3489}
+.b-teal{background:#E1F5EE;color:#085041}
+.b-coral{background:#FAECE7;color:#712B13}
+.b-amber{background:#FAEEDA;color:#633806}
+.b-blue{background:#E6F1FB;color:#0C447C}
+.b-gray{background:#F1EFE8;color:#444441}
+.b-green{background:#EAF3DE;color:#27500A}
+.b-red{background:#FCEBEB;color:#791F1F}
+.b-pink{background:#FBEAF0;color:#72243E}
+.row{font-size:13px;color:var(--color-text-secondary);line-height:1.65;margin:.3rem 0}
+.row strong{font-weight:500;color:var(--color-text-primary)}
+.info{background:var(--color-background-secondary);border-left:3px solid #1D9E75;border-radius:0;padding:.55rem .9rem;margin:.5rem 0;font-size:12px;color:var(--color-text-secondary);line-height:1.6}
+.warn{background:var(--color-background-warning);border-left:3px solid #BA7517;border-radius:0;padding:.55rem .9rem;margin:.5rem 0;font-size:12px;color:var(--color-text-primary);line-height:1.6}
+.fork{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:.5rem 0}
+.fork-box{background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:.6rem .8rem}
+.fork-label{font-size:11px;font-weight:500;color:var(--color-text-secondary);margin-bottom:4px}
+.fork-content{font-size:12px;color:var(--color-text-primary);line-height:1.5}
+.study-tag{font-size:11px;background:var(--color-background-secondary);color:var(--color-text-secondary);padding:1px 6px;border-radius:var(--border-radius-md);display:inline-block;margin-top:3px}
+.divider{height:.5px;background:var(--color-border-tertiary);margin:2rem 0}
+.new{background:#EEEDFE;color:#3C3489;font-size:10px;font-weight:500;padding:1px 5px;border-radius:var(--border-radius-md);margin-left:4px;vertical-align:middle}
+.section-label {
+    font-size: 11px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--color-text-secondary); margin: 1.75rem 0 0.6rem;
+    padding-bottom: 0.35rem; border-bottom: 0.5px solid var(--color-border-tertiary);
+  }
+  table { width: 100%; border-collapse: collapse; table-layout: fixed; font-size: 13px; }
+  th {
+    text-align: left; padding: 8px 10px; font-weight: 500; font-size: 12px;
+    color: var(--color-text-secondary); border-bottom: 0.5px solid var(--color-border-secondary);
+    background: var(--color-background-secondary);
+  }
+  td { padding: 9px 10px; border-bottom: 0.5px solid var(--color-border-tertiary); vertical-align: top; color: var(--color-text-primary); line-height: 1.5; }
+  tr:last-child td { border-bottom: none; }
+  tr:hover td { background: var(--color-background-secondary); }
+  .drug { font-weight: 500; font-size: 13px; }
+  .brand { font-size: 12px; color: var(--color-text-secondary); margin-top: 2px; }
+  .badge {
+    display: inline-block; font-size: 11px; padding: 2px 7px;
+    border-radius: var(--border-radius-md); font-weight: 500; white-space: nowrap;
+  }
+  .b-purple { background: #EEEDFE; color: #3C3489; }
+  .b-teal   { background: #E1F5EE; color: #085041; }
+  .b-coral  { background: #FAECE7; color: #712B13; }
+  .b-blue   { background: #E6F1FB; color: #0C447C; }
+  .b-amber  { background: #FAEEDA; color: #633806; }
+  .b-pink   { background: #FBEAF0; color: #72243E; }
+  .b-gray   { background: #F1EFE8; color: #444441; }
+  .note { font-size: 12px; color: var(--color-text-secondary); font-style: italic; }
+  .col-drug { width: 22%; }
+  .col-brand { width: 18%; }
+  .col-mec { width: 24%; }
+  .col-indica { width: 22%; }
+  .col-efeito { width: 14%; }
+</style>
+</head>
+<body>
+
+<div id="tab-bar">
+<button class="tab-btn" data-tab="drogas" onclick="showTab('drogas')">💉 Drogas</button>
+<button class="tab-btn" data-tab="terapia" onclick="showTab('terapia')">💊 Endócrina</button>
+<button class="tab-btn" data-tab="serms" onclick="showTab('serms')">🔬 SERMs</button>
+<button class="tab-btn" data-tab="ofs" onclick="showTab('ofs')">🔄 OFS</button>
+<button class="tab-btn" data-tab="algoritmo" onclick="showTab('algoritmo')">📋 Algoritmo</button>
+<button class="tab-btn" data-tab="destiny" onclick="showTab('destiny')">🧪 DESTINY</button>
+<button class="tab-btn" data-tab="genomicas" onclick="showTab('genomicas')">🧬 Genômicas</button>
+<button class="tab-btn" data-tab="reab" onclick="showTab('reab')">🩹 Reabilitação</button>
+</div>
+
+<div id="content">
+<div class="tab-panel" id="tab-drogas" style="display:none">
+<div style="padding:1rem 0 2rem">
+
+<input type="text" id="search" placeholder="Buscar droga, alvo, indicação..." oninput="filter()">
+
+<div class="filter-row" id="filters">
+  <button class="filter-btn active" onclick="setClass('all')">Todas</button>
+  <button class="filter-btn" onclick="setClass('hormonal')">Hormonal / Endócrina</button>
+  <button class="filter-btn" onclick="setClass('serd')">SERDs</button>
+  <button class="filter-btn" onclick="setClass('cdk')">CDK4/6i</button>
+  <button class="filter-btn" onclick="setClass('her2')">Anti-HER2</button>
+  <button class="filter-btn" onclick="setClass('adc')">ADCs</button>
+  <button class="filter-btn" onclick="setClass('io')">Imunoterapia</button>
+  <button class="filter-btn" onclick="setClass('parp')">PARP / DNA</button>
+  <button class="filter-btn" onclick="setClass('qt')">Quimioterapia</button>
+  <button class="filter-btn" onclick="setClass('osso')">Osso / Suporte</button>
+  <button class="filter-btn" onclick="setClass('ofs')">OFS</button>
+  <button class="filter-btn" onclick="setClass('pi3k')">PI3K / mTOR</button>
+</div>
+
+<div class="count" id="count"></div>
+<div id="list"></div>
+
+</div>
+
+<script>
+const drugs = [
+  // HORMONAL / SERM
+  {name:"Tamoxifeno",brand:"Nolvadex® / genérico",class:["hormonal"],alvo:"Receptor de estrogênio (ER) — SERM",mecanismo:"Antagonista ER em mama (bloqueia AF-2) · Agonista parcial em útero e osso · Pró-droga → endoxifeno via CYP2D6",indicacao:"Adjuvante pré e pós-menop · CDIS · LCIS · ADH · Quimioprevenção · Ca mama masculino · Mastalgia cíclica · Ginecomastia",tox:"TVP · Ca endométrio · Cataratas · Fogachos"},
+  {name:"Toremifeno",brand:"Fareston®",class:["hormonal"],alvo:"Receptor de estrogênio — SERM",mecanismo:"Análogo clorinado do tamoxifeno · Menos genotóxico · Menos dependente de CYP2D6 · Risco de QT longo dose-dependente",indicacao:"Adjuvante / metastático pós-menopausa · Alternativa ao tamoxifeno",tox:"QT longo · Fogachos · TEV"},
+  {name:"Raloxifeno",brand:"Evista® / Optruma®",class:["hormonal"],alvo:"Receptor de estrogênio — SERM (benzotiofeno)",mecanismo:"Antagonista ER mama · Sem agonismo uterino (correpressores NCoR/SMRT dominam no endométrio) · Agonista em osso · Biodisponibilidade ~2% (glucuronidação extensa) · Ciclo êntero-hepático",indicacao:"Quimioprevenção pós-menopausa · Osteoporose · Ginecomastia em adolescentes (Evista)",tox:"TVP · Fogachos · Sem risco uterino · Sem cataratas"},
+
+  // IAs
+  {name:"Anastrozol",brand:"Arimidex® / genérico",class:["hormonal"],alvo:"Aromatase (CYP19A1) — IA não esteroidal",mecanismo:"Inibe competitivamente e reversivelmente a aromatase → bloqueia conversão de androgênios em estrogênio periférico · Sem atividade androgênica · Requer ausência de função ovariana ativa",indicacao:"Adjuvante pós-menopausa (ATAC) · 1ª linha metastático · + CDK4/6i · Quimioprevenção",tox:"Artralgia · Osteoporose · Fogachos · Sem risco uterino"},
+  {name:"Letrozol",brand:"Femara® / genérico",class:["hormonal"],alvo:"Aromatase (CYP19A1) — IA não esteroidal",mecanismo:"Inibe competitivamente e reversivelmente a aromatase · Ligeiramente mais potente que anastrozol em Ki67 · Mesma classe farmacológica",indicacao:"Adjuvante pós-menop (BIG 1-98) · 1ª linha metastático (PALOMA-2, MONALEESA-2) · Neoadjuvância endócrina · + CDK4/6i · Protocolo de estimulação ovariana em HR+ (oncofertilidade: letrozol + FSH)",tox:"Artralgia · Osteoporose · Fogachos · Hiperlipidemia"},
+  {name:"Exemestano",brand:"Aromasin® / genérico",class:["hormonal"],alvo:"Aromatase (CYP19A1) — IA esteroidal (inativador suicida)",mecanismo:"Liga-se covalentemente ao sítio ativo da aromatase → inativação irreversível ('inativador suicida') · Leve atividade androgênica · Menos impacto lipídico",indicacao:"Adjuvante pós-menop após tamoxifeno (switch) · Metastático após IA não esteroidal · + Everolimo (BOLERO-2) · OFS + exemestano = melhor pré-menopausa alto risco (SOFT/TEXT)",tox:"Artralgia · Osteoporose (menor que não-esteroidais) · Fogachos"},
+
+  // SERDs
+  {name:"Fulvestrant",brand:"Faslodex®",class:["serd","hormonal"],alvo:"Receptor de estrogênio — SERD clássico (IM)",mecanismo:"Antagonista puro ER · Liga com alta afinidade → degrada o receptor (downregulation) · Sem atividade agonista em nenhum tecido · Administração IM mensal · 500 mg/mês (dose de carga dias 1, 15, 29)",indicacao:"2ª linha metastática pós-IA · + CDK4/6i (PALOMA-3, MONARCH-2, MONALEESA-3) · + Alpelisibe (PIK3CA mut · SOLAR-1)",tox:"Reações no local de injeção · Fogachos · Artralgia"},
+  {name:"Elacestrant",brand:"Orserdu® (Menarini/Radius)",class:["serd"],alvo:"Receptor de estrogênio — SERD oral 2ª geração",mecanismo:"Antagonista puro ER + degradação do receptor · Ativo em tumores com mutação ESR1 (mecanismo de resistência ao fulvestrant e IAs) · Biodisponibilidade oral adequada · Não depende de CYP2D6",indicacao:"HR+/HER2− metastático após ≥1 linha endócrina · Especialmente eficaz em ESR1 mutada (EMERALD: HR 0,55) · Aprovado FDA 2023",tox:"Náusea · Dislipidemia · Artralgia · Bradicardia (efeito de classe)"},
+  {name:"Camizestrant",brand:"(AstraZeneca — investigacional)",class:["serd"],alvo:"Receptor de estrogênio — SERD oral nova geração",mecanismo:"Antagonista puro ER + degradação · Ativo em ESR1 mutada · Combinado com CDK4/6i · Testado em switch guiado por ctDNA",indicacao:"SERENA-6: HR+/HER2− avançado com ESR1mut emergente em 1ª linha → switch de AI para camizestrant + CDK4/6i antes da progressão clínica · SLP 16 vs 9,2m (HR 0,44) · Adjuvante: CAMBRIA-1/2 em andamento",tox:"Bradicardia (efeito de classe) · Náusea · Fogachos"},
+  {name:"Giredestrant",brand:"(Roche/Genentech — investigacional)",class:["serd"],alvo:"Receptor de estrogênio — SERD oral nova geração",mecanismo:"Antagonista completo ER + degradação · Maior potência que IAs em Ki67 (coopERA) · Ativo em ESR1 mutada · Pré-menop: requer OFS concomitante",indicacao:"lidERA (SABCS 2025): adjuvante RH+/HER2− estágio I–III → iDFS HR 0,70 · −30% recorrência · Primeiro SERD oral adjuvante com benefício · Metastático: evERA · NDA submetida FDA",tox:"Bradicardia assintomática 11,3% · Náusea · Diarreia · Menor descontinuação que padrão"},
+  {name:"Imlunestrant",brand:"Inluriyo™ (Eli Lilly — investigacional)",class:["serd"],alvo:"Receptor de estrogênio — SERD oral nova geração",mecanismo:"Antagonista puro ER + degradação · Ativo em ESR1 mutada · Combinado com abemaciclib no EMBER-3",indicacao:"EMBER-3 (SABCS 2025): HR+/HER2− metastático após CDK4/6i · ESR1mut: benefício em SLP · Adjuvante: EMBER-4 em andamento",tox:"Bradicardia (efeito de classe) · Náusea · Diarreia"},
+
+  // CDK4/6i
+  {name:"Palbociclibe",brand:"Ibrance® (Pfizer)",class:["cdk"],alvo:"CDK4 e CDK6 — inibidor do ciclo celular",mecanismo:"Inibe CDK4/CDK6 → bloqueia fosforilação de Rb → arresta ciclo celular em G1 · Administração: 21 dias on / 7 dias off · Sem penetração relevante em SNC",indicacao:"1ª e 2ª linha metastático HR+/HER2− + IA ou fulvestrant (PALOMA-2, PALOMA-3) · Pioneer da classe (aprovado 2015) · SEM aprovação adjuvante",tox:"Neutropenia (mais intensa da classe) · Fadiga · Náusea · Infecções · Sem hepatotox relevante"},
+  {name:"Ribociclibe",brand:"Kisqali® (Novartis)",class:["cdk"],alvo:"CDK4 e CDK6 — inibidor do ciclo celular",mecanismo:"Inibe CDK4/6 → arresto G1 · Administração: 21 dias on / 7 dias off · Único CDK4/6i com impacto em SG estatisticamente significativo em 1ª linha metastático · Ligeira seletividade maior para CDK4",indicacao:"1ª linha metastático (MONALEESA-2 pós-menop · MONALEESA-7 pré-menop + OFS) · Adjuvante estágio II–III incluindo N0 (NATALEE · DDFS HR 0,715) · Aprovado FDA adjuvante 2024",tox:"Neutropenia · QT longo (ECG obrigatório) · Hepatotoxicidade · Rash"},
+  {name:"Abemaciclib",brand:"Verzenio® (Eli Lilly)",class:["cdk"],alvo:"CDK4 e CDK6 — inibidor do ciclo celular (seletivo CDK4)",mecanismo:"Inibe CDK4/6 com maior seletividade para CDK4 · Administração contínua (sem semana de pausa) · Atravessa BHE · Maior potencial em SNC · Alto DAR em tecido tumoral",indicacao:"1ª e 2ª linha metastático + IA ou fulvestrant (MONARCH-3, MONARCH-2) · Adjuvante N+ alto risco (monarchE) · ÚNICO CDK4/6i com OS confirmado no adjuvante (HR 0,842 · ESMO 2025)",tox:"Diarreia (mais frequente da classe · grau 3: ~10%) · Neutropenia (menor que palbo) · TVP · Hepatotox · Fadiga"},
+
+  // Anti-HER2 anticorpos
+  {name:"Trastuzumabe",brand:"Herceptin® / Kanjinti® (biossimilares)",class:["her2"],alvo:"Domínio 4 extracelular do HER2 — anticorpo monoclonal IgG1",mecanismo:"Liga-se ao domínio 4 do HER2 → bloqueia sinalização PI3K/Akt e MAPK · Ativa ADCC (citotoxicidade celular dependente de anticorpo) · Impede clivagem proteolítica do HER2 extracelular · Cardiotoxicidade reversível (diferente da antraciclina)",indicacao:"Adjuvante HER2+ (1 ano total) · Neo HER2+ (duplo bloqueio com pertuzumabe) · Metastático 1ª linha (THP) · Combinado com tucatinibe (HER2CLIMB) · Base de todos os esquemas anti-HER2",tox:"Cardiotoxicidade (reversível — monitorar FEVE) · Reações infusionais · Cardiotox aumenta com antraciclina sequencial"},
+  {name:"Pertuzumabe",brand:"Perjeta® (Roche)",class:["her2"],alvo:"Domínio 2 extracelular do HER2 — anticorpo monoclonal IgG1",mecanismo:"Liga-se ao domínio 2 do HER2 (diferente do trastuzumabe → domínio 4) → bloqueia dimerização HER2/HER3 e HER2/EGFR · Complementar ao trastuzumabe (duplo bloqueio em domínios diferentes) · Ativa ADCC",indicacao:"Neo HER2+ estágio II–III: TCHP (duplo bloqueio padrão · NEOSPHERE · TRYPHAENA) · 1ª linha metastático: THP (CLEOPATRA) · Adjuvante N+: APHINITY (benefício em LND+) · DB09: T-DXd + P = novo candidato 1ª linha meta",tox:"Diarreia · Náusea · Fadiga · Neutropenia · Cardiotox (menor que trastuzumabe isolado)"},
+
+  // ADCs
+  {name:"T-DM1 (ado-trastuzumabe emtansine)",brand:"Kadcyla® (Roche)",class:["adc","her2"],alvo:"HER2 — ADC com payload DM1 (antimicrotúbulo)",mecanismo:"Anticorpo anti-HER2 (trastuzumabe) + linker não clivável + DM1 (inibidor de microtúbulo · derivado de maitansina) · DAR ~3,5 · Sem efeito bystander significativo (linker estável) · Internalizado via HER2 → libera DM1 intracelular",indicacao:"Adjuvante HER2+ com doença residual pós-NAT (KATHERINE · iDFS HR 0,50) · Metastático 2ª linha HER2+ (EMILIA) · Sendo substituído por T-DXd nos dois cenários (DB03 em 2L meta · DB05 no adjuvante)",tox:"Trombocitopenia · Hepatotox (ALT/AST) · Neuropatia periférica · Fadiga"},
+  {name:"T-DXd (trastuzumabe deruxtecan)",brand:"Enhertu® (Daiichi Sankyo / AstraZeneca)",class:["adc","her2"],alvo:"HER2 — ADC com payload DXd (topo I) · DAR ~8",mecanismo:"Anticorpo anti-HER2 + linker clivável + DXd (inibidor de topoisomerase I · análogo de exatecano) · DAR alto (~8) · Linker clivável → efeito bystander potente (libera DXd no microambiente) · Penetra em SNC",indicacao:"2ª linha HER2+ meta (DB03 · SLP 29 vs 7,2m · SG confirmada) · Adjuvante pós-NAT com RD (DB05 · iDFS HR 0,47 · BTD FDA dez/2025) · 1ª linha meta candidato (DB09 · T-DXd+P vs THP · HR 0,56) · HER2-low (DB04) · HER2-ultralow",tox:"DPI/pneumonite (16,7% all-grade · monitorar TC tórax) · Náusea · Fadiga · Neutropenia · Alopecia"},
+  {name:"Dato-DXd (datopotamabe deruxtecan)",brand:"Datroway® (Daiichi Sankyo / AstraZeneca)",class:["adc"],alvo:"TROP-2 — ADC com payload DXd (topo I) · DAR ~4",mecanismo:"Anticorpo anti-Trop-2 + linker clivável + DXd · DAR menor que SG (~4 vs 7,6) · Menor bystander que SG · Mesmo payload do T-DXd mas alvo diferente (Trop-2 vs HER2)",indicacao:"HR+/HER2− ≥2ª linha após CDK4/6i + ET (TROPION-Breast01 · SLP HR 0,63) · TNBC 1ª linha PD-L1− (TROPION-Breast02 · ESMO 2025) · Alternativa ao SG com toxicidade distinta",tox:"Pneumonite intersticial (mais que SG) · Náusea · Estomatite · Menos neutropenia que SG"},
+  {name:"Sacituzumabe govitecan (SG)",brand:"Trodelvy® (Gilead)",class:["adc"],alvo:"TROP-2 — ADC com payload SN-38 (topo I) · DAR ~7,6",mecanismo:"Anticorpo anti-Trop-2 humanizado (hRS7) + linker hidrolisável CL2A + SN-38 (metabólito ativo do irinotecano) · DAR alto (~7,6) · Linker hidrolisável → forte efeito bystander (libera SN-38 intracelular E no microambiente) · Metabolismo via UGT1A1",indicacao:"TNBC ≥2ª linha (ASCENT · SLP 4,8 vs 1,7m · SG 11,8 vs 6,9m) · TNBC 1ª linha PD-L1+ com pembro (ASCENT-04 · ASCO 2025) · TNBC 1ª linha PD-L1− isolado (ASCENT-03 · ESMO 2025) · HR+/HER2− ≥2ª linha pós-CDK4/6i (TROPiCS-02)",tox:"Neutropenia (G3-4 ~50%) · Diarreia G3 ~10% · Alopecia · Náusea · UGT1A1*28 hom: maior toxicidade → G-CSF profilático"},
+  {name:"Sacituzumab tirumotecan",brand:"(MSD / Daiichi — investigacional)",class:["adc"],alvo:"TROP-2 — ADC nova geração",mecanismo:"Anti-Trop-2 com payload de nova geração · Diferente do SG em payload e linker · Alta potência",indicacao:"HR+/HER2− pós-CDK4/6i (ESMO 2025): SLP 6m: 61% vs 26% com QT · Investigacional",tox:"Em investigação — perfil emergente"},
+
+  // Anti-HER2 TKIs
+  {name:"Tucatinibe",brand:"Tukysa® (Seagen/Pfizer)",class:["her2"],alvo:"Tirosina quinase HER2 — TKI oral altamente seletivo",mecanismo:"Inibidor oral de TK intracelular do HER2 · Alta seletividade para HER2 (menos efeito off-target em EGFR) · Excelente penetração em SNC · Combinado com capecitabina + trastuzumabe",indicacao:"HER2+ metastático ≥3ª linha (HER2CLIMB · SLP HR 0,54) · Especialmente eficaz em metástase cerebral ativa · HER2CLIMB-02: tucatinibe + T-DM1 em andamento",tox:"Diarreia · Hepatotoxicidade (ALT/AST) · Náusea · Palmar-plantar (capecitabina associada)"},
+  {name:"Lapatinibe",brand:"Tykerb® / Tyverb® (Novartis)",class:["her2"],alvo:"Tirosina quinase HER2 e EGFR — TKI oral duplo",mecanismo:"Inibidor duplo de TK HER2 + EGFR (HER1) · Oral · Menos seletivo que tucatinibe (efeito EGFR gera mais toxicidade GI/cutânea) · Penetração em SNC moderada",indicacao:"HER2+ metastático ≥3ª linha + capecitabina (LAPATINIB-1000) · Triplo-positivo: lapatinibe + IA como alternativa endócrina",tox:"Diarreia intensa · Rash acneiforme (EGFR) · Hepatotox · Náusea · QT longo"},
+  {name:"Neratinibe",brand:"Nerlynx® (Pierre Fabre)",class:["her2"],alvo:"Tirosina quinase HER2, EGFR, HER4 — TKI irreversível pan-HER",mecanismo:"Inibidor irreversível (covalente) de HER1, HER2 e HER4 · Oral · Maior duração de inibição que lapatinibe · Inibição pan-HER · Atravessa BHE moderadamente",indicacao:"Adjuvante extendido após 1 ano de trastuzumabe (ExteNET · iDFS HR 0,73) · Metastático ≥3ª linha + capecitabina (NALA) · Benefício maior em HR+/HER2+",tox:"Diarreia muito intensa (profil profilaxia obrigatória com loperamida) · Náusea · Vômito · Fadiga"},
+
+  // IO
+  {name:"Pembrolizumabe",brand:"Keytruda® (MSD)",class:["io"],alvo:"PD-1 — checkpoint inhibitor anti-PD-1",mecanismo:"Anticorpo monoclonal IgG4 anti-PD-1 · Bloqueia interação PD-1/PD-L1 e PD-1/PD-L2 · Restaura atividade de linfócitos T citotóxicos contra tumor · Avaliação de PD-L1 por CPS (Combined Positive Score)",indicacao:"TNBC estágio II–III neoadjuvante + QT → adjuvante (KEYNOTE-522) · TNBC metastático PD-L1+ 1ª linha (KEYNOTE-355 · CPS≥10) · TNBC meta 1ª linha + SG (ASCENT-04 · ASCO 2025)",tox:"Eventos imunomediados: pneumonite · colite · hepatite · endocrinopatias (tireoidite, hipofisíte, DM1) · Fadiga"},
+  {name:"Atezolizumabe",brand:"Tecentriq® (Roche) — retirado em mama",class:["io"],alvo:"PD-L1 — checkpoint inhibitor anti-PD-L1",mecanismo:"Anticorpo anti-PD-L1 · Aprovação em TNBC metastático retirada voluntariamente (2021) após benefício não confirmado em análise final IMpassion130",indicacao:"Histórico: IMpassion130 (TNBC meta + nab-paclitaxel) — aprovação retirada · Substituído pelo pembrolizumabe",tox:"Similar ao pembrolizumabe"},
+
+  // PARP
+  {name:"Olaparibe",brand:"Lynparza® (AstraZeneca)",class:["parp"],alvo:"PARP1/2 — inibidor de reparo de DNA (via BER)",mecanismo:"Inibe PARP1 e PARP2 → impede reparo de quebras de fita simples de DNA → acúmulo de DSBs → letal em células com deficiência de HRR (BRCA1/2 mutadas) · Mecanismo: 'synthetic lethality'",indicacao:"Adjuvante gBRCA+ HER2− alto risco (OLYMPIA · iDFS HR 0,58 · SG HR 0,68) · Metastático gBRCA+ HER2− (OlympiAD · SLP HR 0,58) · Dose: 300mg 2x/dia · 1 ano adjuvante",tox:"Náusea importante · Anemia · Fadiga · Leucopenia · Risco MDS/LMA (raro)"},
+  {name:"Talazoparibe",brand:"Talzenna® (Pfizer)",class:["parp"],alvo:"PARP1/2 — inibidor de reparo de DNA",mecanismo:"PARP inhibitor com maior potência de 'PARP trapping' que olaparibe · Oral · 1 cp/dia",indicacao:"Metastático gBRCA+ HER2− (EMBRACA · SLP HR 0,54) · Alternativa ao olaparibe no cenário metastático",tox:"Anemia (mais intensa que olaparibe) · Náusea · Fadiga · Neutropenia"},
+
+  // OFS
+  {name:"Goserelina",brand:"Zoladex® (AstraZeneca)",class:["ofs"],alvo:"Receptor de GnRH hipofisário — agonista",mecanismo:"Superestimulação contínua do receptor GnRH → dessensibilização hipofisária → queda de LH/FSH → supressão estrogênica ovariana · Efeito flare inicial nas primeiras 1–2 semanas (pico estrogênico antes da supressão) · Implante SC abdominal",indicacao:"OFS em pré-menopáusicas: adjuvante (SOFT/TEXT) + IA · Metastático pré-menop + CDK4/6i · Preservação ovariana durante QT · Quimioprevenção neo (POEMS)",tox:"Fogachos · Osteoporose · Humor deprimido · Flare inicial (cuidado em mets ósseas extensas)"},
+  {name:"Leuprorrelina (Leuprolida)",brand:"Lupron Depot® (AbbVie) / Eligard®",class:["ofs"],alvo:"Receptor de GnRH hipofisário — agonista",mecanismo:"Mesmo mecanismo da goserelina · Agonista GnRH → dessensibilização → supressão gonadal · Disponível em formulações mensais, trimestrais e semestrais · Mais usado em próstata nos EUA; equivalente à goserelina em mama",indicacao:"OFS em pré-menopáusicas · Mesmas indicações da goserelina · Preservação gonadal durante QT",tox:"Idêntico à goserelina · Fogachos · Osteoporose · Flare inicial"},
+  {name:"Triptorelina",brand:"Decapeptyl® (Ipsen) / Gonapeptyl®",class:["ofs"],alvo:"Receptor de GnRH hipofisário — agonista",mecanismo:"Agonista GnRH de mesmo mecanismo · Formulação IM mensal ou trimestral · Amplamente usado em preservação gonadal durante QT (POEMS trial)",indicacao:"OFS adjuvante · Preservação ovariana durante QT (POEMS: redução de falência ovariana prematura + maior taxa de gravidez pós-tto) · Equivalente clínico à goserelina",tox:"Fogachos · Osteoporose · Flare inicial"},
+  {name:"Degarelix",brand:"Firmagon® (Ferring)",class:["ofs"],alvo:"Receptor de GnRH — antagonista direto",mecanismo:"Bloqueia diretamente o receptor GnRH sem estimulação prévia → supressão imediata de LH/FSH · SEM efeito flare · Reversão mais rápida que agonistas",indicacao:"Aprovado em câncer de próstata · Uso off-label em mama (OFS sem flare) · Útil em doença metastática óssea extensa onde flare é perigoso",tox:"Reações SC intensas · Menos tolerado que agonistas · Sem flare"},
+
+  // Osso
+  {name:"Denosumabe",brand:"Xgeva® 120mg (mets ósseas) / Prolia® 60mg (osteoporose)",class:["osso"],alvo:"RANKL — anticorpo monoclonal anti-RANKL",mecanismo:"Bloqueia RANKL (receptor activator of nuclear factor kappa-B ligand) → impede ativação de osteoclastos via RANK · Neutraliza o ciclo vicioso tumor→RANKL→osteoclasto→lise óssea→fatores de crescimento→tumor · Meia-vida ~26 dias (reversível · risco de rebound na suspensão abrupta)",indicacao:"Mets ósseas: prevenção de SREs (Xgeva 120mg SC/mês) · Osteoporose por IA (Prolia 60mg SC/6 meses) · RRSO + osteoporose · NÃO tem papel adjuvante antitumoral (D-CARE negativo)",tox:"ONJ (risco aumentado ≥32 doses · 2h40m de uso · avaliação odontológica pré-tto) · Hipocalcemia (suplementar Ca/VitD) · Rebound na suspensão → transicionar para bisfosfonato"},
+  {name:"Ácido Zoledrônico",brand:"Zometa® / Aclasta® (Novartis)",class:["osso"],alvo:"Bisfosfonato IV — inibidor de osteoclastos",mecanismo:"Incorpora-se à hidroxiapatita óssea → inibição de farnesil pirofosfato sintase nos osteoclastos → apoptose de osteoclastos · Efeito permanente (incorporado ao osso por anos) · Sem rebound na suspensão",indicacao:"Mets ósseas: prevenção de SREs (4mg IV q3-4sem) · Osteoporose em pós-menopausa com IA (Aclasta 5mg/ano) · Requer ajuste renal · Pré-hidratação",tox:"Toxicidade renal (monitorar creatinina) · ONJ · Hipocalcemia · Síndrome gripal pós-infusão · Osteocondronecrose"},
+
+  // Quimioterapia
+  {name:"Capecitabina",brand:"Xeloda® (Roche) / genérico",class:["qt"],alvo:"Timidilato sintase — antimetabólito (pró-droga de 5-FU oral)",mecanismo:"Pró-droga oral → convertida em 5-FU preferencialmente no tumor (via timidina fosforilase) → inibe timidilato sintase → bloqueia síntese de DNA · Atividade preferencial em tecido tumoral (menor toxicidade sistêmica que 5-FU IV)",indicacao:"Adjuvante TNBC com doença residual sem pembro (CREATE-X · DFS 69,8% vs 56,1%) · HER2+ pós-trastuzumabe com lapatinibe/tucatinibe (HER2CLIMB) · Metastático RH+ (TROPiCS) · Metastático TNBC ≥2L",tox:"Síndrome mão-pé (eritrodisestesia palmar-plantar) · Diarreia · Náusea · Mucosite · Redução em insuficiência renal"},
+  {name:"Carboplatina",brand:"Paraplatin® / genérico",class:["qt"],alvo:"DNA — agente alquilante / platina",mecanismo:"Forma adutos com DNA → cross-linking de fitas de DNA → inibe replicação e transcrição · Especialmente ativo em tumores com defeito de HRR (BRCA1/2 mutados) por depender do mesmo mecanismo de reparo",indicacao:"TNBC neo: KEYNOTE-522 (carbo + paclitaxel → AC + pembro) · BRIGHTNESS: carbo aumenta pCR + SG em TNBC indep. BRCA · HER2+ neo: TCHP (carbo + docetaxel + HP) · gBRCA+ metastático: alta taxa de resposta",tox:"Mielossupressão (trombocitopenia > anemia > neutropenia) · Nefrotoxicidade (menor que cisplatina) · Náusea · Neuropatia periférica · Ototoxicidade"},
+  {name:"Antraciclinas (Doxorrubicina / Epirrubicina)",brand:"Adriamycin® / Farmorubicina® (doxo/epirru genérico)",class:["qt"],alvo:"Topoisomerase II — intercalação de DNA",mecanismo:"Intercala no DNA → inibe topoisomerase II → quebras de DNA · Gera radicais livres · Cardiotoxicidade IRREVERSÍVEL (dose cumulativa dependente · cardiomiopatia dilatada) · Diferente do trastuzumabe (cardiotox reversível)",indicacao:"QT neo/adj clássica: esquemas AC (doxo+ciclo) ou FEC/EC (epirru+ciclo) → seguidos de taxane · TNBC: parte do backbone (AC → carbo/taxol + pembro KEYNOTE-522) · HER2+: evitar concomitante com trastuzumabe (TRYPHAENA) · Máx dose cumulativa: doxo 550mg/m² · epirru 900mg/m²",tox:"Cardiotoxicidade IRREVERSÍVEL (cardiomiopatia dilatada) · Náusea/vômito · Alopecia · Mucosite · Mielossupressão · Leucemia secundária (risco tardio)"},
+  {name:"Taxanos (Paclitaxel / Docetaxel / Nab-paclitaxel)",brand:"Taxol® / Taxotere® / Abraxane® (BMS/Celgene)",class:["qt"],alvo:"Microtúbulos — estabilizador (antiproliferativo)",mecanismo:"Estabiliza polímeros de microtúbulos → impede despolimerização → bloqueia mitose na fase M · Paclitaxel/docetaxel: solvente Cremophor/polissorbato (reações alérgicas) · Nab-paclitaxel: albumina-bound (menos reações · maior acúmulo tumoral)",indicacao:"Base da QT neo em TNBC e HER2+ · Adjuvante: TC × 4 ou paclitaxel semanal (APT trial HER2+) · Metastático: múltiplas indicações · Paclitaxel semanal: menor neurotox que q3sem",tox:"Neuropatia periférica (dose-cumulativa) · Mielossupressão · Alopecia · Reação de hipersensibilidade (paclitaxel Cremophor) · Artralgia/mialgia · Retenção hídrica (docetaxel)"},
+  {name:"Eribulina",brand:"Halaven® (Eisai)",class:["qt"],alvo:"Microtúbulos — inibidor não taxano",mecanismo:"Análogo sintético da halicondrina B · Inibe polimerização de microtúbulos em mecanismo distinto dos taxanos · Ativo em tumores resistentes a taxanos · Também modula tumor microenvironment (reduz hipóxia)",indicacao:"TNBC ≥3ª linha (EMBRACE · SG modesta) · Metastático HR+/HER2− ≥3ª linha · Alternativa pós-ADCs e taxanos",tox:"Neutropenia (principal) · Neuropatia periférica · Alopecia · Fadiga · Náusea"},
+  {name:"Vinorelbina",brand:"Navelbine® / genérico",class:["qt"],alvo:"Microtúbulos — alcaloide da vinca",mecanismo:"Inibe polimerização de microtúbulos → bloqueia mitose · Oral ou IV · Usada em metastático como opção de QT de resgate ou combinada com capecitabina",indicacao:"Metastático TNBC/RH+ linhas tardias · Combinada com trastuzumabe em HER2+ linha tardia",tox:"Neutropenia · Constipação (neuropatia autonômica) · Neuropatia periférica · Flebite (IV)"},
+  {name:"Gencitabina",brand:"Gemzar® / genérico",class:["qt"],alvo:"DNA — antimetabólito (análogo de nucleosídeo)",mecanismo:"Análogo de deoxicitidina → inibe ribonucleotídeo redutase e incorpora-se ao DNA → bloqueia síntese de DNA · Frequentemente usada em combinação (gem + carboplatina em TNBC)",indicacao:"TNBC metastático: combinada com carboplatina (especialmente gBRCA+ platina-naive) · Alternativa em linhas tardias",tox:"Mielossupressão · Síndrome pseudogripal · Pneumonite · Edema"},
+  {name:"Ciclofosfamida",brand:"Cytoxan® / genérico",class:["qt"],alvo:"DNA — agente alquilante (pró-droga)",mecanismo:"Pró-droga ativada no fígado via CYP → mostarda nitrogenada → cross-linking de DNA · Componente dos esquemas AC, FEC, TC · Dose-dependente",indicacao:"Base dos esquemas adjuvantes/neo: AC (adriamicina + ciclo) · FEC · TC (docetaxel + ciclo) · Componente universal dos esquemas de QT em mama",tox:"Mielossupressão · Cistite hemorrágica (hidratação obrigatória em altas doses · MESNA) · Alopecia · Náusea · Leucemia secundária (longo prazo)"},
+
+  // PI3K/mTOR
+  {name:"Everolimo",brand:"Afinitor® (Novartis)",class:["pi3k"],alvo:"mTORC1 — inibidor de mTOR",mecanismo:"Inibe mTORC1 (rapamicina) → bloqueia tradução de proteínas de crescimento celular · Restaura sensibilidade à endocrinoterapia após resistência aos IAs · Não atinge mTORC2 (escape parcial via feedback)",indicacao:"HR+/HER2− metastático pós-IA + exemestano (BOLERO-2 · SLP 10,6 vs 4,1m) · Linha tardia após CDK4/6i e ET",tox:"Estomatite/mucosite (muito frequente · colutório com dexametasona profilático) · Pneumonite · Hiperglicemia · Infecções oportunistas · Fadiga"},
+  {name:"Alpelisibe",brand:"Piqray® (Novartis)",class:["pi3k"],alvo:"PI3Kα — inibidor seletivo de PI3K alfa",mecanismo:"Inibe PI3Kα (isoforma mutada em ~40% dos tumores HR+ · PIK3CA) → bloqueia via PI3K/Akt/mTOR → reduz proliferação · Requer teste de mutação PIK3CA (tumor ou ctDNA) antes do uso",indicacao:"HR+/HER2− metastático pós-CDK4/6i + fulvestrant com PIK3CA mutada (SOLAR-1 · SLP 11 vs 5,7m) · BYLieve: menor benefício após CDK4/6i (era atual)",tox:"Hiperglicemia grave (coma hiperosmolar · contraindicado em DM2 mal controlada · monitorar glicemia) · Rash cutâneo severo · Diarreia · Náusea · Fadiga"},
+];
+
+let activeClass = 'all';
+let searchTerm = '';
+
+function render() {
+  const list = document.getElementById('list');
+  const count = document.getElementById('count');
+  let filtered = drugs.filter(d => {
+    const matchClass = activeClass === 'all' || d.class.includes(activeClass);
+    const term = searchTerm.toLowerCase();
+    const matchSearch = !term || 
+      d.name.toLowerCase().includes(term) ||
+      d.brand.toLowerCase().includes(term) ||
+      d.alvo.toLowerCase().includes(term) ||
+      d.mecanismo.toLowerCase().includes(term) ||
+      d.indicacao.toLowerCase().includes(term);
+    return matchClass && matchSearch;
+  });
+  
+  count.textContent = filtered.length + ' droga' + (filtered.length !== 1 ? 's' : '');
+  
+  const classColors = {
+    hormonal:'b-teal', serd:'b-pink', cdk:'b-purple', her2:'b-blue',
+    adc:'b-blue', io:'b-coral', parp:'b-amber', qt:'b-gray',
+    osso:'b-green', ofs:'b-teal', pi3k:'b-red'
+  };
+  const classLabels = {
+    hormonal:'Hormonal', serd:'SERD', cdk:'CDK4/6i', her2:'Anti-HER2',
+    adc:'ADC', io:'IO', parp:'PARP', qt:'Quimio',
+    osso:'Osso', ofs:'OFS', pi3k:'PI3K/mTOR'
+  };
+  
+  list.innerHTML = filtered.map(d => `
+    <div class="drug-card">
+      <div>
+        <div class="drug-name">${d.name}</div>
+        <div class="drug-brand">${d.brand}</div>
+        <div style="margin-top:5px">${d.class.map(c => `<span class="badge ${classColors[c]||'b-gray'}">${classLabels[c]||c}</span>`).join('')}</div>
+      </div>
+      <div>
+        <div class="drug-col-label">Alvo / mecanismo</div>
+        <div class="drug-col-val"><strong style="font-weight:500;color:var(--color-text-primary)">${d.alvo}</strong><br>${d.mecanismo}</div>
+      </div>
+      <div>
+        <div class="drug-col-label">Indicações principais</div>
+        <div class="drug-col-val">${d.indicacao}</div>
+      </div>
+      <div>
+        <div class="drug-col-label">Toxicidades chave</div>
+        <div class="drug-col-val" style="color:var(--color-text-danger,var(--color-text-secondary))">${d.tox}</div>
+      </div>
+    </div>
+  `).join('');
+}
+
+function setClass(cls) {
+  activeClass = cls;
+  document.querySelectorAll('.filter-btn').forEach((b,i) => b.classList.remove('active'));
+  event.target.classList.add('active');
+  render();
+}
+
+function filter() {
+  searchTerm = document.getElementById('search').value;
+  render();
+}
+
+render();
+</script>
+</div>
+<div class="tab-panel" id="tab-terapia" style="display:none">
+<div style="padding: 1rem 0 2rem;">
+
+  <div class="section-label">Moduladores seletivos do receptor de estrogênio (SERMs)</div>
+  <table>
+    <thead>
+      <tr>
+        <th class="col-drug">Nome genérico</th>
+        <th class="col-brand">Nome comercial</th>
+        <th class="col-mec">Mecanismo</th>
+        <th class="col-indica">Indicações principais</th>
+        <th class="col-efeito">Efeitos adversos chave</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><div class="drug">Tamoxifeno</div><span class="badge b-purple" style="margin-top:4px">SERM</span></td>
+        <td><div class="brand">Nolvadex®, Tamoxifeno (genérico)</div></td>
+        <td>Antagonista ER em mama; agonista parcial em útero e osso. Liga-se ao ER sem degradá-lo.</td>
+        <td>Adjuvante pré e pós-menopausa · Doença metastática · Quimioprevenção · Compatível com OFS</td>
+        <td>Tromboembolismo · Câncer de endométrio · Fogachos · Cataratas</td>
+      </tr>
+      <tr>
+        <td><div class="drug">Toremifeno</div><span class="badge b-purple" style="margin-top:4px">SERM</span></td>
+        <td><div class="brand">Fareston®</div></td>
+        <td>Similar ao tamoxifeno; antagonista ER em mama, agonista fraco em útero.</td>
+        <td>Doença metastática pós-menopausa (uso menos frequente)</td>
+        <td>Semelhante ao tamoxifeno; risco uterino menor em alguns estudos</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="section-label">Inibidores de aromatase (IAs)</div>
+  <table>
+    <thead>
+      <tr>
+        <th class="col-drug">Nome genérico</th>
+        <th class="col-brand">Nome comercial</th>
+        <th class="col-mec">Mecanismo</th>
+        <th class="col-indica">Indicações principais</th>
+        <th class="col-efeito">Efeitos adversos chave</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <div class="drug">Anastrozol</div>
+          <div style="margin-top:4px; display:flex; gap:4px; flex-wrap:wrap;">
+            <span class="badge b-teal">IA não esteroidal</span>
+            <span class="badge b-gray">3ª geração</span>
+          </div>
+        </td>
+        <td><div class="brand">Arimidex®, Anastrozol (genérico)</div></td>
+        <td>Inibe competitivamente a aromatase (CYP19A1) → bloqueia conversão de androgênios em estrogênio. Reversível.</td>
+        <td>Adjuvante pós-menopausa (ATAC) · 1ª linha metastático pós-menopausa · + CDK4/6i</td>
+        <td>Artralgia/mialgia · Osteoporose · Fogachos · Sem risco uterino</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="drug">Letrozol</div>
+          <div style="margin-top:4px; display:flex; gap:4px; flex-wrap:wrap;">
+            <span class="badge b-teal">IA não esteroidal</span>
+            <span class="badge b-gray">3ª geração</span>
+          </div>
+        </td>
+        <td><div class="brand">Femara®, Letrozol (genérico)</div></td>
+        <td>Inibe aromatase de forma competitiva e reversível. Potência ligeiramente superior ao anastrozol em estudos comparativos.</td>
+        <td>Adjuvante pós-menopausa (BIG 1-98) · 1ª linha metastático · + CDK4/6i (PALOMA, MONALEESA) · Neoadjuvante</td>
+        <td>Artralgia · Osteoporose · Fogachos · Hiperlipidemia</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="drug">Exemestano</div>
+          <div style="margin-top:4px; display:flex; gap:4px; flex-wrap:wrap;">
+            <span class="badge b-coral">IA esteroidal</span>
+            <span class="badge b-gray">3ª geração</span>
+          </div>
+        </td>
+        <td><div class="brand">Aromasin®, Exemestano (genérico)</div></td>
+        <td>Inativador irreversível da aromatase ("suicida"). Liga-se covalentemente ao sítio ativo — enzima destruída permanentemente. Leve atividade androgênica.</td>
+        <td>Adjuvante pós-menopausa após tamoxifeno · Metastático após falha de IA não esteroidal · + Everolimo (BOLERO-2)</td>
+        <td>Artralgia · Osteoporose leve · Fogachos · Menos hipercolesterolemia</td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="note" style="margin: 0.5rem 0 0;">Obs.: IAs só são eficazes em pós-menopáusicas (ou pré-menopáusicas com supressão ovariana — OFS). A diferença entre não-esteroidal (reversível) e esteroidal (irreversível) é classicamente cobrada em provas.</p>
+
+  <div class="section-label">SERDs — Degradadores seletivos do receptor de estrogênio</div>
+  <table>
+    <thead>
+      <tr>
+        <th class="col-drug">Nome genérico</th>
+        <th class="col-brand">Nome comercial</th>
+        <th class="col-mec">Mecanismo</th>
+        <th class="col-indica">Indicações / geração</th>
+        <th class="col-efeito">Efeitos adversos chave</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <div class="drug">Fulvestrant</div>
+          <div style="margin-top:4px; display:flex; gap:4px; flex-wrap:wrap;">
+            <span class="badge b-blue">SERD clássico</span>
+            <span class="badge b-gray">IM</span>
+          </div>
+        </td>
+        <td><div class="brand">Faslodex®</div></td>
+        <td>Antagonista puro do ER. Liga-se com alta afinidade → degrada o receptor (downregulation). Sem atividade agonista. Administração IM mensal.</td>
+        <td>Doença metastática pós-menopausa após falha de IA · 500 mg/mês · + CDK4/6i (PALOMA-3, MONARCH-2, MONALEESA-3) · + Alpelisibe (PIK3CA mut.)</td>
+        <td>Reações no local da injeção · Fogachos · Artralgia · Dor musculoesquelética · Náusea</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="drug">Elacestrant</div>
+          <div style="margin-top:4px; display:flex; gap:4px; flex-wrap:wrap;">
+            <span class="badge b-pink">SERD oral</span>
+            <span class="badge b-gray">2ª linha</span>
+          </div>
+        </td>
+        <td><div class="brand">Orserdu® (Menarini/Radius)</div></td>
+        <td>SERD oral. Antagonista puro do ER + degradação. Eficaz mesmo em tumores com mutação ESR1 — mecanismo de resistência ao fulvestrant e IAs.</td>
+        <td>HR+/HER2− metastático após ≥1 linha endócrina (EMERALD trial) · Especialmente eficaz em mutação ESR1 · Aprovado FDA 2023</td>
+        <td>Náusea · Dislipidemia · Artralgia · Fogachos · Diarreia</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="drug">Giredestrant</div>
+          <div style="margin-top:4px; display:flex; gap:4px; flex-wrap:wrap;">
+            <span class="badge b-pink">SERD oral</span>
+            <span class="badge b-amber">Investigacional</span>
+          </div>
+        </td>
+        <td><div class="brand">(sem nome comercial ainda — Roche/Genentech)</div></td>
+        <td>SERD oral de nova geração. Antagonista completo + degradação do ER. Maior potência que IAs em Ki67 (coopERA). Ativo em ESR1 mutado.</td>
+        <td>Adjuvante precoce HR+/HER2− — lidERA (SABCS 2025) · Metastático — evERA · NDA submetido à FDA (avançado). Ativo em pré e pós-menopausa.</td>
+        <td>Bradicardia assintomática (11,3% — efeito de classe) · Náusea · Diarreia · Menor descontinuação que IAs/tamox</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="drug">Camizestrant</div>
+          <div style="margin-top:4px; display:flex; gap:4px; flex-wrap:wrap;">
+            <span class="badge b-pink">SERD oral</span>
+            <span class="badge b-amber">Investigacional</span>
+          </div>
+        </td>
+        <td><div class="brand">(AstraZeneca — em desenvolvimento)</div></td>
+        <td>SERD oral. Antagonista puro + degradação ER. Ativo em ESR1 mutado. Testado em combinação com CDK4/6i.</td>
+        <td>Metastático HR+/HER2−: SERENA-6 (troca guiada por ctDNA ESR1) · Precoce: CAMBRIA-1 e -2 em andamento</td>
+        <td>Bradicardia (efeito de classe) · Perfil semelhante aos outros SERDs orais</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="drug">Imlunestrant</div>
+          <div style="margin-top:4px; display:flex; gap:4px; flex-wrap:wrap;">
+            <span class="badge b-pink">SERD oral</span>
+            <span class="badge b-amber">Investigacional</span>
+          </div>
+        </td>
+        <td><div class="brand">Inluriyo™ (Eli Lilly — em desenvolvimento)</div></td>
+        <td>SERD oral. Antagonista puro + degradação ER. Ativo em ESR1 mutado. Combinado com abemaciclib no EMBER-3.</td>
+        <td>HR+/HER2− metastático — EMBER-3 (SABCS 2025) · Adjuvante — EMBER-4 em andamento</td>
+        <td>Bradicardia (efeito de classe) · Náusea · Diarreia · Artralgia</td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="note" style="margin: 0.5rem 0 0;">Diferença crucial SERM vs SERD: SERMs modulam (agonismo parcial em alguns tecidos); SERDs apenas bloqueiam e destroem o receptor — sem atividade agonista residual.</p>
+
+  <div class="section-label">CDK4/6 inibidores</div>
+  <table>
+    <thead>
+      <tr>
+        <th class="col-drug">Nome genérico</th>
+        <th class="col-brand">Nome comercial</th>
+        <th class="col-mec">Mecanismo</th>
+        <th class="col-indica">Indicações principais / estudos-chave</th>
+        <th class="col-efeito">Efeitos adversos chave</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <div class="drug">Palbociclibe</div>
+          <span class="badge b-amber" style="margin-top:4px">CDK4/6i</span>
+        </td>
+        <td><div class="brand">Ibrance® (Pfizer)</div></td>
+        <td>Inibe CDK4 e CDK6 → bloqueia fosforilação de Rb → arresta ciclo celular na fase G1 → impede proliferação tumoral.</td>
+        <td>1ª e 2ª linha metastático HR+/HER2− + IA ou fulvestrant (PALOMA-2, PALOMA-3) · Pionerio da classe (aprovado 2015) · Sem aprovação adjuvante</td>
+        <td>Neutropenia (mais intensa da classe) · Fadiga · Náusea · Infecções · Sem hepatotoxicidade relevante</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="drug">Ribociclibe</div>
+          <span class="badge b-amber" style="margin-top:4px">CDK4/6i</span>
+        </td>
+        <td><div class="brand">Kisqali® (Novartis)</div></td>
+        <td>Inibe CDK4/6 → arresto G1. Seletividade ligeiramente maior para CDK4.</td>
+        <td>1ª linha metastático HR+/HER2− + IA (MONALEESA-2, -3, -7 — pré e pós-menopausa) · Adjuvante doença precoce (NATALEE) — estágio II-III incluindo N0 · Aprovado FDA adjuvante 2024</td>
+        <td>Neutropenia · Prolongamento QT (monitorar ECG) · Hepatotoxicidade · Rash</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="drug">Abemaciclib</div>
+          <span class="badge b-amber" style="margin-top:4px">CDK4/6i</span>
+        </td>
+        <td><div class="brand">Verzenio® (Eli Lilly)</div></td>
+        <td>Inibe CDK4/6 com maior seletividade para CDK4. Administração contínua (sem semana de pausa). Atravessa BHE com efeito potencial em SNC.</td>
+        <td>1ª e 2ª linha metastático + IA ou fulvestrant (MONARCH-3, -2) · Adjuvante nodal-positivo alto risco (monarchE) — primeiro CDK4/6i a mostrar OS no adjuvante · Aprovado FDA adjuvante 2021</td>
+        <td>Diarreia (mais frequente da classe, grau 3: ~10%) · Neutropenia (menor que palbo) · Tromboembolismo venoso · Hepatotoxicidade · Fadiga</td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="note" style="margin: 0.5rem 0 0;">Diferença entre os CDK4/6i mais cobrada: neutropenia é mais intensa com palbociclibe · diarreia é mais frequente com abemaciclib · prolongamento QT e hepatotoxicidade são mais associados ao ribociclibe.</p>
+
+  <div class="section-label">Referência rápida — menopausa e elegibilidade</div>
+  <table>
+    <thead>
+      <tr>
+        <th style="width:30%">Droga / classe</th>
+        <th style="width:25%">Pré-menopausa</th>
+        <th style="width:25%">Pós-menopausa</th>
+        <th style="width:20%">Via</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Tamoxifeno</td>
+        <td><span class="badge b-teal">Sim (1ª escolha)</span></td>
+        <td><span class="badge b-teal">Sim</span></td>
+        <td>VO</td>
+      </tr>
+      <tr>
+        <td>IAs (anastrozol, letrozol, exemestano)</td>
+        <td><span class="badge b-coral">Só com OFS</span></td>
+        <td><span class="badge b-teal">Sim (padrão)</span></td>
+        <td>VO</td>
+      </tr>
+      <tr>
+        <td>Fulvestrant</td>
+        <td><span class="badge b-coral">Uso limitado / off-label</span></td>
+        <td><span class="badge b-teal">Sim</span></td>
+        <td>IM</td>
+      </tr>
+      <tr>
+        <td>SERDs orais (elacestrant, giredestrant, etc.)</td>
+        <td><span class="badge b-amber">Com OFS (giredestrant p. ex.)</span></td>
+        <td><span class="badge b-teal">Sim</span></td>
+        <td>VO</td>
+      </tr>
+      <tr>
+        <td>CDK4/6i</td>
+        <td><span class="badge b-teal">Sim (+ OFS + IA ou tamox)</span></td>
+        <td><span class="badge b-teal">Sim (+ IA ou fulvestrant)</span></td>
+        <td>VO</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+</div>
+<div class="tab-panel" id="tab-serms" style="display:none">
+<div style="padding: 1rem 0 2rem;">
+
+  <div class="sec">1. Uso adjuvante — câncer de mama precoce HR+</div>
+  <table>
+    <thead>
+      <tr>
+        <th style="width:16%">Droga / dose</th>
+        <th style="width:14%">Duração</th>
+        <th style="width:28%">Estudo que firma</th>
+        <th style="width:22%">Quando escolher</th>
+        <th style="width:20%">Benefício principal</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <div class="drug">Tamoxifeno</div>
+          <div style="margin-top:4px;">20 mg/dia VO<br><span style="font-size:12px;color:var(--color-text-secondary);">= 7.300 mg/ano</span></div>
+        </td>
+        <td>
+          <span class="badge b-purple">5 anos</span><br>
+          <span class="badge b-teal" style="margin-top:4px;">10 anos</span>
+        </td>
+        <td>
+          <div class="study-row">
+            <span class="badge b-gray">EBCTCG meta-análise</span>
+            <span class="badge b-gray">NATO trial</span>
+          </div>
+          <div style="font-size:12px; margin-top:6px; color:var(--color-text-secondary);">→ 5 anos: redução de 50% recorrência e 30% mortalidade vs. não tratar</div>
+          <div class="study-row" style="margin-top:6px;">
+            <span class="badge b-blue">ATLAS (Davies 2013, Lancet)</span>
+            <span class="badge b-blue">aTTom (Gray 2013)</span>
+          </div>
+          <div style="font-size:12px; margin-top:6px; color:var(--color-text-secondary);">→ 10 anos: redução adicional de recorrência (RR 0,84) e mortalidade (RR 0,83) vs. parar em 5 anos. Benefício se acentua nos anos 10–14 ("carry-over effect")</div>
+        </td>
+        <td>
+          <div style="font-size:12px; line-height:1.6;">
+            <strong>Pré-menopausa</strong> — 1ª escolha isolado ou + OFS<br><br>
+            <strong>Pós-menopausa</strong> — quando IA contraindicado (osteoporose grave, intolerância articular severa)<br><br>
+            <strong>Switch strategy</strong> — 2–3 anos tamox → completar com IA (BIG 1-98, IES)
+          </div>
+        </td>
+        <td>
+          Redução de recorrência local e à distância · Proteção óssea (pós-menopausa) · Redução de câncer contralateral · Redução de mortalidade câncer-específica
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="drug">Toremifeno</div>
+          <div style="margin-top:4px;">60 mg/dia VO<br><span style="font-size:12px;color:var(--color-text-secondary);">= 21.900 mg/ano</span></div>
+        </td>
+        <td><span class="badge b-purple">5 anos</span></td>
+        <td>
+          <div class="study-row"><span class="badge b-gray">Estudos fase III vs. tamoxifeno (não-inferioridade)</span></div>
+          <div style="font-size:12px; margin-top:6px; color:var(--color-text-secondary);">Eficácia equivalente ao tamoxifeno em pós-menopausa. Sem estudos de 10 anos.</div>
+        </td>
+        <td>Alternativa ao tamoxifeno em pós-menopausa · Menos dados que tamoxifeno · Uso limitado no Brasil</td>
+        <td>Semelhante ao tamoxifeno · Menor risco de Ca endometrial em alguns estudos comparativos</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="info">
+    <strong style="color:var(--color-text-primary);">ATLAS e aTTom — o que saber para a prova:</strong> ambos publicados em 2013, juntos randomizaram ~16.000 pacientes entre parar no 5º ano vs. continuar por 10 anos. O benefício de 10 anos é maior em pré-menopáusicas (que ainda teriam anos de exposição estrogênica pela frente) e em pacientes de alto risco (N+, grade 3). O efeito carry-over — benefício que aparece anos após o término — é uma característica única do tamoxifeno que justifica os 10 anos mesmo sabendo que a paciente só tomou por 5.
+  </div>
+
+  <div class="warn">
+    <strong>Quando preferir 5 anos vs. 10 anos:</strong> 10 anos são preferidos em pré-menopáusicas de alto risco, N+, grade alto. Cinco anos podem ser suficientes em pós-menopáusicas de baixo risco que farão switch para IA, ou quando toxicidade (tromboembolismo, sintomas climatéricos graves) limita continuidade. A decisão é individualizada.
+  </div>
+
+  <div class="sec">2. Quimioprevenção — pacientes de alto risco SEM câncer</div>
+  <table>
+    <thead>
+      <tr>
+        <th style="width:16%">Droga / dose</th>
+        <th style="width:14%">Duração</th>
+        <th style="width:30%">Estudos principais</th>
+        <th style="width:22%">Para quem indicar</th>
+        <th style="width:18%">Redução de risco</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <div class="drug">Tamoxifeno</div>
+          <div style="margin-top:4px;">20 mg/dia VO<br><span style="font-size:12px;color:var(--color-text-secondary);">Ou 5 mg/dia (low dose — emergindo)</span></div>
+        </td>
+        <td><span class="badge b-purple">5 anos</span></td>
+        <td>
+          <div class="study-row">
+            <span class="badge b-blue">NSABP P-1 (Fisher 1998, JNCI)</span>
+          </div>
+          <div style="font-size:12px; margin-top:5px; color:var(--color-text-secondary);">13.388 mulheres alto risco · Redução 49% incidência Ca mama invasivo vs. placebo · Redução 50% CDIS · Aprovação FDA 1998 para quimioprevenção</div>
+          <div class="study-row" style="margin-top:8px;">
+            <span class="badge b-blue">IBIS-I (Cuzick 2002/2015, Lancet)</span>
+          </div>
+          <div style="font-size:12px; margin-top:5px; color:var(--color-text-secondary);">7.154 mulheres · Redução 29% Ca mama · Benefício persiste 20 anos após término (follow-up longo)</div>
+          <div class="study-row" style="margin-top:8px;">
+            <span class="badge b-blue">Royal Marsden (Powles)</span>
+            <span class="badge b-blue">Italian Trial</span>
+          </div>
+        </td>
+        <td>
+          <div style="font-size:12px; line-height:1.65;">
+            Risco ≥1,7% em 5 anos (modelo Gail) · BRCA1/2 portadoras · Histórico familiar forte · Biópsia prévia com ADH, ALH ou LCIS · Densidade mamária muito alta · Pré ou pós-menopausa
+          </div>
+        </td>
+        <td>
+          <span class="badge b-green">~49% redução</span><br>
+          <span style="font-size:12px;color:var(--color-text-secondary);">Ca invasivo HR+<br>Sem benefício em HR−</span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="drug">Raloxifeno</div>
+          <div style="margin-top:4px;">60 mg/dia VO</div>
+        </td>
+        <td><span class="badge b-purple">5 anos</span></td>
+        <td>
+          <div class="study-row">
+            <span class="badge b-blue">STAR (NSABP P-2, Vogel 2006, JAMA)</span>
+          </div>
+          <div style="font-size:12px; margin-top:5px; color:var(--color-text-secondary);">19.747 mulheres pós-menopáusicas · Raloxifeno vs. tamoxifeno · Eficácia similar para Ca invasivo · Menos Ca endometrial · Menos TVP · Menos cataratas · Porém MENOS eficaz para CDIS e Ca in situ</div>
+        </td>
+        <td>
+          <div style="font-size:12px; line-height:1.65;">
+            Pós-menopausa apenas · Alto risco com osteoporose concomitante (duplo benefício) · Quando tamoxifeno é contraindicado (TVP prévia, útero de risco)
+          </div>
+        </td>
+        <td>
+          <span class="badge b-green">~38% redução</span><br>
+          <span style="font-size:12px;color:var(--color-text-secondary);">Ca invasivo<br>Inferior ao tamox p/ CDIS</span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="info">
+    <strong style="color:var(--color-text-primary);">Low-dose tamoxifeno (5 mg/dia) — TAM-01 trial:</strong> estudo italiano fase III mostrou que 5 mg/dia por 3 anos reduziu recorrência de lesões intraepiteliais (ADH, ALH, LCIS, CDIS) com perfil de toxicidade significativamente melhor que 20 mg/dia. Emerge como alternativa para quimioprevenção com maior aceitabilidade. Ainda não aprovado formalmente, mas crescendo nas diretrizes europeias.
+  </div>
+
+  <div class="sec">3. Doenças proliferativas benignas e lesões de risco</div>
+  <table>
+    <thead>
+      <tr>
+        <th style="width:25%">Condição</th>
+        <th style="width:20%">Droga / dose</th>
+        <th style="width:30%">Evidência / racional</th>
+        <th style="width:25%">Observações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <div class="drug">CDIS (carcinoma ductal in situ) pós-excisão</div>
+        </td>
+        <td>Tamoxifeno 20 mg/dia · 5 anos</td>
+        <td>
+          <div class="study-row"><span class="badge b-blue">NSABP B-24</span><span class="badge b-blue">IBIS-II DCIS</span></div>
+          <div style="font-size:12px; margin-top:5px; color:var(--color-text-secondary);">B-24: tamoxifeno após lumpectomia + RT reduz recorrência ipsilateral e Ca mama contralateral · Benefício maior em HR+. IBIS-II DCIS: anastrozol não-inferior ao tamoxifeno em pós-menopausa para CDIS.</div>
+        </td>
+        <td>Em pré-menopausa: tamoxifeno é a escolha. Em pós-menopausa: IA pode ser preferido (IBIS-II DCIS).</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="drug">LCIS (carcinoma lobular in situ)</div>
+        </td>
+        <td>Tamoxifeno 20 mg/dia · 5 anos<br><span style="font-size:12px;color:var(--color-text-secondary);">ou Raloxifeno (pós-menop.)</span></td>
+        <td>
+          <div class="study-row"><span class="badge b-blue">NSABP P-1</span><span class="badge b-blue">STAR</span></div>
+          <div style="font-size:12px; margin-top:5px; color:var(--color-text-secondary);">LCIS é marcador de risco aumentado (~8–10x) para Ca invasivo bilateral. Tamoxifeno reduz esse risco em ~50%. É indicação formal de quimioprevenção.</div>
+        </td>
+        <td>LCIS clássico: conduta observacional + quimioprevenção. LCIS pleomórfico: conduta mais agressiva (excisão ± RT discutida).</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="drug">ADH / ALH (hiperplasia atípica ductal ou lobular)</div>
+        </td>
+        <td>Tamoxifeno 20 mg/dia · 5 anos<br><span style="font-size:12px;color:var(--color-text-secondary);">Low-dose 5 mg/dia emergindo (TAM-01)</span></td>
+        <td>
+          <div class="study-row"><span class="badge b-blue">NSABP P-1 (subgrupo ADH)</span></div>
+          <div style="font-size:12px; margin-top:5px; color:var(--color-text-secondary);">Subgrupo com ADH no P-1: redução de 86% no risco de Ca invasivo com tamoxifeno — o maior benefício observado em qualquer subgrupo do estudo.</div>
+        </td>
+        <td>ADH/ALH conferem risco relativo ~4–5x. Com história familiar positiva, risco sobe para ~10x. Quimioprevenção fortemente recomendada.</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="drug">Mastopatia fibrocística com componente proliferativo</div>
+        </td>
+        <td>Tamoxifeno 10–20 mg/dia · ciclos curtos ou contínuo</td>
+        <td>
+          <div style="font-size:12px; color:var(--color-text-secondary);">Evidência moderada. Reduz proliferação epitelial e sintomas em pacientes com componente proliferativo ativo. Menos estudado que nas lesões formais de risco.</div>
+        </td>
+        <td>Uso individualizado. Mais frequente em contexto de risco elevado associado.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="sec">4. Mastalgia — uso específico</div>
+  <table>
+    <thead>
+      <tr>
+        <th style="width:20%">Droga / dose</th>
+        <th style="width:20%">Tipo de mastalgia</th>
+        <th style="width:30%">Evidência</th>
+        <th style="width:30%">Observações práticas</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <div class="drug">Tamoxifeno</div>
+          <div style="margin-top:4px;">10 mg/dia VO · fase lútea (D15–D25)<br><span style="font-size:12px; color:var(--color-text-secondary);">ou 20 mg/dia contínuo</span></div>
+        </td>
+        <td><span class="badge b-teal">Mastalgia cíclica</span><br><span class="badge b-amber" style="margin-top:4px;">Mastalgia não-cíclica (menor resposta)</span></td>
+        <td>
+          <div class="study-row"><span class="badge b-blue">Fentiman et al. (Lancet 1986)</span><span class="badge b-blue">Revisões EBCTCG</span></div>
+          <div style="font-size:12px; margin-top:5px; color:var(--color-text-secondary);">Tamoxifeno 10 mg/dia apenas na fase lútea mostrou eficácia similar ao uso contínuo com menor toxicidade. Resposta em 70–80% das mastalgias cíclicas graves refratárias a medidas conservadoras.</div>
+        </td>
+        <td>1ª linha farmacológica para mastalgia cíclica grave refratária · Excluir causas extramamárias antes · Uso por 3–6 meses · Reavaliar necessidade de continuação</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="drug">Danazol</div>
+          <div style="margin-top:4px;">100–400 mg/dia<br><span style="font-size:12px; color:var(--color-text-secondary);">(não é SERM — referência comparativa)</span></div>
+        </td>
+        <td><span class="badge b-teal">Cíclica e não-cíclica</span></td>
+        <td>Eficaz mas com perfil androgênico desfavorável (acne, hirsutismo, voz). Menos utilizado atualmente.</td>
+        <td>2ª linha quando tamoxifeno falha · Cursos curtos · Contraindicado na gravidez</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="drug">Raloxifeno</div>
+          <div style="margin-top:4px;">60 mg/dia</div>
+        </td>
+        <td><span class="badge b-amber">Mastalgia em pós-menopausa</span></td>
+        <td>Dados limitados · Alguns estudos observacionais sugerem benefício em mastalgia pós-menopáusica.</td>
+        <td>Uso off-label · Menos evidência que tamoxifeno para esta indicação específica</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="sec">5. Ginecomastia — uso em homens</div>
+  <table>
+    <thead>
+      <tr>
+        <th style="width:20%">Droga / dose</th>
+        <th style="width:20%">Indicação</th>
+        <th style="width:30%">Evidência</th>
+        <th style="width:30%">Observações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <div class="drug">Tamoxifeno</div>
+          <div style="margin-top:4px;">10–20 mg/dia VO · 3–6 meses</div>
+        </td>
+        <td>
+          <span class="badge b-purple">Ginecomastia idiopática</span><br>
+          <span class="badge b-purple" style="margin-top:4px;">Pubertal persistente</span><br>
+          <span class="badge b-purple" style="margin-top:4px;">Induzida por drogas</span><br>
+          <span class="badge b-blue" style="margin-top:4px;">Profilaxia em Ca próstata com agonista GnRH</span>
+        </td>
+        <td>
+          <div class="study-row"><span class="badge b-blue">Devoto et al. · Khan et al.</span></div>
+          <div style="font-size:12px; margin-top:5px; color:var(--color-text-secondary);">Tamoxifeno 20 mg/dia × 3 meses: resposta completa em 78–85% dos casos de ginecomastia ativa (tecido mole, sem fibrose). Mais eficaz quanto mais precoce o tratamento.</div>
+        </td>
+        <td>Melhor resposta em ginecomastia recente (&lt;12 meses) · Ginecomastia fibrótica (dura, crônica) não responde — indicação cirúrgica · Em Ca próstata em uso de bicalutamida ou análogo GnRH: tamoxifeno profilático é eficaz</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="drug">Raloxifeno</div>
+          <div style="margin-top:4px;">60 mg/dia · 3–6 meses</div>
+        </td>
+        <td><span class="badge b-purple">Ginecomastia puberal · Idiopática</span></td>
+        <td>
+          <div class="study-row"><span class="badge b-blue">Lawrence et al. (NEJM 2004 — adolescentes)</span></div>
+          <div style="font-size:12px; margin-top:5px; color:var(--color-text-secondary);">Eficaz em adolescentes com ginecomastia puberal persistente. Alguns estudos sugerem eficácia superior ao tamoxifeno em adolescentes, com perfil de segurança favorável.</div>
+        </td>
+        <td>Boa opção em adolescentes · Sem atividade estrogênica em outros tecidos em homens · Menos usado que tamoxifeno no adulto</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="drug">Câncer de mama masculino</div>
+          <div style="margin-top:4px;">Tamoxifeno 20 mg/dia · 5–10 anos</div>
+        </td>
+        <td><span class="badge b-coral">Adjuvante HR+ em homem</span></td>
+        <td>
+          <div style="font-size:12px; color:var(--color-text-secondary);">Tamoxifeno é o padrão adjuvante no homem. IAs isolados são inferiores (testosterona ainda se converte em estrogênio via aromatase periférica — sem supressão ovariana para bloquear). Se IA for usado, deve ser + análogo GnRH.</div>
+        </td>
+        <td>Ponto de prova: IA sozinho NÃO é padrão em homem com Ca mama — tamoxifeno é superior neste cenário.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="sec">Resumo rápido — dose e duração por indicação</div>
+  <table>
+    <thead>
+      <tr>
+        <th style="width:30%">Indicação</th>
+        <th style="width:18%">Droga preferida</th>
+        <th style="width:15%">Dose</th>
+        <th style="width:15%">Duração</th>
+        <th style="width:22%">Estudo ancora</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Adjuvante pré-menopausa baixo risco</td>
+        <td>Tamoxifeno</td>
+        <td>20 mg/dia</td>
+        <td><span class="badge b-purple">5 anos</span></td>
+        <td>EBCTCG</td>
+      </tr>
+      <tr>
+        <td>Adjuvante pré-menopausa alto risco / N+</td>
+        <td>Tamoxifeno</td>
+        <td>20 mg/dia</td>
+        <td><span class="badge b-teal">10 anos</span></td>
+        <td>ATLAS · aTTom</td>
+      </tr>
+      <tr>
+        <td>Quimioprevenção alto risco pré-menop.</td>
+        <td>Tamoxifeno</td>
+        <td>20 mg/dia</td>
+        <td><span class="badge b-purple">5 anos</span></td>
+        <td>NSABP P-1 · IBIS-I</td>
+      </tr>
+      <tr>
+        <td>Quimioprevenção alto risco pós-menop.</td>
+        <td>Raloxifeno</td>
+        <td>60 mg/dia</td>
+        <td><span class="badge b-purple">5 anos</span></td>
+        <td>STAR (NSABP P-2)</td>
+      </tr>
+      <tr>
+        <td>CDIS pós-excisão (pré-menopausa)</td>
+        <td>Tamoxifeno</td>
+        <td>20 mg/dia</td>
+        <td><span class="badge b-purple">5 anos</span></td>
+        <td>NSABP B-24</td>
+      </tr>
+      <tr>
+        <td>LCIS / ADH / ALH</td>
+        <td>Tamoxifeno</td>
+        <td>20 mg/dia (ou 5 mg)</td>
+        <td><span class="badge b-purple">5 anos</span></td>
+        <td>NSABP P-1 · TAM-01</td>
+      </tr>
+      <tr>
+        <td>Mastalgia cíclica grave</td>
+        <td>Tamoxifeno</td>
+        <td>10 mg/dia (fase lútea)</td>
+        <td><span class="badge b-amber">3–6 meses</span></td>
+        <td>Fentiman et al.</td>
+      </tr>
+      <tr>
+        <td>Ginecomastia ativa (&lt;12 meses)</td>
+        <td>Tamoxifeno</td>
+        <td>10–20 mg/dia</td>
+        <td><span class="badge b-amber">3–6 meses</span></td>
+        <td>Devoto · Khan</td>
+      </tr>
+      <tr>
+        <td>Ca mama masculino adjuvante</td>
+        <td>Tamoxifeno</td>
+        <td>20 mg/dia</td>
+        <td><span class="badge b-teal">5–10 anos</span></td>
+        <td>Consenso ASCO/ESMO</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+</div>
+<div class="tab-panel" id="tab-ofs" style="display:none">
+<div style="padding: 1rem 0 2rem;">
+
+  <div class="section-label">Agonistas de GnRH (análogos de LHRH) — principal classe</div>
+  <table>
+    <thead>
+      <tr>
+        <th style="width:20%">Nome genérico</th>
+        <th style="width:20%">Nome comercial</th>
+        <th style="width:22%">Mecanismo</th>
+        <th style="width:18%">Posologia</th>
+        <th style="width:20%">Efeitos adversos chave</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <div class="drug">Goserelina</div>
+          <div style="display:flex; gap:4px; flex-wrap:wrap; margin-top:4px;">
+            <span class="badge b-purple">Agonista GnRH</span>
+          </div>
+        </td>
+        <td><div class="brand">Zoladex® (AstraZeneca)<br>Implante SC</div></td>
+        <td>Superestimulação contínua do receptor GnRH → dessensibilização hipofisária → queda de LH/FSH → supressão estrogênica ovariana. Efeito flare inicial nos primeiros dias.</td>
+        <td>3,6 mg SC/mês ou 10,8 mg SC/3 meses · Implante subcutâneo (abdome)</td>
+        <td>Fogachos · Ressecamento vaginal · Osteoporose · Humor deprimido · Flare inicial (1ª dose)</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="drug">Leuprolida</div>
+          <div style="display:flex; gap:4px; flex-wrap:wrap; margin-top:4px;">
+            <span class="badge b-purple">Agonista GnRH</span>
+          </div>
+        </td>
+        <td><div class="brand">Lupron Depot® (AbbVie)<br>Eligard®<br>IM ou SC</div></td>
+        <td>Mesmo mecanismo da goserelina. Mais disponível nos EUA; no Brasil menos utilizado que goserelina em oncologia mamária.</td>
+        <td>3,75 mg IM/mês ou 11,25 mg IM/3 meses ou 22,5 mg IM/6 meses</td>
+        <td>Fogachos · Osteoporose · Alterações de humor · Flare inicial</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="drug">Triptorelina</div>
+          <div style="display:flex; gap:4px; flex-wrap:wrap; margin-top:4px;">
+            <span class="badge b-purple">Agonista GnRH</span>
+          </div>
+        </td>
+        <td><div class="brand">Decapeptyl® (Ipsen)<br>Gonapeptyl®<br>IM</div></td>
+        <td>Mesmo mecanismo. Utilizado especialmente em preservação ovariana durante quimioterapia e em OFS para câncer de mama.</td>
+        <td>3,75 mg IM/mês ou 11,25 mg IM/3 meses</td>
+        <td>Fogachos · Osteoporose · Flare inicial · Alterações de humor</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="drug">Buserelina</div>
+          <div style="display:flex; gap:4px; flex-wrap:wrap; margin-top:4px;">
+            <span class="badge b-purple">Agonista GnRH</span>
+          </div>
+        </td>
+        <td><div class="brand">Suprefact® · Uso menos frequente em mama</div></td>
+        <td>Mesmo mecanismo. Menos utilizado em oncologia mamária no Brasil.</td>
+        <td>SC diário ou depot mensal</td>
+        <td>Semelhante aos demais agonistas</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="alert-box">
+    <strong>Efeito flare dos agonistas GnRH:</strong> na 1ª dose, antes da dessensibilização, ocorre pico de LH/FSH e estrogênio (1–2 semanas). Em pacientes com doença metastática óssea, pode precipitar hipercalcemia ou dor óssea. Em cânceres muito hormônio-sensíveis, considerar cobertura com antiandrogênio/antiestrogênio nas primeiras semanas ou preferir antagonista de GnRH.
+  </div>
+
+  <div class="section-label">Antagonistas de GnRH — supressão imediata, sem flare</div>
+  <table>
+    <thead>
+      <tr>
+        <th style="width:20%">Nome genérico</th>
+        <th style="width:20%">Nome comercial</th>
+        <th style="width:22%">Mecanismo</th>
+        <th style="width:18%">Posologia</th>
+        <th style="width:20%">Diferencial</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <div class="drug">Degarelix</div>
+          <div style="display:flex; gap:4px; flex-wrap:wrap; margin-top:4px;">
+            <span class="badge b-teal">Antagonista GnRH</span>
+          </div>
+        </td>
+        <td><div class="brand">Firmagon® (Ferring)<br>SC</div></td>
+        <td>Bloqueio direto e competitivo do receptor GnRH → queda imediata de LH/FSH → supressão estrogênica rápida, SEM flare inicial.</td>
+        <td>240 mg SC (dose de ataque) → 80 mg SC/mês de manutenção</td>
+        <td>Aprovado em próstata; uso off-label em mama. Vantagem: sem flare. Desvantagem: injeções mensais dolorosas, reações locais frequentes.</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="drug">Relugolix</div>
+          <div style="display:flex; gap:4px; flex-wrap:wrap; margin-top:4px;">
+            <span class="badge b-teal">Antagonista GnRH</span>
+            <span class="badge b-gray">Oral</span>
+          </div>
+        </td>
+        <td><div class="brand">Orgovyx® (Myovant) · Uso em próstata; em investigação para mama</div></td>
+        <td>Antagonista GnRH oral. Supressão imediata e reversível. Recuperação hormonal mais rápida após suspensão.</td>
+        <td>120 mg VO/dia</td>
+        <td>Único antagonista GnRH oral disponível. Potencial uso futuro em mama (estudos em andamento).</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="section-label">Supressão cirúrgica — ooforectomia bilateral</div>
+  <table>
+    <thead>
+      <tr>
+        <th style="width:25%">Método</th>
+        <th style="width:35%">Características</th>
+        <th style="width:40%">Quando considerar</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <div class="drug">Ooforectomia bilateral</div>
+          <div style="display:flex; gap:4px; flex-wrap:wrap; margin-top:4px;">
+            <span class="badge b-red">Irreversível</span>
+            <span class="badge b-gray">Cirúrgica</span>
+          </div>
+        </td>
+        <td>Supressão estrogênica imediata, permanente e completa. Sem necessidade de injeções mensais. Por laparoscopia preferencial.</td>
+        <td>Pacientes que recusam ou não toleram análogos mensais · Portadoras de BRCA1/2 (reduz risco de Ca de ovário concomitantemente) · Metastático com controle desejado a longo prazo · Países com acesso limitado a análogos de GnRH</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="drug">Radioterapia ovariana</div>
+          <div style="display:flex; gap:4px; flex-wrap:wrap; margin-top:4px;">
+            <span class="badge b-red">Irreversível</span>
+            <span class="badge b-gray">RT</span>
+          </div>
+        </td>
+        <td>Supressão estrogênica por ablação radiante. Lenta (semanas a meses para efeito completo). Menos utilizada atualmente.</td>
+        <td>Alternativa histórica onde cirurgia e análogos não são disponíveis. Rara na prática moderna.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="section-label">Quando a OFS é obrigatória — resumo clínico</div>
+  <table>
+    <thead>
+      <tr>
+        <th style="width:40%">Cenário clínico</th>
+        <th style="width:30%">OFS necessária?</th>
+        <th style="width:30%">Referência</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Pré-menopausa + IA (anastrozol, letrozol, exemestano)</td>
+        <td><span class="badge b-red">Sim — obrigatória</span></td>
+        <td>IA não funciona sem supressão ovariana em pré-menopausa</td>
+      </tr>
+      <tr>
+        <td>Pré-menopausa alto risco + tamoxifeno (SOFT/TEXT)</td>
+        <td><span class="badge b-amber">Sim — benefício adicional</span></td>
+        <td>OFS + tamoxifeno ou OFS + exemestano supera tamoxifeno isolado</td>
+      </tr>
+      <tr>
+        <td>Pré-menopausa + CDK4/6i (ribociclibe MONALEESA-7)</td>
+        <td><span class="badge b-red">Sim — obrigatória</span></td>
+        <td>CDK4/6i em pré-menopausa sempre combinado com OFS + IA ou tamoxifeno</td>
+      </tr>
+      <tr>
+        <td>Pré-menopausa + giredestrant (lidERA)</td>
+        <td><span class="badge b-red">Sim — protocolo exige OFS</span></td>
+        <td>SERDs orais de nova geração em pré-menopausa requerem OFS</td>
+      </tr>
+      <tr>
+        <td>Preservação da fertilidade durante quimioterapia</td>
+        <td><span class="badge b-teal">Sim — proteção gonadal</span></td>
+        <td>Triptorelina/goserelina antes da QT reduz falência ovariana prematura (POEMS trial)</td>
+      </tr>
+      <tr>
+        <td>Pós-menopausa confirmada</td>
+        <td><span class="badge b-gray">Não necessária</span></td>
+        <td>Ovários já inativados fisiologicamente</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="info-box">
+    <strong style="color: var(--color-text-primary);">Ponto de prova — SOFT/TEXT:</strong> esses dois estudos randomizados definiram que em pré-menopáusicas de alto risco, OFS + exemestano é superior a tamoxifeno isolado em iDFS. OFS + tamoxifeno também supera tamoxifeno isolado. O benefício da OFS é maior quanto maior o risco da paciente (jovem, N+, grade alto, HER2+).
+  </div>
+
+</div>
+</div>
+<div class="tab-panel" id="tab-algoritmo" style="display:none">
+<div style="padding:1rem 0 3rem">
+
+<!-- HER2+ -->
+<div class="subtipo-header" style="background:var(--color-background-secondary)">
+  <div class="subtipo-icon" style="background:#E6F1FB;color:#0C447C">HER2+</div>
+  <div>
+    <div class="subtipo-title">HER2 positivo — todos os cenários</div>
+    <div class="subtipo-sub">HER2+ RH− · HER2+ RH+ (triplo-positivo) · Metastático · Adjuvante</div>
+  </div>
+</div>
+
+<div class="sec">HER2+ — Neoadjuvância (doença precoce estágio II–III)</div>
+
+<div class="step">
+  <div class="step-header">
+    <div class="step-num" style="background:#E6F1FB;color:#0C447C">1</div>
+    <div class="step-title">Quem vai para QT neoadjuvante?</div>
+  </div>
+  <div class="step-body">
+    <div class="row"><strong>Indicação formal:</strong> T ≥ 2cm e/ou N+ (qualquer estágio II–III) · Downstaging tumoral · Avaliar resposta in vivo · Planejar adjuvância baseada em pCR</div>
+    <div class="row"><strong>Tumores pequenos (T1b/c N0):</strong> considerar cirurgia upfront → APT trial (paclitaxel semanal + trastuzumabe × 12 semanas adjuvante) — alternativa para baixo risco</div>
+    <div class="info"><strong>APT trial:</strong> pT1b–T1c pN0 HER2+ · Paclitaxel semanal × 12 + trastuzumabe → 1 ano de H adjuvante · Redução &gt;7% de recidiva · Abaixo de 5mm: questionável</div>
+  </div>
+</div>
+
+<div class="step">
+  <div class="step-header">
+    <div class="step-num" style="background:#E6F1FB;color:#0C447C">2</div>
+    <div class="step-title">Qual esquema neoadjuvante escolher?</div>
+  </div>
+  <div class="step-body">
+    <div class="row"><strong>Padrão atual:</strong> TCHP — Taxane + Carboplatina + Trastuzumabe + Pertuzumabe (sem antraciclina)</div>
+    <div class="fork">
+      <div class="fork-box">
+        <div class="fork-label">TRAIN-2 (referência principal)</div>
+        <div class="fork-content">TCHP vs FEC+THP → pCR equivalente (~68%) · Menor cardiotoxicidade com TCHP · 3 anos: não-inferioridade confirmada → TCHP preferível</div>
+        <div class="study-tag">TRAIN-2 · Ann Oncol 2022</div>
+      </div>
+      <div class="fork-box">
+        <div class="fork-label">TRYPHAENA (confirmação)</div>
+        <div class="fork-content">Segurança cardíaca como endpoint · Antraciclina + H: LVSD em 5,6% · TCHP: LVSD em 2,6% · pCR 57–66% nos braços · Reforça evitar antraciclina concomitante</div>
+        <div class="study-tag">TRYPHAENA · Ann Oncol 2013</div>
+      </div>
+    </div>
+    <div class="fork">
+      <div class="fork-box">
+        <div class="fork-label">NEOSPHERE (duplo bloqueio)</div>
+        <div class="fork-content">THP → maior pCR (~46%) vs. TH (29%) → pertuzumabe é obrigatório no duplo bloqueio · RH+ tem menor pCR que RH− em todos os braços</div>
+        <div class="study-tag">NEOSPHERE · Lancet Oncol 2012</div>
+      </div>
+      <div class="fork-box">
+        <div class="fork-label">HER2+ RH+ vs RH−</div>
+        <div class="fork-content">RH−: pCR ~55–68% com TCHP · RH+: pCR ~30–45% (menor por crosstalk HR↔HER2) → mesmo esquema TCHP, mas expectativa de pCR menor · Não mudar o regime, adequar a expectativa</div>
+        <div class="study-tag">Metanálise Liu et al 2025</div>
+      </div>
+    </div>
+    <div class="warn"><strong>Antraciclina: quando ainda usar?</strong> Linfonodos muito comprometidos (&gt;4 N+), carcinoma inflamatório, tumores com componente luminal muito alto — decisão individualizada. Em geral: prefira TCHP.</div>
+  </div>
+</div>
+
+<div class="step">
+  <div class="step-header">
+    <div class="step-num" style="background:#E6F1FB;color:#0C447C">3</div>
+    <div class="step-title">Após cirurgia — baseado no resultado da peça (pCR vs. doença residual)</div>
+  </div>
+  <div class="step-body">
+    <div class="fork">
+      <div class="fork-box" style="border:.5px solid var(--color-border-secondary)">
+        <div class="fork-label" style="color:#085041">✓ Atingiu pCR (ypT0 ypN0)</div>
+        <div class="fork-content" style="margin-top:4px"><strong style="font-weight:500">→ HP adjuvante</strong> (trastuzumabe + pertuzumabe) para completar 1 ano de terapia anti-HER2 total · Pertuzumabe adjuvante em N+: benefício iDFS (APHINITY) · APHINITY: N+ → curvas se alargam a longo prazo</div>
+        <div class="study-tag">APHINITY · NEJM 2017</div>
+      </div>
+      <div class="fork-box" style="border:.5px solid var(--color-border-secondary)">
+        <div class="fork-label" style="color:#712B13">✗ Sem pCR (doença residual invasiva)</div>
+        <div class="fork-content" style="margin-top:4px"><strong style="font-weight:500">→ T-DXd adjuvante</strong> (candidato) <span class="new">DB05 2025</span> · iDFS 92,4% vs 83,7% (HR 0,47) · Ainda sem aprovação formal · Enquanto não aprovado: <strong style="font-weight:500">T-DM1 adjuvante</strong> (KATHERINE) · KATHERINE: HR 0,50; iDFS melhorado vs. trastuzumabe</div>
+        <div class="study-tag">KATHERINE · NEJM 2019 · DB05 · NEJM 2025</div>
+      </div>
+    </div>
+    <div class="info"><strong>A pergunta da prova sobre DB05:</strong> a paciente fez TCHP neo e teve doença residual. KATHERINE usou T-DM1 como padrão. DB05 demonstrou T-DXd superior ao T-DM1 (HR 0,47). Enquanto T-DXd não está aprovado formalmente nesta indicação, T-DM1 ainda é o padrão. BTD FDA concedida em dezembro 2025 — aprovação esperada em 2026.</div>
+    <div class="info"><strong>HER2+ RH+ com doença residual:</strong> além do T-DM1/T-DXd, considerar endocrinoterapia adjuvante (IA ± OFS conforme menopausa) — o componente hormonal ainda precisa ser tratado mesmo após anti-HER2.</div>
+  </div>
+</div>
+
+<div class="sec">HER2+ Metastático — por linha</div>
+
+<div class="step">
+  <div class="step-header">
+    <div class="step-num" style="background:#E6F1FB;color:#0C447C">1L</div>
+    <div class="step-title">Primeira linha metastática — novo padrão em 2025</div>
+  </div>
+  <div class="step-body">
+    <div class="row"><strong>Padrão histórico (CLEOPATRA):</strong> THP — taxane + trastuzumabe + pertuzumabe · SLP ~18m · SG ~57m · Estabelecido desde 2012</div>
+    <div class="row"><strong>Novo candidato (DESTINY-Breast09 · ASCO 2025):</strong> <span class="new">NOVO</span> T-DXd + pertuzumabe (sem taxane) · SLP 40,7 vs 26,9m (HR 0,56) · ORR 85% · Ainda não aprovado como 1ª linha — aguardando aprovação regulatória</div>
+    <div class="info"><strong>Resposta à sua pergunta:</strong> SIM — paciente que fez CLEOPATRA (THP) em 1ª linha → na progressão → 2ª linha com DB03 (T-DXd). Essa é a sequência padrão atual. O DB09 mudará isso quando aprovado: T-DXd+P será 1ª linha, e haverá necessidade de redefinir o que fazer em 2ª linha após T-DXd.</div>
+    <div class="warn"><strong>HER2+ RH+:</strong> 1ª linha = THP padrão (ou T-DXd+P quando aprovado) · Endocrinoterapia NÃO substitui QT em 1ª linha metastática HER2+ · ET pode ser usada em manutenção após quimioterapia em cenário de baixo risco / doença indolente (PATINA trial: palbociclibe + HT em manutenção após 1ª linha HER2+/RH+)</div>
+    <div class="study-tag">CLEOPATRA · NEJM 2012 · DB09 · ASCO 2025 · PATINA · Lancet 2024</div>
+  </div>
+</div>
+
+<div class="step">
+  <div class="step-header">
+    <div class="step-num" style="background:#E6F1FB;color:#0C447C">2L</div>
+    <div class="step-title">Segunda linha — T-DXd é o padrão</div>
+  </div>
+  <div class="step-body">
+    <div class="row"><strong>Padrão após THP:</strong> T-DXd 5,4mg/kg a cada 3 semanas</div>
+    <div class="row"><strong>DB03 (Nature Medicine 2024):</strong> SLP 29,0 vs 7,2m (HR 0,30) · SG 52,6 vs 42,7m (HR 0,73) · ORR ~80% · Seguimento 41 meses · Substituiu definitivamente o T-DM1 em 2ª linha</div>
+    <div class="info"><strong>Metástase de SNC:</strong> T-DXd tem penetração em SNC · HER2CLIMB (tucatinibe) tem evidência mais robusta em SNC ativo — pode ser preferido em metástase cerebral sintomática</div>
+  </div>
+</div>
+
+<div class="step">
+  <div class="step-header">
+    <div class="step-num" style="background:#E6F1FB;color:#0C447C">3L+</div>
+    <div class="step-title">Terceira linha em diante</div>
+  </div>
+  <div class="step-body">
+    <div class="row"><strong>HER2CLIMB:</strong> tucatinibe + capecitabina + trastuzumabe · SLP HR 0,54 · Inclui metástase cerebral ativa · Especialmente relevante em doença de SNC</div>
+    <div class="row"><strong>Lapatinibe + capecitabina:</strong> opção disponível com menor perfil de evidência frente aos anteriores</div>
+    <div class="row"><strong>Neratinibe + capecitabina:</strong> aprovado em ≥3ª linha (NALA trial)</div>
+    <div class="row"><strong>T-DM1:</strong> pode ser usado após T-DXd em linha tardia (evidência limitada)</div>
+    <div class="study-tag">HER2CLIMB · NEJM 2020 · NALA · JCO 2020</div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- TNBC -->
+<div class="subtipo-header" style="background:var(--color-background-secondary)">
+  <div class="subtipo-icon" style="background:#FAECE7;color:#712B13">TNBC</div>
+  <div>
+    <div class="subtipo-title">Triplo-negativo (TNBC)</div>
+    <div class="subtipo-sub">Neoadjuvância · Adjuvância · Metastático por linha</div>
+  </div>
+</div>
+
+<div class="sec">TNBC — Neoadjuvância</div>
+
+<div class="step">
+  <div class="step-header">
+    <div class="step-num" style="background:#FAECE7;color:#712B13">1</div>
+    <div class="step-title">Quem vai para QT neo no TNBC?</div>
+  </div>
+  <div class="step-body">
+    <div class="row"><strong>Indicação formal (KEYNOTE-522):</strong> T ≥ 2cm OU N+ · Estágio II–III</div>
+    <div class="row"><strong>Tumores pequenos (T1a/b N0):</strong> cirurgia upfront → adjuvância baseada no patológico</div>
+    <div class="row"><strong>T1c N0 (1–2cm, axila negativa):</strong> zona de decisão individualizada — discutir neo vs. cirurgia</div>
+    <div class="info">TNBC tem alta sensibilidade à QT — pCR correlaciona fortemente com SG e SLD nesse subtipo. Isso justifica a neoadjuvância como preferencial para estadiar a resposta biológica in vivo.</div>
+  </div>
+</div>
+
+<div class="step">
+  <div class="step-header">
+    <div class="step-num" style="background:#FAECE7;color:#712B13">2</div>
+    <div class="step-title">Qual esquema neoadjuvante no TNBC?</div>
+  </div>
+  <div class="step-body">
+    <div class="row"><strong>Padrão KEYNOTE-522:</strong> Pembrolizumabe 200mg + (carboplatina + paclitaxel) × 4–6 ciclos → (AC ou EC) × 4 ciclos → cirurgia</div>
+    <div class="fork">
+      <div class="fork-box">
+        <div class="fork-label">KEYNOTE-522 (pivotal)</div>
+        <div class="fork-content">pCR: 64,8% (pembro) vs 51,2% (placebo) · EFS 5 anos: 81,2% vs 72,2% · SG: 86,6% vs 81,7% · Benefício em pCR E sem pCR → SG melhorada em ambos os grupos</div>
+        <div class="study-tag">KEYNOTE-522 · NEJM 2022 + ESMO 2024 SG confirmada</div>
+      </div>
+      <div class="fork-box">
+        <div class="fork-label">BRIGHTNESS (carboplatina)</div>
+        <div class="fork-content">Carboplatina aumenta pCR em TNBC · Follow-up 4 anos: benefício em SG com carboplatina independente de BRCA · Inibidor PARP na neo: sem aumento de pCR</div>
+        <div class="study-tag">BRIGHTNESS · JAMA Oncol 2020</div>
+      </div>
+    </div>
+    <div class="warn"><strong>Atenção — BRCA germinal:</strong> paciente BRCA+ TNBC → indicação de KEYNOTE-522 (pembro + QT) · BRIGHTNESS confirma benefício de carboplatina mesmo em BRCA+. OLYMPIA é para adjuvância pós-neo, não para a neo em si.</div>
+  </div>
+</div>
+
+<div class="sec">TNBC — Adjuvância pós-neo (baseada na resposta)</div>
+
+<div class="step">
+  <div class="step-header">
+    <div class="step-num" style="background:#FAECE7;color:#712B13">A</div>
+    <div class="step-title">Atingiu pCR após KEYNOTE-522</div>
+  </div>
+  <div class="step-body">
+    <div class="row"><strong>→ Manter pembrolizumabe adjuvante</strong> por 9 ciclos (≈6 meses) · Benefício independente da pCR no KEYNOTE-522</div>
+    <div class="info">Pegadinha clássica: mesmo tendo pCR, o pembrolizumabe adjuvante é mantido se foi usado na neo. O benefício em SG do KEYNOTE-522 aparece nos dois grupos (pCR e não-pCR).</div>
+  </div>
+</div>
+
+<div class="step">
+  <div class="step-header">
+    <div class="step-num" style="background:#FAECE7;color:#712B13">B</div>
+    <div class="step-title">Sem pCR (doença residual) — como decidir o adjuvante?</div>
+  </div>
+  <div class="step-body">
+    <div class="fork">
+      <div class="fork-box">
+        <div class="fork-label">Recebeu pembro na neo (KEYNOTE-522)</div>
+        <div class="fork-content"><strong style="font-weight:500">→ Manter pembro adjuvante</strong> (9 ciclos) + discutir capecitabina · Sem dados de combinação pembro + cape em KEYNOTE-522 · Prática: pembro adjuvante · Cape em discussão individualizada</div>
+        <div class="study-tag">KEYNOTE-522</div>
+      </div>
+      <div class="fork-box">
+        <div class="fork-label">NÃO recebeu pembro na neo (QT clássica)</div>
+        <div class="fork-content"><strong style="font-weight:500">→ Capecitabina adjuvante × 6 meses</strong> (CREATE-X) · DFS 69,8% vs 56,1% (capecitabina vs obs.) · SG significativa · Especialmente eficaz no subgrupo TNBC</div>
+        <div class="study-tag">CREATE-X · NEJM 2017</div>
+      </div>
+    </div>
+    <div class="fork">
+      <div class="fork-box">
+        <div class="fork-label">BRCA germinal mutada + doença residual</div>
+        <div class="fork-content"><strong style="font-weight:500">→ Olaparibe adjuvante</strong> × 1 ano (OLYMPIA) · iDFS HR 0,58 · SG HR 0,68 · 2 cp 12/12h · Aplicável em TNBC E RH+ se BRCA+ e critérios de alto risco</div>
+        <div class="study-tag">OLYMPIA · NEJM 2021 + SG NEJM 2023</div>
+      </div>
+      <div class="fork-box">
+        <div class="fork-label">Critérios OLYMPIA (relembrar)</div>
+        <div class="fork-content">TNBC sem pCR pós-neo · TNBC ≥pT2 ou pN+ sem neo · RH+ com CPS-EG ≥3 pós-neo · RH+ ≥4 N+ sem neo · Todos: gBRCA1/2 obrigatório</div>
+      </div>
+    </div>
+    <div class="warn"><strong>Decisão difícil na prática — BRCA+ com doença residual pós KEYNOTE-522:</strong> olaparibe ou capecitabina + pembro? Os estudos não se cruzaram. Não há dados de combinação olaparibe + pembro. Consenso atual: priorizar olaparibe em BRCA+; considerar capecitabina se não elegível para olaparibe.</div>
+  </div>
+</div>
+
+<div class="step">
+  <div class="step-header">
+    <div class="step-num" style="background:#FAECE7;color:#712B13">C</div>
+    <div class="step-title">TNBC adjuvante sem neoadjuvância (cirurgia upfront)</div>
+  </div>
+  <div class="step-body">
+    <div class="row"><strong>Alto risco (pT2+ ou pN+):</strong> QT adjuvante (AC + taxane) → capecitabina se RCB alto (extrapolação CREATE-X) → olaparibe se gBRCA+ (OLYMPIA)</div>
+    <div class="row"><strong>Baixo risco (pT1a/b N0):</strong> observação ou QT leve (TC × 4)</div>
+  </div>
+</div>
+
+<div class="sec">TNBC Metastático — por linha</div>
+
+<div class="step">
+  <div class="step-header">
+    <div class="step-num" style="background:#FAECE7;color:#712B13">1L</div>
+    <div class="step-title">Primeira linha metastática TNBC</div>
+  </div>
+  <div class="step-body">
+    <div class="fork">
+      <div class="fork-box">
+        <div class="fork-label">PD-L1 positivo (CPS ≥10)</div>
+        <div class="fork-content"><strong style="font-weight:500">→ SG + pembrolizumabe</strong> (ASCENT-04/KEYNOTE-D19) <span class="new">ASCO 2025</span> · Novo padrão · SLP e SG superiores ao padrão QT+pembro</div>
+        <div class="study-tag">ASCENT-04 · ASCO 2025</div>
+      </div>
+      <div class="fork-box">
+        <div class="fork-label">PD-L1 negativo (CPS &lt;10)</div>
+        <div class="fork-content"><strong style="font-weight:500">→ SG isolado</strong> (ASCENT-03) <span class="new">ESMO 2025</span> OU <strong style="font-weight:500">Dato-DXd</strong> (TROPION-Breast02) · Ambos superiores a QT · Chemo-free em 1ª linha viável mesmo sem IO</div>
+        <div class="study-tag">ASCENT-03 + TROPION-Breast02 · ESMO 2025</div>
+      </div>
+    </div>
+    <div class="info"><strong>Padrão anterior:</strong> carboplatina/gencitabina + pembrolizumabe (KEYNOTE-355, aprovado 2021, CPS≥10). O ASCENT-04 substitui esse padrão em PD-L1+ com ADC + IO mais eficaz.</div>
+    <div class="row"><strong>gBRCA metastático:</strong> olaparibe (OlympiAD) ou talazoparibe (EMBRACA) em qualquer linha — especialmente após platina</div>
+  </div>
+</div>
+
+<div class="step">
+  <div class="step-header">
+    <div class="step-num" style="background:#FAECE7;color:#712B13">2L+</div>
+    <div class="step-title">Segunda linha em diante — TNBC metastático</div>
+  </div>
+  <div class="step-body">
+    <div class="row"><strong>SG (sacituzumabe govitecan) — ASCENT:</strong> ≥ 2ª linha · SLP 4,8 vs 1,7m · SG 11,8 vs 6,9m · Padrão estabelecido</div>
+    <div class="row"><strong>Platina (carboplatina):</strong> especialmente em gBRCA+ · Alta taxa de resposta em platina-naive</div>
+    <div class="row"><strong>Eribulina:</strong> opção em ≥3ª linha (EMBRACE) · Benefício modesto em SG</div>
+    <div class="row"><strong>Dato-DXd (TROPION-Breast01):</strong> ≥ 2ª linha · SLP HR 0,63 · Alternativa ao SG com perfil de toxicidade diferente (pneumonite vs neutropenia)</div>
+    <div class="study-tag">ASCENT · NEJM 2021 · TROPION-B01 · Lancet 2024</div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- RH+ HER2- -->
+<div class="subtipo-header" style="background:var(--color-background-secondary)">
+  <div class="subtipo-icon" style="background:#EEEDFE;color:#3C3489">RH+</div>
+  <div>
+    <div class="subtipo-title">RH+ / HER2− (Luminal)</div>
+    <div class="subtipo-sub">Neoadjuvância · Adjuvância endócrina · Metastático por linha · Novos SERDs</div>
+  </div>
+</div>
+
+<div class="sec">RH+/HER2− — Neoadjuvância</div>
+
+<div class="step">
+  <div class="step-header">
+    <div class="step-num" style="background:#EEEDFE;color:#3C3489">1</div>
+    <div class="step-title">Quem vai para QT neo no luminal?</div>
+  </div>
+  <div class="step-body">
+    <div class="row"><strong>Luminal tem menor sensibilidade à QT</strong> — pCR baixa (10–20%) e não prediz SG com a mesma força que em TNBC/HER2+</div>
+    <div class="fork">
+      <div class="fork-box">
+        <div class="fork-label">Indicações de QT neo em RH+</div>
+        <div class="fork-content">Tumor volumoso (downstaging para conservadora) · N+ com alta carga nodal · Grau 3 + Ki67 muito alto · Considerar RS ≥ 26 como indicador de maior sensibilidade à QT</div>
+      </div>
+      <div class="fork-box">
+        <div class="fork-label">Neoadjuvância endócrina</div>
+        <div class="fork-content">Pós-menopáusicas com tumor hormônio-sensível sem urgência cirúrgica → IA neoadjuvante × 4–8 meses · Resposta clínica sem toxicidade de QT · Objetivo: conservação cirúrgica</div>
+      </div>
+    </div>
+    <div class="info"><strong>Oncotype antes da neo:</strong> se RS &lt;18 e N0 → evitar QT (quimioterapia desnecessária com pCR baixíssima em luminal de baixo risco). Oncotype não deve ser pedido após QT neo (não validado).</div>
+  </div>
+</div>
+
+<div class="sec">RH+/HER2− — Adjuvância endócrina (doença precoce)</div>
+
+<div class="step">
+  <div class="step-header">
+    <div class="step-num" style="background:#EEEDFE;color:#3C3489">2</div>
+    <div class="step-title">Terapia endócrina adjuvante — escolha por menopausa e risco</div>
+  </div>
+  <div class="step-body">
+    <div class="fork">
+      <div class="fork-box">
+        <div class="fork-label">Pré-menopausa baixo risco</div>
+        <div class="fork-content">Tamoxifeno × 5 anos · Se RS &lt;16: endocrinoterapia isolada suficiente (TailorX)</div>
+        <div class="study-tag">EBCTCG · TailorX</div>
+      </div>
+      <div class="fork-box">
+        <div class="fork-label">Pré-menopausa alto risco (N+, grade 3)</div>
+        <div class="fork-content"><strong style="font-weight:500">OFS + exemestano</strong> (melhor opção) ou OFS + tamoxifeno (SOFT/TEXT) · Se N+ muito comprometido: + abemaciclib (monarchE)</div>
+        <div class="study-tag">SOFT/TEXT · NEJM 2014 · monarchE</div>
+      </div>
+    </div>
+    <div class="fork">
+      <div class="fork-box">
+        <div class="fork-label">Pós-menopausa baixo/intermediário risco</div>
+        <div class="fork-content">IA × 5 anos (anastrozol ATAC ou letrozol BIG 1-98) · Switch strategy: 2–3a tamox → completar com IA</div>
+        <div class="study-tag">ATAC · BIG 1-98</div>
+      </div>
+      <div class="fork-box">
+        <div class="fork-label">Pós-menopausa alto risco (N+)</div>
+        <div class="fork-content">IA × 5–10 anos + abemaciclib × 2 anos (monarchE) <span class="new">OS confirmada ESMO 2025</span> OU ribociclibe × 3 anos (NATALEE, inclui N0)</div>
+        <div class="study-tag">monarchE (HR OS 0,842) · NATALEE (DDFS HR 0,715)</div>
+      </div>
+    </div>
+    <div class="step" style="margin:.65rem 0">
+      <div class="step-header">
+        <div class="step-num" style="background:#EEEDFE;color:#3C3489">★</div>
+        <div class="step-title">lidERA — giredestrant adjuvante <span class="new">SABCS 2025</span></div>
+      </div>
+      <div class="step-body">
+        <div class="row"><strong>População:</strong> RH+/HER2− estágio I–III · Pré e pós-menopausa · Risco médio-alto</div>
+        <div class="row"><strong>Resultado:</strong> giredestrant (SERD oral) vs. terapia endócrina padrão (tamox ou IA) → iDFS HR 0,70 · Redução 30% recorrência · iDFS 3 anos: 92,4% vs 89,6%</div>
+        <div class="row"><strong>Impacto:</strong> primeiro SERD oral a vencer no adjuvante · 20 anos sem nova droga endócrina adjuvante · Superou tanto tamox (HR 0,53) quanto IA (HR 0,73)</div>
+        <div class="row"><strong>Toxicidade distintiva:</strong> bradicardia 11,3% (assintomática, sem descontinuação) · Menor taxa de abandono que terapia padrão (5,3% vs 8,2%)</div>
+        <div class="row"><strong>Limitação:</strong> CDK4/6i não incluídos no design (pré-era monarchE/NATALEE) · Posição final no algoritmo depende de aprovação regulatória</div>
+        <div class="study-tag">lidERA · SABCS 2025 · NDA submetida FDA</div>
+      </div>
+    </div>
+    <div class="info"><strong>Tamoxifeno 5 vs 10 anos:</strong> ATLAS + aTTom → 10 anos superiores em pré-menopausa de alto risco · Carry-over effect nos anos 10–14 · Pós-menopausa de baixo risco: 5 anos podem ser suficientes se switch para IA.</div>
+  </div>
+</div>
+
+<div class="sec">RH+/HER2− Metastático — por linha</div>
+
+<div class="step">
+  <div class="step-header">
+    <div class="step-num" style="background:#EEEDFE;color:#3C3489">1L</div>
+    <div class="step-title">Primeira linha metastática RH+/HER2−</div>
+  </div>
+  <div class="step-body">
+    <div class="row"><strong>Padrão universal:</strong> CDK4/6i + IA (anastrozol ou letrozol) ou + fulvestrant</div>
+    <div class="fork">
+      <div class="fork-box">
+        <div class="fork-label">Pós-menopausa · 1ª linha</div>
+        <div class="fork-content">Ribociclibe + IA (MONALEESA-2) · único CDK4/6i com SG significativa em 1L pós-menop. · OU letrozol + palbociclibe (PALOMA-2) · OU abemaciclib + IA (MONARCH-3)</div>
+        <div class="study-tag">MONALEESA-2 · PALOMA-2 · MONARCH-3</div>
+      </div>
+      <div class="fork-box">
+        <div class="fork-label">Pré-menopausa · 1ª linha</div>
+        <div class="fork-content">OFS + ribociclibe + IA (MONALEESA-7) · SG benefício em pré-menopausa · OU OFS + palbociclibe + IA · OU OFS + abemaciclib + IA</div>
+        <div class="study-tag">MONALEESA-7 · NEJM 2019</div>
+      </div>
+    </div>
+    <div class="info"><strong>SERENA-6 — nova estratégia durante 1ª linha:</strong> monitorar ctDNA a cada 2–3m durante AI + CDK4/6i → se ESR1mut emergente → trocar AI para camizestrant (SERD oral) antes da progressão → redução 56% no risco (HR 0,44) · SLP 16 vs 9,2m <span class="new">ASCO 2025 · NEJM</span></div>
+  </div>
+</div>
+
+<div class="step">
+  <div class="step-header">
+    <div class="step-num" style="background:#EEEDFE;color:#3C3489">2L</div>
+    <div class="step-title">Após CDK4/6i — segunda linha</div>
+  </div>
+  <div class="step-body">
+    <div class="row"><strong>Testar mutação ESR1 em ctDNA/tumor</strong> — orienta a escolha endócrina</div>
+    <div class="fork">
+      <div class="fork-box">
+        <div class="fork-label">ESR1 mutada</div>
+        <div class="fork-content"><strong style="font-weight:500">Elacestrant</strong> (SERD oral · Orserdu®) → EMERALD: SLP HR 0,55 em ESR1mut · OU imlunestrant (EMBER-3 <span class="new">SABCS 2025</span>) · OU fulvestrant + CDK4/6i se ainda não usado</div>
+        <div class="study-tag">EMERALD · JCO 2023 · EMBER-3 · SABCS 2025</div>
+      </div>
+      <div class="fork-box">
+        <div class="fork-label">PIK3CA mutada</div>
+        <div class="fork-content"><strong style="font-weight:500">Alpelisibe + fulvestrant</strong> (SOLAR-1) · Risco de hiperglicemia grave · Pré-selecionar com teste PIK3CA em tumor ou ctDNA</div>
+        <div class="study-tag">SOLAR-1 · NEJM 2019</div>
+      </div>
+    </div>
+    <div class="row"><strong>Everolimo + exemestano:</strong> BOLERO-2 · opção em pós-CDK4/6i sem ESR1/PIK3CA</div>
+    <div class="row"><strong>Gedatolisib (PI3K/mTOR pan-isoforma):</strong> benefício em SLP pós-CDK4/6i <span class="new">ESMO 2025</span> — investigacional</div>
+  </div>
+</div>
+
+<div class="step">
+  <div class="step-header">
+    <div class="step-num" style="background:#EEEDFE;color:#3C3489">3L+</div>
+    <div class="step-title">Terceira linha em diante — ADCs e quimioterapia</div>
+  </div>
+  <div class="step-body">
+    <div class="row"><strong>Sacituzumabe govitecan (SG):</strong> TROPiCS-02 · ≥2ª linha após CDK4/6i + ET · SLP 5,5 vs 4,0m · SG 14,4 vs 11,2m · Padrão estabelecido</div>
+    <div class="row"><strong>Dato-DXd (datopotamabe deruxtecan):</strong> TROPION-Breast01 · ≥2ª linha · SLP HR 0,63 · Alternativa ao SG com perfil de toxicidade diferente</div>
+    <div class="row"><strong>Sacituzumab tirumotecan (novo ADC anti-TROP2):</strong> SLP 6m: 61% vs 26% com QT <span class="new">ESMO 2025</span> — investigacional</div>
+    <div class="row"><strong>T-DXd (HER2-low/ultralow):</strong> DB04 · HER2 IHC 1+ ou 2+/ISH− · SLP HR 0,50 · Se HER2-low documentado: T-DXd é opção em linha avançada</div>
+    <div class="row"><strong>Quimioterapia convencional:</strong> capecitabina, eribulina, vinorelbina, gencitabina — após falha dos ADCs</div>
+    <div class="study-tag">TROPiCS-02 · JCO 2023 · TROPION-B01 · Lancet 2024 · DB04 · NEJM 2022</div>
+  </div>
+</div>
+
+</div>
+</div>
+<div class="tab-panel" id="tab-destiny" style="display:none">
+<div style="padding:1rem 0 2.5rem">
+
+<div class="sec">DESTINY-Breast — linha do tempo e evolução</div>
+<div style="font-size:13px;color:var(--color-text-secondary);line-height:1.7;margin-bottom:1.5rem">
+O T-DXd (trastuzumabe deruxtecan) é um ADC anti-HER2 com payload DXd (inibidor de topoisomerase I), linker clivável e DAR ~8. A série DESTINY-Breast expandiu progressivamente sua indicação: de linha avançada (DB03) → adjuvante pós-neo (DB05) → primeira linha metastática (DB09).
+</div>
+
+<div class="card">
+  <div class="card-title">DESTINY-Breast03 <span class="badge b-teal">2ª linha HER2+ metastático</span> <span class="badge b-gray">Padrão estabelecido</span></div>
+  <div class="card-sub">T-DXd vs. T-DM1 · N = 524 · Follow-up 41 meses (Nature Medicine 2024)</div>
+  <div class="prop-grid">
+    <div class="prop-box"><div class="prop-label">População</div><div class="prop-val">HER2+ metastático · Pós-taxane + trastuzumabe</div></div>
+    <div class="prop-box"><div class="prop-label">Randomização</div><div class="prop-val">T-DXd 5,4mg/kg vs. T-DM1 3,6mg/kg · 1:1</div></div>
+    <div class="prop-box"><div class="prop-label">Endpoint primário</div><div class="prop-val">SLP por BICR</div></div>
+    <div class="prop-box"><div class="prop-label">Publicação</div><div class="prop-val">NEJM 2022 + Nature Medicine 2024 (atualização)</div></div>
+  </div>
+
+  <div style="margin:.75rem 0">
+    <div class="result-row"><span class="result-label">SLP mediana</span><span class="result-val">29,0 meses (T-DXd) vs. 7,2 meses (T-DM1)</span><span class="arrow">→ HR 0,30</span></div>
+    <div class="result-row"><span class="result-label">SLP 36 meses</span><span class="result-val">45,7% vs. 12,4%</span></div>
+    <div class="result-row"><span class="result-label">SG mediana</span><span class="result-val">52,6 vs. 42,7 meses</span><span class="arrow">→ HR 0,73 (p=0,0099)</span></div>
+    <div class="result-row"><span class="result-label">ORR</span><span class="result-val">~80% T-DXd vs. ~35% T-DM1</span></div>
+  </div>
+
+  <div class="info">
+    <strong style="color:var(--color-text-primary)">O que mudou na atualização de 41 meses:</strong> confirmação do benefício em SG (HR 0,73 — primeiro resultado significativo), manutenção da SLP com quase 4x de diferença, e nenhum novo sinal de DPI grau ≥3. A DPI all-grade se acumula até 24 meses mas estabiliza depois — dado importante de segurança a longo prazo.
+  </div>
+  <div class="warn">
+    <strong>Pegadinha DPI:</strong> DPI (doença pulmonar intersticial / pneumonite) ocorre em ~16,7% all-grade com T-DXd vs. 3,4% com T-DM1. Grau ≥3 ainda raro mas potencialmente fatal. Monitorização com TC de tórax obrigatória — qualquer sintoma respiratório novo → investigar imediatamente. DPI grau 1: manter com monitorização estreita. Grau 2: suspender e tratar com corticoide. Grau ≥3: descontinuar definitivamente.
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-title">DESTINY-Breast05 <span class="badge b-purple">Adjuvante pós-neoadjuvância HER2+</span> <span class="new-badge">ESMO + SABCS 2025 · NEJM</span></div>
+  <div class="card-sub">T-DXd vs. T-DM1 · N = 1.635 · Doença residual após NAT · Potencial substituto do KATHERINE</div>
+  <div class="prop-grid">
+    <div class="prop-box"><div class="prop-label">População</div><div class="prop-val">HER2+ doença precoce com doença residual invasiva pós-NAT · Alto risco</div></div>
+    <div class="prop-box"><div class="prop-label">Alto risco definido</div><div class="prop-val">T4N0–3 ou T1–3N2–3 na apresentação · OU doença nodal residual pós-NAT</div></div>
+    <div class="prop-box"><div class="prop-label">Randomização</div><div class="prop-val">T-DXd 5,4mg/kg vs. T-DM1 3,6mg/kg · 14 ciclos · 1:1</div></div>
+    <div class="prop-box"><div class="prop-label">Endpoint primário</div><div class="prop-val">iDFS</div></div>
+    <div class="prop-box"><div class="prop-label">Follow-up mediano</div><div class="prop-val">~30 meses (DCO julho 2025)</div></div>
+    <div class="prop-box"><div class="prop-label">Status regulatório</div><div class="prop-val">FDA Breakthrough Therapy Designation dez/2025</div></div>
+  </div>
+
+  <div style="margin:.75rem 0">
+    <div class="result-row"><span class="result-label">iDFS 3 anos</span><span class="result-val">92,4% (T-DXd) vs. 83,7% (T-DM1)</span><span class="arrow">→ HR 0,47 · p&lt;0,0001</span></div>
+    <div class="result-row"><span class="result-label">Redução risco</span><span class="result-val">53% redução no risco de recorrência invasiva ou morte</span></div>
+    <div class="result-row"><span class="result-label">HER2 IHC 3+</span><span class="result-val">iDFS 91,8% vs. 83,2% → HR 0,49</span></div>
+    <div class="result-row"><span class="result-label">HER2 ISH+</span><span class="result-val">iDFS 96,2% vs. 86,5% → HR 0,39</span></div>
+    <div class="result-row"><span class="result-label">SG</span><span class="result-val">Imatura — análise subsequente planejada</span></div>
+  </div>
+
+  <div class="info">
+    <strong style="color:var(--color-text-primary)">Benefício consistente em TODOS os subgrupos:</strong> idade ≥65 anos (HR 0,31), RH negativo (HR 0,37), RT sequencial (HR 0,35), duplo bloqueio ou bloqueio único anti-HER2 na NAT — sem subgrupo que não se beneficiou. Publicado simultaneamente no NEJM em dezembro 2025.
+  </div>
+  <div class="warn">
+    <strong>O que muda na prática — a pergunta de prova:</strong> o KATHERINE estabeleceu T-DM1 como padrão pós-NAT com doença residual (iDFS HR 0,50 vs. trastuzumabe). O DB05 demonstrou que T-DXd é superior ao T-DM1 com HR 0,47 — redução adicional de ~50% no risco vs. T-DM1. T-DXd ainda não tem aprovação formal nesta indicação (BTD concedida, aprovação pendente), mas é o candidato a substituir o T-DM1 como padrão adjuvante pós-NAT assim que aprovado.
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-title">DESTINY-Breast09 <span class="badge b-blue">1ª linha HER2+ metastático</span> <span class="new-badge">ASCO 2025 · Novo padrão</span></div>
+  <div class="card-sub">T-DXd ± pertuzumabe vs. THP (taxane + trastuzumabe + pertuzumabe) · N = 1.157 · 3 braços</div>
+  <div class="prop-grid">
+    <div class="prop-box"><div class="prop-label">População</div><div class="prop-val">HER2+ metastático · 1ª linha · Sem trat. sistêmico prévio para doença avançada</div></div>
+    <div class="prop-box"><div class="prop-label">Braços</div><div class="prop-val">A: T-DXd + P · B: T-DXd + placebo · C: THP (controle CLEOPATRA)</div></div>
+    <div class="prop-box"><div class="prop-label">Endpoint primário</div><div class="prop-val">SLP por BICR</div></div>
+    <div class="prop-box"><div class="prop-label">DCO análise interim</div><div class="prop-val">Fevereiro 2025</div></div>
+  </div>
+
+  <div style="margin:.75rem 0">
+    <div class="result-row"><span class="result-label">SLP mediana (T-DXd+P)</span><span class="result-val">40,7 meses vs. 26,9 meses (THP)</span><span class="arrow">→ HR 0,56 · p&lt;0,0001</span></div>
+    <div class="result-row"><span class="result-label">Redução risco</span><span class="result-val">44% redução no risco de progressão ou morte</span></div>
+    <div class="result-row"><span class="result-label">ORR</span><span class="result-val">85,1% (T-DXd+P) vs. 76,8% (THP)</span></div>
+    <div class="result-row"><span class="result-label">T-DXd isolado (B)</span><span class="result-val">SLP 33,0 meses vs. THP 26,9 → HR 0,72 (sem sig. estatística)</span></div>
+    <div class="result-row"><span class="result-label">SG</span><span class="result-val">Imatura — dados preliminares favoráveis</span></div>
+    <div class="result-row"><span class="result-label">SNC metastático</span><span class="result-val">Incluído — benefício mantido; dados específicos em análise</span></div>
+  </div>
+
+  <div class="info">
+    <strong style="color:var(--color-text-primary)">O que muda na prática:</strong> o CLEOPATRA estabeleceu THP como padrão de 1ª linha em HER2+ metastático (SLP ~18 meses, SG ~57 meses). O DB09 demonstra SLP de 40,7 meses com T-DXd+P — um salto de quase 14 meses. A combinação T-DXd + pertuzumabe sem taxane desafia o paradigma de quimioterapia contínua em 1ª linha. T-DXd + P se torna o candidato a novo padrão de 1ª linha assim que aprovado.
+  </div>
+  <div class="warn">
+    <strong>Pegadinha do braço B (T-DXd isolado):</strong> T-DXd sem pertuzumabe não atingiu significância estatística vs. THP — a superioridade é específica da combinação T-DXd + pertuzumabe. O pertuzumabe não pode ser retirado do esquema vencedor. Outra pegadinha: T-DXd + P não tem taxane — mas a SLP foi superior ao THP que inclui taxane. A era do taxane em 1ª linha HER2+ pode estar chegando ao fim.
+  </div>
+</div>
+
+<div class="sec">Comparativo rápido — os 3 DESTINY</div>
+<table>
+  <thead>
+    <tr>
+      <th style="width:18%">Estudo</th>
+      <th style="width:20%">Contexto</th>
+      <th style="width:17%">Comparador</th>
+      <th style="width:20%">Resultado chave</th>
+      <th style="width:25%">Impacto prático</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong style="font-weight:500">DB03</strong></td>
+      <td>2ª linha HER2+ metastático</td>
+      <td>T-DM1</td>
+      <td>SLP 29 vs. 7,2m · HR 0,30 · SG 52,6 vs. 42,7m</td>
+      <td><span class="badge b-teal">Padrão 2ª linha estabelecido</span> — substitui T-DM1</td>
+    </tr>
+    <tr>
+      <td><strong style="font-weight:500">DB05</strong></td>
+      <td>Adjuvante pós-NAT doença residual</td>
+      <td>T-DM1</td>
+      <td>iDFS 92,4% vs. 83,7% · HR 0,47 · p&lt;0,0001</td>
+      <td><span class="badge b-purple">Candidato a substituir T-DM1</span> pós-KATHERINE · BTD FDA</td>
+    </tr>
+    <tr>
+      <td><strong style="font-weight:500">DB09</strong></td>
+      <td>1ª linha HER2+ metastático</td>
+      <td>THP (padrão CLEOPATRA)</td>
+      <td>SLP 40,7 vs. 26,9m · HR 0,56 · ORR 85%</td>
+      <td><span class="badge b-blue">Novo padrão 1ª linha</span> — desafia THP · Sem taxane</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="sec">SERENA-6 + ctDNA — o novo paradigma de oncologia de precisão</div>
+
+<div class="card">
+  <div class="card-title">SERENA-6 <span class="badge b-pink">ctDNA-guided switch</span> <span class="badge b-purple">ESR1 mutação emergente</span> <span class="new-badge">ASCO 2025 · Plenary · NEJM</span></div>
+  <div class="card-sub">Camizestrant + CDK4/6i vs. IA + CDK4/6i · HR+/HER2− avançado · 1ª linha</div>
+
+  <div style="font-size:13px;font-weight:500;color:var(--color-text-primary);margin:.5rem 0 .4rem">O conceito revolucionário</div>
+  <div style="font-size:13px;color:var(--color-text-secondary);line-height:1.7;margin-bottom:.75rem">
+    O paradigma tradicional: tratar até progressão clínica ou radiológica → depois trocar. O SERENA-6 inverte isso: monitorar ctDNA em sangue a cada 2–3 meses → detectar mutação ESR1 emergente <em>antes</em> de qualquer sinal clínico ou radiológico → trocar imediatamente para camizestrant. A mutação ESR1 é um sinal molecular precoce de resistência endócrina — ela aparece no sangue semanas a meses antes da progressão visível na TC.
+  </div>
+
+  <div class="prop-grid">
+    <div class="prop-box"><div class="prop-label">População</div><div class="prop-val">HR+/HER2− avançado · 1ª linha · ≥6 meses em AI + CDK4/6i sem progressão</div></div>
+    <div class="prop-box"><div class="prop-label">Gatilho para randomização</div><div class="prop-val">Detecção de ESR1mut em ctDNA (Guardant360 CDx) SEM progressão clínica</div></div>
+    <div class="prop-box"><div class="prop-label">Braço experimental</div><div class="prop-val">Camizestrant (SERD oral) + CDK4/6i (qualquer dos 3)</div></div>
+    <div class="prop-box"><div class="prop-label">Braço controle</div><div class="prop-val">Continuar IA (anastrozol ou letrozol) + CDK4/6i</div></div>
+    <div class="prop-box"><div class="prop-label">CDK4/6i permitidos</div><div class="prop-val">Palbociclibe, ribociclibe ou abemaciclib — qualquer</div></div>
+    <div class="prop-box"><div class="prop-label">Vigilância ctDNA</div><div class="prop-val">A cada 2–3 meses, junto com avaliação clínica rotineira</div></div>
+  </div>
+
+  <div style="margin:.75rem 0">
+    <div class="result-row"><span class="result-label">SLP mediana</span><span class="result-val">16,0 meses (camizestrant) vs. 9,2 meses (IA)</span><span class="arrow">→ HR 0,44 · redução 56%</span></div>
+    <div class="result-row"><span class="result-label">SLP 24 meses</span><span class="result-val">29,7% vs. 5,4% → aumento de 3x na taxa de 24 meses</span></div>
+    <div class="result-row"><span class="result-label">SG</span><span class="result-val">Imatura — dados futuros aguardados</span></div>
+    <div class="result-row"><span class="result-label">Qualidade de vida</span><span class="result-val">Camizestrant atrasou deterioração de QoL global e dor vs. IA</span></div>
+    <div class="result-row"><span class="result-label">Descontinuação por EAs</span><span class="result-val">Baixa — perfil de tolerabilidade favorável</span></div>
+  </div>
+
+  <div class="landmark">
+    <strong>Marco histórico — por que o SERENA-6 é diferente de tudo que veio antes:</strong> é o primeiro trial fase III a usar ctDNA como ferramenta de decisão terapêutica em tempo real — não para diagnóstico, não para prognóstico, mas para <em>mudar o tratamento</em> antes que o paciente piore. Isso redefine o papel da biópsia líquida de monitoramento passivo para agente ativo na tomada de decisão clínica. Publicado no NEJM e apresentado na Sessão Plenária do ASCO 2025.
+  </div>
+</div>
+
+<div class="sec">ctDNA e biópsia líquida — os papéis que mudaram</div>
+<table>
+  <thead>
+    <tr>
+      <th style="width:22%">Papel</th>
+      <th style="width:38%">O que detecta / responde</th>
+      <th style="width:40%">Contexto clínico / estudo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><span class="badge b-gray">Diagnóstico</span> Screening de mutações</td>
+      <td>Mutações em PIK3CA, ESR1, BRCA1/2, HER2, TP53 no plasma</td>
+      <td>Estadiamento molecular sem nova biópsia tecidual — útil quando metástase não é acessível</td>
+    </tr>
+    <tr>
+      <td><span class="badge b-blue">Monitoramento</span> Resposta ao tto.</td>
+      <td>Queda de ctDNA correlaciona com resposta · Aumento precede progressão radiológica</td>
+      <td>Monitorar IA + CDK4/6i — queda de VAF (variant allele frequency) = resposta molecular</td>
+    </tr>
+    <tr>
+      <td><span class="badge b-purple">Resistência precoce</span> ESR1 emergente</td>
+      <td>Mutações ESR1 aparecem semanas-meses antes da progressão clínica · ~30% desenvolvem durante 1ª linha sem progressão</td>
+      <td><strong style="font-weight:500">SERENA-6:</strong> gatilho para trocar IA → camizestrant antes da progressão · Redução de 56% no risco</td>
+    </tr>
+    <tr>
+      <td><span class="badge b-teal">Doença residual</span> MRD pós-cirurgia</td>
+      <td>ctDNA detectável pós-cirurgia = doença micrometastática residual · Prediz recorrência precoce</td>
+      <td>Estudos em andamento — potencial para intensificar adjuvância em ctDNA+ pós-cirurgia</td>
+    </tr>
+    <tr>
+      <td><span class="badge b-amber">Neoadjuvância</span> Resposta molecular</td>
+      <td>Clearance de ctDNA durante NAT correlaciona com pCR · Persistência de ctDNA = doença residual provável</td>
+      <td>ISPY-2, OPTI-TUNE — ctDNA como surrogate de pCR em tempo real</td>
+    </tr>
+    <tr>
+      <td><span class="badge b-coral">HER2 amplificação</span> em ctDNA</td>
+      <td>HER2 amplificação detectável no plasma — pode aparecer em tumores originalmente HER2− que adquirem amplificação</td>
+      <td>Resistência adquirida — identificar pacientes que podem se beneficiar de anti-HER2 em linhas tardias</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="warn" style="margin-top:.75rem">
+  <strong>Pergunta de prova esperada — "o que o SERENA-6 mudou?":</strong> antes, ESR1 era testada na progressão clínica para guiar a escolha de 2ª linha. Após o SERENA-6, a proposta é testar ESR1 por ctDNA periodicamente durante 1ª linha — e trocar antes da progressão. Isso transforma o ctDNA de ferramenta diagnóstica reativa em ferramenta de decisão terapêutica prospectiva. O desafio prático: custo e disponibilidade do teste (Guardant360 CDx) e como implementar isso fora de centros de referência.
+</div>
+
+</div>
+</div>
+<div class="tab-panel" id="tab-genomicas" style="display:none">
+<div style="padding:1rem 0 2rem">
+
+<div class="sec">Os 4 testes — visão geral por droga</div>
+
+<div class="card">
+  <div class="drug-header">
+    <div class="drug-icon" style="background:#EEEDFE;color:#3C3489">ODX</div>
+    <div>
+      <div class="card-title">Oncotype DX</div>
+      <div class="card-sub">Genomic Health (Exact Sciences) · 21 genes · RT-PCR quantitativo</div>
+    </div>
+  </div>
+  <div class="prop-grid">
+    <div class="prop-box"><div class="prop-label">Genes</div><div class="prop-val">21</div></div>
+    <div class="prop-box"><div class="prop-label">Tecido</div><div class="prop-val">FFPE</div></div>
+    <div class="prop-box"><div class="prop-label">Output</div><div class="prop-val">Recurrence Score 0–100</div></div>
+    <div class="prop-box"><div class="prop-label">Estratificação</div><div class="prop-val">Baixo / Médio / Alto</div></div>
+    <div class="prop-box"><div class="prop-label">Corte baixo</div><div class="prop-val">RS < 18</div></div>
+    <div class="prop-box"><div class="prop-label">Corte alto</div><div class="prop-val">RS ≥ 31</div></div>
+  </div>
+
+  <div style="font-size:13px;font-weight:500;color:var(--color-text-primary);margin:.75rem 0 .4rem">Grupos de genes avaliados</div>
+  <div style="font-size:13px;color:var(--color-text-secondary);line-height:1.7;margin-bottom:.75rem">
+    Cinco grupos funcionais + genes de referência: proliferação (Ki67, STK15, Survivin, CCNB1, MYBL2) · ER/PR (ER, PR, BCL2, SCUBE2) · HER2 (HER2, GRB7) · invasão (MMP11, CTSL2) · CD68 · GSTM1 · BAG1. Os 5 genes de referência normalizam a expressão. O RS é uma fórmula matemática ponderada desses grupos — não é uma média simples.
+  </div>
+
+  <div style="font-size:13px;font-weight:500;color:var(--color-text-primary);margin:.75rem 0 .4rem">Estudos pivotais</div>
+  <table>
+    <thead><tr><th style="width:22%">Estudo</th><th style="width:38%">Pergunta</th><th style="width:40%">Resultado</th></tr></thead>
+    <tbody>
+      <tr><td><span class="badge b-purple">NSABP B-14</span></td><td>Prognóstico + benefício do tamoxifeno (RH+ N0)</td><td>RS baixo: mínimo benefício de QT; RS alto: maior benefício do tamoxifeno</td></tr>
+      <tr><td><span class="badge b-purple">NSABP B-20</span></td><td>Predizer benefício de QT (RH+ N0)</td><td>RS alto: 28% ganho em sobrevida livre de recorrência com QT</td></tr>
+      <tr><td><span class="badge b-blue">TailorX</span></td><td>Validação prospectiva do RS intermediário (11–25)</td><td>RS 0–15: endocrinoterapia isolada suficiente · RS 16–25 + ≤ 50 anos: benefício de QT · RS ≥ 26: QT indicada</td></tr>
+      <tr><td><span class="badge b-blue">RxPONDER</span></td><td>HR+ N1 (1–3 LND+) com RS ≤ 25</td><td>Pós-menopausa: sem benefício de QT · Pré-menopausa: benefício de QT (efeito supressão ovariana?)</td></tr>
+      <tr><td><span class="badge b-gray">SWOG-8814</span></td><td>Pós-menopausa N+ com QT</td><td>RS alto: benefício de QT em N+ pós-menopausa (análise retrospectiva)</td></tr>
+    </tbody>
+  </table>
+
+  <div class="info" style="margin-top:.75rem">
+    <strong style="color:var(--color-text-primary)">Quem merece o Oncotype DX:</strong> HR+/HER2− · Axila negativa (N0) em pré e pós-menopausa · N1 (1–3 LND+) em pós-menopausa ou &gt; 50 anos · Quando a decisão de QT adjuvante é incerta · Único teste com validação prospectiva robusta em N0 (TailorX) e N1 (RxPONDER) · Melhor evidência preditiva de benefício de QT da classe
+  </div>
+  <div class="warn">
+    <strong>Não usar em:</strong> HER2+ · TNBC · Pré-menopausa com N1 (evidência insuficiente para guiar omissão de QT) · Após QT neoadjuvante (RS em tecido pós-QT não é validado)
+  </div>
+</div>
+
+<div class="card">
+  <div class="drug-header">
+    <div class="drug-icon" style="background:#E1F5EE;color:#085041">MP</div>
+    <div>
+      <div class="card-title">MammaPrint</div>
+      <div class="card-sub">Agendia · 70 genes · Microarray ou Next-Gen Sequencing</div>
+    </div>
+  </div>
+  <div class="prop-grid">
+    <div class="prop-box"><div class="prop-label">Genes</div><div class="prop-val">70</div></div>
+    <div class="prop-box"><div class="prop-label">Tecido</div><div class="prop-val">Fresco ou FFPE</div></div>
+    <div class="prop-box"><div class="prop-label">Output</div><div class="prop-val">Binário: Baixo / Alto risco</div></div>
+    <div class="prop-box"><div class="prop-label">Estratificação</div><div class="prop-val">2 categorias apenas</div></div>
+    <div class="prop-box"><div class="prop-label">Aprovação</div><div class="prop-val">FDA cleared · CE Mark</div></div>
+    <div class="prop-box"><div class="prop-label">Diferencial</div><div class="prop-val">1ª aprovação FDA</div></div>
+  </div>
+
+  <div style="font-size:13px;font-weight:500;color:var(--color-text-primary);margin:.75rem 0 .4rem">Genes e plataforma</div>
+  <div style="font-size:13px;color:var(--color-text-secondary);line-height:1.7;margin-bottom:.75rem">
+    70 genes selecionados por sua associação com metástase à distância em 10 anos. Diferente do Oncotype (RT-PCR), o MammaPrint usa microarray de DNA ou NGS, requerendo originalmente tecido fresco — hoje disponível também em FFPE com o MammaPrint FLEX. O resultado é dicotômico (baixo ou alto risco), sem gradação intermediária. Pode ser combinado com o Blueprint, que classifica o subtipo molecular intrínseco (Luminal A, Luminal B, HER2, Basal).
+  </div>
+
+  <div style="font-size:13px;font-weight:500;color:var(--color-text-primary);margin:.75rem 0 .4rem">Estudos pivotais</div>
+  <table>
+    <thead><tr><th style="width:22%">Estudo</th><th style="width:38%">Pergunta</th><th style="width:40%">Resultado</th></tr></thead>
+    <tbody>
+      <tr><td><span class="badge b-teal">MINDACT</span></td><td>Alto risco clínico + baixo risco genômico → pode omitir QT?</td><td>Sem diferença em DRFS em 5 anos sem QT · Follow-up 8 anos: &lt; 50 anos → benefício de QT (SLD 90,2% vs 84,0%) · Pós-menopausa/&gt; 50 anos: omissão segura</td></tr>
+      <tr><td><span class="badge b-gray">Coortes retrospectivas</span></td><td>Prognóstico em N0 e N1</td><td>Forte valor prognóstico; dados preditivos de QT mais fracos que Oncotype</td></tr>
+    </tbody>
+  </table>
+
+  <div class="info" style="margin-top:.75rem">
+    <strong style="color:var(--color-text-primary)">Quem merece o MammaPrint:</strong> HR+/HER2− · Alto risco clínico + decisão incerta sobre QT · N0 e N1 (1–3 LND+) · Especialmente útil quando o risco clínico e o genômico são discordantes (alto clínico + baixo genômico = candidata a omitir QT em &gt; 50 anos) · Quando se deseja classificar também o subtipo intrínseco (+ Blueprint) · Único teste com dados de 8 anos de seguimento no MINDACT
+  </div>
+  <div class="warn">
+    <strong>Limitação chave:</strong> Output binário sem gradação intermediária pode dificultar decisões em casos limítrofes · Evidência preditiva de benefício de QT menos robusta que o Oncotype · Benefício da omissão de QT em pré-menopáusicas jovens (≤ 50 anos) não está estabelecido — MINDACT sugere QT mesmo com baixo risco genômico neste grupo
+  </div>
+</div>
+
+<div class="card">
+  <div class="drug-header">
+    <div class="drug-icon" style="background:#EEEDFE;color:#3C3489">P50</div>
+    <div>
+      <div class="card-title">Prosigna / PAM50</div>
+      <div class="card-sub">Veracyte (ex-NanoString) · 50 genes · nCounter platform · FFPE</div>
+    </div>
+  </div>
+  <div class="prop-grid">
+    <div class="prop-box"><div class="prop-label">Genes</div><div class="prop-val">50</div></div>
+    <div class="prop-box"><div class="prop-label">Tecido</div><div class="prop-val">FFPE</div></div>
+    <div class="prop-box"><div class="prop-label">Output</div><div class="prop-val">ROR score 0–100 + subtipo</div></div>
+    <div class="prop-box"><div class="prop-label">Estratificação</div><div class="prop-val">Baixo / Médio / Alto + N status</div></div>
+    <div class="prop-box"><div class="prop-label">Subtipo intrínseco</div><div class="prop-val">Sim — único teste</div></div>
+    <div class="prop-box"><div class="prop-label">Prognóstico tardio</div><div class="prop-val">Melhor da classe</div></div>
+  </div>
+
+  <div style="font-size:13px;font-weight:500;color:var(--color-text-primary);margin:.75rem 0 .4rem">O que o ROR score incorpora</div>
+  <div style="font-size:13px;color:var(--color-text-secondary);line-height:1.7;margin-bottom:.75rem">
+    O ROR é uma fórmula que combina: (1) correlação com cada centroide de subtipo molecular (Luminal A, Luminal B, HER2-enriched, Basal-like), (2) score de proliferação a partir dos 50 genes, e (3) status nodal (N0 ou N1). Isso resulta em um escore contínuo com maior granularidade biológica do que o Oncotype. É o único teste que classifica formalmente o subtipo intrínseco como parte do output clínico — o que tem relevância além da decisão de QT.
+  </div>
+
+  <div style="font-size:13px;font-weight:500;color:var(--color-text-primary);margin:.75rem 0 .4rem">Estudos de validação</div>
+  <table>
+    <thead><tr><th style="width:22%">Estudo</th><th style="width:38%">Pergunta</th><th style="width:40%">Resultado</th></tr></thead>
+    <tbody>
+      <tr><td><span class="badge b-purple">TransATAC</span></td><td>Pós-menopausa N0/N1 + tamoxifeno ou anastrozol</td><td>ROR prediz recorrência à distância em 10 anos independentemente dos fatores clínicos</td></tr>
+      <tr><td><span class="badge b-purple">ABCSG-8</span></td><td>Pós-menopausa N0 + endocrinoterapia</td><td>ROR prediz recorrência precoce e tardia de forma independente</td></tr>
+      <tr><td><span class="badge b-blue">Coorte dinamarquesa</span></td><td>N0 e N1 (1–3 LND+) pós-menopausa</td><td>Melhor predição de recorrência tardia (5–10 anos) vs. Oncotype · Lobular: pior prognóstico no mesmo ROR que ductal</td></tr>
+      <tr><td><span class="badge b-blue">EMIT-1</span></td><td>Impacto na decisão clínica em N0</td><td>Mudança de decisão em 30–40% dos casos após resultado do Prosigna</td></tr>
+    </tbody>
+  </table>
+
+  <div class="info" style="margin-top:.75rem">
+    <strong style="color:var(--color-text-primary)">Quem merece o Prosigna:</strong> HR+/HER2− pós-menopausa · N0 com dúvida sobre QT ou endocrinoterapia estendida · N1 (1–3 LND+) pós-menopausa · Quando a decisão é sobre ESTENDER a endocrinoterapia além de 5 anos (melhor evidência de prognóstico tardio entre os 4 testes) · Carcinoma lobular (fornece informação prognóstica incremental) · Quando se deseja saber o subtipo molecular intrínseco como parte da decisão clínica
+  </div>
+  <div class="warn">
+    <strong>Limitação:</strong> Aprovado apenas para pós-menopáusicas · Menor evidência preditiva de benefício de QT do que Oncotype e MammaPrint · Não deve ser usado em HER2+ ou TNBC
+  </div>
+</div>
+
+<div class="card">
+  <div class="drug-header">
+    <div class="drug-icon" style="background:#FAEEDA;color:#633806">EP</div>
+    <div>
+      <div class="card-title">EndoPredict</div>
+      <div class="card-sub">Myriad Genetics · 11 genes · RT-PCR · FFPE · Pode ser feito in-house</div>
+    </div>
+  </div>
+  <div class="prop-grid">
+    <div class="prop-box"><div class="prop-label">Genes</div><div class="prop-val">8 tumorais + 3 referência</div></div>
+    <div class="prop-box"><div class="prop-label">Tecido</div><div class="prop-val">FFPE</div></div>
+    <div class="prop-box"><div class="prop-label">Output</div><div class="prop-val">EP score + EPclin score</div></div>
+    <div class="prop-box"><div class="prop-label">EPclin cutoff</div><div class="prop-val">≤ 3,3 = baixo risco</div></div>
+    <div class="prop-box"><div class="prop-label">Prognóstico tardio</div><div class="prop-val">Até 15 anos</div></div>
+    <div class="prop-box"><div class="prop-label">Diferencial</div><div class="prop-val">Pode ser feito no lab local</div></div>
+  </div>
+
+  <div style="font-size:13px;font-weight:500;color:var(--color-text-primary);margin:.75rem 0 .4rem">EP score vs EPclin — a distinção crítica</div>
+  <div style="font-size:13px;color:var(--color-text-secondary);line-height:1.7;margin-bottom:.75rem">
+    O EndoPredict tem dois outputs. O <strong style="color:var(--color-text-primary)">EP score molecular</strong> (cutoff 5) avalia apenas os 8 genes tumorais — relacionados à proliferação e à sinalização hormonal. O <strong style="color:var(--color-text-primary)">EPclin score</strong> (cutoff 3,3) combina o EP score com tamanho do tumor e status nodal — fornece informação clínica e molecular integrada. O EPclin é superior ao EP isolado e é o score recomendado para decisões clínicas. Os genes avaliados incluem BIRC5, UBE2C, DHCR7, RBBP8, IL6ST, AZGP1, MGP, STC2.
+  </div>
+
+  <div style="font-size:13px;font-weight:500;color:var(--color-text-primary);margin:.75rem 0 .4rem">Estudos de validação</div>
+  <table>
+    <thead><tr><th style="width:22%">Estudo</th><th style="width:38%">Pergunta</th><th style="width:40%">Resultado</th></tr></thead>
+    <tbody>
+      <tr><td><span class="badge b-amber">MSKCC / Viena</span></td><td>Pós-menopausa N0 e N1 + endocrinoterapia adjuvante</td><td>EPclin prediz recorrência precoce e tardia independentemente</td></tr>
+      <tr><td><span class="badge b-amber">GEICAM 9906</span></td><td>N+ tratadas com QT + endocrinoterapia</td><td>EPclin baixo: MFS 100% em 10 anos · EPclin alto: MFS 72% · HR 4,8 (IC 2,5–9,5)</td></tr>
+      <tr><td><span class="badge b-amber">Validação pré-menopausa</span></td><td>EPclin em pré-menopáusicas com endocrinoterapia isolada</td><td>EPclin fortemente associado a DRFS em pré-menopausa — único teste validado também nessa população</td></tr>
+      <tr><td><span class="badge b-blue">EXET (prospectivo)</span></td><td>EPclin guiando decisão de endocrinoterapia estendida</td><td>EPclin alto: todos receberam EET · EPclin baixo: significativamente menos EET · EPclin é preditor independente de decisão clínica (OR 20,2)</td></tr>
+    </tbody>
+  </table>
+
+  <div class="info" style="margin-top:.75rem">
+    <strong style="color:var(--color-text-primary)">Quem merece o EndoPredict:</strong> HR+/HER2− · N0 e N1 (1–3 LND+) · Pré e pós-menopausa (único validado em ambas) · Quando a decisão é sobre endocrinoterapia estendida além de 5 anos (risco até 15 anos — maior janela temporal de todos) · Contextos onde o teste precisa ser realizado no laboratório local (pode ser feito in-house sem envio para central) · Quando EPclin baixo quer dizer risco consistente de apenas 4% em 5–15 anos
+  </div>
+  <div class="warn">
+    <strong>Limitação:</strong> Menos evidência prospectiva que Oncotype e MammaPrint para decisão de QT · Dois estudos de validação principais são retrospectivos · Não classifica subtipo molecular intrínseco
+  </div>
+</div>
+
+<div class="sec">Comparativo lado a lado — resumo final</div>
+<table>
+  <thead>
+    <tr>
+      <th style="width:22%">Parâmetro</th>
+      <th style="width:19.5%">Oncotype DX</th>
+      <th style="width:19.5%">MammaPrint</th>
+      <th style="width:19.5%">Prosigna/PAM50</th>
+      <th style="width:19.5%">EndoPredict</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Genes</td>
+      <td>21</td>
+      <td>70</td>
+      <td>50</td>
+      <td>11 (8 + 3 ref.)</td>
+    </tr>
+    <tr>
+      <td>Output</td>
+      <td>RS 0–100</td>
+      <td>Binário (B/A)</td>
+      <td>ROR 0–100 + subtipo</td>
+      <td>EP + EPclin</td>
+    </tr>
+    <tr>
+      <td>Tecido</td>
+      <td>FFPE</td>
+      <td>Fresco / FFPE</td>
+      <td>FFPE</td>
+      <td>FFPE</td>
+    </tr>
+    <tr>
+      <td>Pré-menopausa validada</td>
+      <td><span class="badge b-teal">Sim (TailorX/RxP)</span></td>
+      <td><span class="badge b-amber">Parcial (MINDACT)</span></td>
+      <td><span class="badge b-red">Não (só pós)</span></td>
+      <td><span class="badge b-teal">Sim</span></td>
+    </tr>
+    <tr>
+      <td>N1 validado</td>
+      <td><span class="badge b-teal">Sim (RxPONDER)</span></td>
+      <td><span class="badge b-teal">Sim (MINDACT)</span></td>
+      <td><span class="badge b-teal">Sim</span></td>
+      <td><span class="badge b-teal">Sim (GEICAM)</span></td>
+    </tr>
+    <tr>
+      <td>Predição benefício QT</td>
+      <td><span class="badge b-teal">Melhor evidência</span></td>
+      <td><span class="badge b-teal">Boa (MINDACT)</span></td>
+      <td><span class="badge b-amber">Menor evidência</span></td>
+      <td><span class="badge b-amber">Menor evidência</span></td>
+    </tr>
+    <tr>
+      <td>Prognóstico tardio (5–10a)</td>
+      <td><span class="badge b-amber">Limitado</span></td>
+      <td><span class="badge b-amber">Limitado (5 anos)</span></td>
+      <td><span class="badge b-teal">Melhor da classe</span></td>
+      <td><span class="badge b-teal">Até 15 anos</span></td>
+    </tr>
+    <tr>
+      <td>Endocrinoterapia estendida</td>
+      <td><span class="badge b-amber">Limitado</span></td>
+      <td><span class="badge b-red">Sem dados sólidos</span></td>
+      <td><span class="badge b-teal">Boa evidência</span></td>
+      <td><span class="badge b-teal">Melhor evidência (EXET)</span></td>
+    </tr>
+    <tr>
+      <td>Subtipo intrínseco</td>
+      <td><span class="badge b-red">Não</span></td>
+      <td><span class="badge b-amber">+ Blueprint (separado)</span></td>
+      <td><span class="badge b-teal">Sim — único integrado</span></td>
+      <td><span class="badge b-red">Não</span></td>
+    </tr>
+    <tr>
+      <td>Validação prospectiva</td>
+      <td><span class="badge b-teal">TailorX + RxPONDER</span></td>
+      <td><span class="badge b-teal">MINDACT</span></td>
+      <td><span class="badge b-amber">Retrospectiva-prospectiva</span></td>
+      <td><span class="badge b-amber">Retrospectiva + EXET</span></td>
+    </tr>
+    <tr>
+      <td>Feito in-house</td>
+      <td><span class="badge b-red">Não (central)</span></td>
+      <td><span class="badge b-red">Não (central)</span></td>
+      <td><span class="badge b-red">Não (central)</span></td>
+      <td><span class="badge b-teal">Sim</span></td>
+    </tr>
+    <tr>
+      <td>Recomendação ASCO</td>
+      <td><span class="badge b-teal">N0 e N1 pré/pós-menop.</span></td>
+      <td><span class="badge b-teal">N0 e N1 pós-menop.</span></td>
+      <td><span class="badge b-purple">N0 pós-menop. apenas</span></td>
+      <td><span class="badge b-teal">N0 e N1 pós-menop.</span></td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="sec">Qual paciente merece qual exame — algoritmo prático</div>
+<table>
+  <thead>
+    <tr>
+      <th style="width:28%">Perfil da paciente</th>
+      <th style="width:18%">Teste preferido</th>
+      <th style="width:54%">Racional</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>HR+/HER2− · N0 · Pré-menopausa · Decisão sobre QT</td>
+      <td><span class="badge b-purple">Oncotype DX</span></td>
+      <td>Único com validação prospectiva robusta em pré-menopausa (TailorX). RS 16–25 + ≤ 50a → QT indicada</td>
+    </tr>
+    <tr>
+      <td>HR+/HER2− · N0 · Pós-menopausa · Decisão sobre QT</td>
+      <td><span class="badge b-purple">Oncotype DX</span><br><span class="badge b-amber" style="margin-top:4px">MammaPrint</span></td>
+      <td>Ambos válidos; Oncotype com RS tem maior granularidade para omissão de QT. MammaPrint se deseja classificar alto/baixo risco clínico discordante</td>
+    </tr>
+    <tr>
+      <td>HR+/HER2− · N1 (1–3 LND+) · Pós-menopausa · Decisão sobre QT</td>
+      <td><span class="badge b-purple">Oncotype DX</span><br><span class="badge b-amber" style="margin-top:4px">EndoPredict</span><br><span class="badge b-amber" style="margin-top:4px">MammaPrint</span></td>
+      <td>ASCO recomenda todos os 3. Oncotype tem RxPONDER (mais específico para N1 pós-menop.). EndoPredict tem GEICAM 9906 (N+ com QT). MammaPrint tem MINDACT</td>
+    </tr>
+    <tr>
+      <td>HR+/HER2− · N1 · Pré-menopausa · Decisão sobre QT</td>
+      <td><span class="badge b-purple">Oncotype DX</span></td>
+      <td>RxPONDER: pré-menopáusicas N1 com RS ≤ 25 beneficiam de QT. ASCO não recomenda os outros testes nesta população específica</td>
+    </tr>
+    <tr>
+      <td>HR+/HER2− · N0 ou N1 · Pós-menopausa · Decisão sobre endocrinoterapia estendida (&gt; 5 anos)</td>
+      <td><span class="badge b-amber">EndoPredict</span><br><span class="badge b-purple">Prosigna</span></td>
+      <td>EndoPredict: único com prognóstico até 15 anos + EXET prospectivo. Prosigna: melhor que Oncotype no prognóstico tardio 5–10 anos (TransATAC). Ambos superiores ao Oncotype neste cenário</td>
+    </tr>
+    <tr>
+      <td>HR+/HER2− · Alto risco clínico + incerteza biológica · Qualquer menopausa</td>
+      <td><span class="badge b-teal">MammaPrint</span></td>
+      <td>MINDACT: alto risco clínico + baixo risco genômico → omissão de QT segura em &gt; 50 anos. Melhor estudo para essa discordância clínica-molecular</td>
+    </tr>
+    <tr>
+      <td>HR+/HER2− · Deseja saber subtipo molecular intrínseco</td>
+      <td><span class="badge b-purple">Prosigna/PAM50</span></td>
+      <td>Único que integra subtipo (Luminal A/B, HER2-enriched, Basal-like) ao output clínico. Útil quando IHQ e comportamento clínico são discordantes</td>
+    </tr>
+    <tr>
+      <td>Carcinoma lobular HR+/HER2− · Pós-menopausa</td>
+      <td><span class="badge b-purple">Prosigna/PAM50</span></td>
+      <td>Validado especificamente em lobular. Lobular com mesmo ROR que ductal tem pior prognóstico real — Prosigna captura essa diferença</td>
+    </tr>
+    <tr>
+      <td>HER2+ · TNBC · Qualquer</td>
+      <td><span class="badge b-red">Nenhum</span></td>
+      <td>Nenhum dos 4 testes está indicado em HER2+ ou TNBC — não foram desenvolvidos para esses subtipos e não têm utilidade clínica validada</td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
+</div>
+<div class="tab-panel" id="tab-reab" style="display:none">
+<div style="padding:1rem 0 2.5rem">
+
+<div class="sec">Exercício físico em pacientes com CA de mama — recomendações 2024</div>
+
+<div class="card">
+  <div class="card-title">Recomendações gerais — ASCO / SBM 2024</div>
+  <div class="row"><strong>Meta semanal:</strong> 150 minutos de atividade física aeróbica de intensidade moderada · OU 75 minutos de intensidade vigorosa · + 2 sessões de exercício resistido (musculação) por semana</div>
+  <div class="row"><strong>Princípio geral:</strong> "algum exercício é sempre melhor que nenhum" — qualquer faixa etária, qualquer condição física, qualquer fase do tratamento</div>
+  <div class="grid3">
+    <div class="box">
+      <div class="box-label">Exercício aeróbico</div>
+      <div class="box-val">Caminhada · Natação · Ciclismo · Hidroginástica · Intensidade moderada · Aumenta capacidade cardiorrespiratória · Reduz fadiga oncológica · Melhora humor e sono</div>
+    </div>
+    <div class="box">
+      <div class="box-label">Exercício resistido (musculação)</div>
+      <div class="box-val">Braço operado incluído · Quanto mais massa muscular nos braços → menor risco de linfedema · Iniciar 4–6 semanas pós-cirurgia · Supervisionado inicialmente · Progressão gradual de carga</div>
+    </div>
+    <div class="box">
+      <div class="box-label">Flexibilidade e amplitude</div>
+      <div class="box-val">Alongamento · Pilates · Yoga · Fundamental após cirurgia + RT · Previne fibrose muscular · Retração tecidual · Limitação articular do ombro · Iniciar precocemente (1ª semana PO)</div>
+    </div>
+  </div>
+  <div class="info"><strong>Quando iniciar por fase:</strong> 1ª semana PO → mobilização suave de ombro e pescoço (amplitude de movimento) · 4–6 semanas PO → fortalecimento progressivo · Durante QT → exercício aeróbico mantém energia e força muscular sem agravar linfedema ou efeitos adversos · Durante RT → mobilidade do ombro obrigatória (fibrose precoce pós-RT) · Doença óssea metastática → avaliação individual; evitar impacto em áreas de risco de fratura</div>
+  <div class="warn"><strong>Avaliações pré-exercício obrigatórias em pacientes oncológicas:</strong> mobilidade do braço · neuropatia periférica (QT) · doenças musculoesqueléticas · risco de fratura (IA + metástase óssea) · cardiotoxicidade prévia (antraciclina/trastuzumabe)</div>
+</div>
+
+<div class="card">
+  <div class="card-title">Benefícios do exercício — o que a evidência mostra</div>
+  <div class="grid2">
+    <div>
+      <div class="row"><strong>Durante QT:</strong> reduz fadiga · melhora autoestima · preserva força muscular e composição corporal · não agrava linfedema · melhora tolerância aos ciclos</div>
+      <div class="row"><strong>Pós-RT:</strong> preserva amplitude de movimento · previne fibrose torácica · melhora qualidade de vida · reduz linfedema pós-RT</div>
+      <div class="row"><strong>Musculação específica:</strong> maior massa muscular nos braços → compressão linfática ativa → menor risco e gravidade de linfedema</div>
+    </div>
+    <div>
+      <div class="row"><strong>Benefício oncológico:</strong> metanálises sugerem redução de recorrência e melhora de SG com exercício regular — especialmente em RH+ (reduz IGF-1 e estrogênio circulante) · Mecanismos: redução de inflamação · melhora do sistema imune · regulação hormonal</div>
+      <div class="row"><strong>Benefício psicológico:</strong> reduz depressão · ansiedade · medo de recorrência · melhora imagem corporal · reintegração social · reduz insônia</div>
+    </div>
+  </div>
+</div>
+
+<div class="sec">Fisioterapia oncológica — técnicas específicas</div>
+
+<div class="card">
+  <div class="card-title">Drenagem Linfática Manual (DLM)</div>
+  <div class="card-sub">Técnica de Vodder / Leduc — base do tratamento do linfedema</div>
+  <div class="row"><strong>Mecanismo:</strong> manobras suaves sobre a pele que estimulam a contração dos vasos linfáticos superficiais → desviam a linfa de áreas congestionadas para áreas com drenagem preservada · Pressão muito suave (20–40 mmHg) — diferente da massagem terapêutica convencional</div>
+  <div class="row"><strong>Indicação:</strong> linfedema estabelecido · Prevenção de linfedema (pós-esvaziamento axilar) · Pós-operatório imediato (após cicatrização inicial)</div>
+  <div class="row"><strong>Contraindicação:</strong> infecção ativa (erisipela, celulite) · Trombose venosa profunda ativa · Doença metastática na área de drenagem · Insuficiência cardíaca descompensada</div>
+  <div class="row"><strong>Protocolo completo (CDT — Terapia Descongestiva Complexa):</strong> DLM + bandagem compressiva multicamadas + exercícios + cuidados de pele</div>
+</div>
+
+<div class="card">
+  <div class="card-title">Taping / Kinesio Tape em Oncoplástica e Linfedema</div>
+  <div class="card-sub">Crescente evidência — tema cobrado em 2024</div>
+  <div class="row"><strong>O que é:</strong> fita elástica terapêutica aplicada sobre a pele em padrões específicos → cria espaço subcutâneo entre pele e músculo → facilita drenagem linfática superficial e reduz compressão</div>
+  <div class="grid2">
+    <div>
+      <div class="row"><strong>Linfotaping (aplicação linfática):</strong> fitas em formato de leque (fan cut) aplicadas de forma centrípeta → direcionam a linfa para linfonodos preservados · Eficácia comparável à DLM em linfedema leve-moderado em alguns estudos · Vantagem: pode ser mantido 3–5 dias · Paciente aprende a reaplicar</div>
+      <div class="row"><strong>Indicações principais:</strong> linfedema de membro superior pós-esvaziamento axilar · Alternativa ou complemento à DLM · Pós-operatório precoce para redução de edema cicatricial · Apoio postural do ombro após mastectomia</div>
+    </div>
+    <div>
+      <div class="row"><strong>Taping postural / tensional:</strong> aplicação sobre cicatriz e região perioperatória → reduz tensão na sutura → melhora retração cicatricial · Aplicação ao longo da cicatriz após retirada dos pontos → reduz aderências</div>
+      <div class="row"><strong>Limitações:</strong> alergia ao acrílico (contraindica) · Pele irradiada friável (usar com cuidado) · Ferida aberta (contraindicado) · Eficácia como alternativa standalone ao CDT ainda em investigação — usar como adjuvante</div>
+    </div>
+  </div>
+  <div class="info"><strong>Prova 2024 — o que foi cobrado:</strong> diferença entre linfotaping (drenagem) vs. taping postural (suporte/cicatriz) · contraindicações · como fazer a aplicação em leque centrípeto · comparação com DLM · indicação em pós-operatório precoce</div>
+</div>
+
+<div class="card">
+  <div class="card-title">Outras técnicas fisioterapêuticas relevantes</div>
+  <div class="grid2">
+    <div>
+      <div class="row"><strong>Mobilização cicatricial:</strong> massagem transversa profunda (Cyriax) sobre a cicatriz após consolidação · Desfaz aderências subcutâneas · Melhora mobilidade do ombro limitada por fibrose pós-RT · Iniciar após cicatrização completa (≥4–6 semanas PO)</div>
+      <div class="row"><strong>Ultrassom terapêutico:</strong> sobre aderências cicatriciais e fibrose · Efeito térmico e mecânico · Melhora elasticidade tecidual · Contraindicado sobre implantes (efeito térmico) e sobre tecido neoplásico ativo</div>
+      <div class="row"><strong>TENS:</strong> estimulação elétrica transcutânea para controle de dor pós-operatória · Reduz necessidade de analgésicos · Não estimular sobre implantes metálicos</div>
+    </div>
+    <div>
+      <div class="row"><strong>Exercícios de ombro (protocolo pós-mastectomia):</strong> rotação interna/externa · Flexão progressiva (parede climbing) · Abdução · Pendular (Codman) · Iniciar D1–D3 PO com movimentos suaves · Aumentar amplitude conforme tolerância</div>
+      <div class="row"><strong>Compressão pneumática intermitente:</strong> dispositivo de compressão mecânica do membro superior · Adjuvante ao CDT em linfedema moderado-grave · Não substitui DLM mas potencializa os efeitos</div>
+      <div class="row"><strong>Bandagem compressiva:</strong> multicamadas de baixa elasticidade durante fase intensiva · Substituída por manga compressiva de manutenção após descongestionamento</div>
+    </div>
+  </div>
+</div>
+
+<div class="sec">Complicações de cicatrização — diagnóstico e conduta</div>
+
+<div class="info" style="margin-bottom:.75rem"><strong>Framework TIME para avaliação de feridas:</strong> T (Tissue — tecido: tipo e viabilidade) · I (Infection/Inflammation — infecção) · M (Moisture — umidade) · E (Edge — bordas e epitelização). Avaliar sistematicamente antes de escolher a cobertura.</div>
+
+<div class="ferida-card" style="border-left-color:#1D9E75">
+  <div class="card-title">Deiscência simples — sem secreção, sem sinais de infecção</div>
+  <div class="card-sub">Abertura da ferida com bordas viáveis · Leito limpo · Rosa-avermelhado</div>
+  <div class="row"><strong>Causa comum:</strong> tensão excessiva na sutura · Edema pós-operatório · Movimento precoce · Hematoma subjacente</div>
+  <div class="row"><strong>Conduta:</strong> limpeza com SF 0,9% sob leve pressão (seringa 20ml + agulha 40×12 = pressão de 8–15 psi) · Avaliar profundidade e extensão · Bordas viáveis? → manter ambiente úmido para cicatrização por segunda intenção</div>
+  <div class="grid2">
+    <div>
+      <div class="row"><strong>Cobertura ideal:</strong> hidrocoloide em deiscências rasas e pequenas · Espuma poliuretano (foam) em feridas com exsudato leve · AGE (ácidos graxos essenciais) em leito limpo para estimular granulação · Curativo de silicone (não-aderente) se bordas frágeis</div>
+    </div>
+    <div>
+      <div class="row"><strong>Fechamento secundário:</strong> sutura secundária possível se bordas viáveis e sem infecção · Fita adesiva estéril (Steri-Strip) em deiscências pequenas · Curativo com pressão negativa (NPWT/VAC) em grandes deiscências com boa granulação</div>
+    </div>
+  </div>
+  <div class="info">Troca: a cada 2–3 dias para hidrocoloide · diário para foam em alta exsudação · AGE: diário ou em dias alternados. Sempre reavaliar na troca.</div>
+</div>
+
+<div class="ferida-card" style="border-left-color:#1D9E75">
+  <div class="card-title">Secreção serosa / inodora (linfocele, seroma residual)</div>
+  <div class="card-sub">Secreção clara, amarelo-palha, sem odor · Frequente após esvaziamento axilar</div>
+  <div class="row"><strong>Mecanismo:</strong> acúmulo de linfa ou plasma tecidual · Mais comum após linfadenectomia · Pode surgir semanas após a cirurgia</div>
+  <div class="row"><strong>Avaliação:</strong> volume · velocidade de produção · aspecto (se turva → suspeitar infecção) · flutuação ao exame físico</div>
+  <div class="grid2">
+    <div>
+      <div class="row"><strong>Conduta:</strong> punção aspirativa guiada por USG se grande volume e sintomático · Compressão local com atadura crepe · Restrição de movimento do ombro por 48–72h após punção · Repetir punções conforme necessidade</div>
+    </div>
+    <div>
+      <div class="row"><strong>Cobertura:</strong> curativo absorvente (foam ou compressa) para capturar exsudato · Hidrofibra de prata se secreção persistente com risco de colonização · Trocar diariamente ou quando saturado</div>
+    </div>
+  </div>
+  <div class="warn"><strong>Quando suspeitar de infecção:</strong> secreção torna-se turva, com odor · Eritema periferida · Dor e calor · Febre → coletar cultura e iniciar ATB</div>
+</div>
+
+<div class="ferida-card" style="border-left-color:#BA7517">
+  <div class="card-title">Secreção purulenta (ferida infectada)</div>
+  <div class="card-sub">Secreção amarela/esverdeada/marrom · Com odor · Sinais sistêmicos possíveis</div>
+  <div class="row"><strong>Germes mais comuns:</strong> S. aureus (incluindo MRSA) · Pseudomonas · Enterobactérias · Anaeróbios em feridas profundas</div>
+  <div class="row"><strong>Conduta geral:</strong> cultura do exsudato antes de ATB · Desbridamento do tecido desvitalizado · Irrigação abundante · ATB sistêmico conforme cultura/antibiograma · Internação se sinais sistêmicos</div>
+  <div class="grid2">
+    <div>
+      <div class="row"><strong>Limpeza:</strong> PHMB 0,1% (polihexametileno biguanida) — antimicrobiano de amplo espectro · elimina biofilme · não agride tecido de granulação · aplicar no leito e aguardar 1–2 min antes de irrigar · Alternativa: Dakin diluído (hipoclorito 0,025%) em surtos agudos</div>
+    </div>
+    <div>
+      <div class="row"><strong>Coberturas:</strong> Hidrofibra com prata (Aquacel Ag+, Biatain Ag) — absorve exsudato + liberação sustentada de prata antimicrobiana · Carvão ativado com prata (Acticoat, CarboFlex) — controle de odor + antimicrobiano · Alginato de cálcio e prata em feridas cavitárias profundas</div>
+    </div>
+  </div>
+  <div class="row"><strong>Desbridamento:</strong> mecânico (curativo úmido a seco — em desuso) · Autolítico (hidrocoloide ou hidrogel em necroses secas) · Enzimático (colagenase — Kollagenase Nycomed) · Instrumental (bisturi/cureta na beira do leito) · Cirúrgico (CC para infecções profundas)</div>
+  <div class="danger"><strong>Sinal de alerta — celulite extensiva / fasceíte:</strong> eritema rapidamente progressivo + crepitação + toxemia → emergência cirúrgica · Não aguardar cultura · ATB IV imediato · Desbridamento cirúrgico urgente</div>
+</div>
+
+<div class="ferida-card" style="border-left-color:#3C3489">
+  <div class="card-title">Equimose / Hematoma</div>
+  <div class="card-sub">Sangramento subcutâneo · Variável em extensão e profundidade</div>
+  <div class="row"><strong>Equimose superficial:</strong> sem conduta específica · Compressa fria nas primeiras 24h · Evolui para reabsorção espontânea em 7–14 dias · Orientar paciente sobre coloração progressiva (violáceo → verde → amarelo)</div>
+  <div class="row"><strong>Hematoma organizado / tenso:</strong> drenagem cirúrgica se grande volume, dor intensa ou risco de isquemia do retalho · Punção aspirativa guiada por USG em hematomas líquidos acessíveis · Não drenar hematomas pequenos e assintomáticos (risco de infecção secundária)</div>
+  <div class="row"><strong>Cobertura:</strong> não há cobertura específica para equimose · Monitorar evolução · Se hematoma em via de infecção: protocolo de ferida infectada</div>
+  <div class="info"><strong>Prevenção:</strong> hemostasia cuidadosa · Dreno aspirativo no PO imediato · Compressão local nas primeiras 48h · Suspender anticoagulantes no pré-operatório conforme protocolo</div>
+</div>
+
+<div class="ferida-card" style="border-left-color:#791F1F">
+  <div class="card-title">Necrose seca (escara seca)</div>
+  <div class="card-sub">Tecido enegrecido, duro, desidratado, aderido · Sem exsudato · Fronteira definida</div>
+  <div class="row"><strong>Causa em mama:</strong> isquemia do retalho · Tensão excessiva nas bordas · Radioterapia prévia · Tabagismo (vasoconstrição) · Diabetes</div>
+  <div class="row"><strong>Conduta — decisão crítica:</strong> <strong style="font-weight:500;color:var(--color-text-primary)">NÃO desbridar imediatamente</strong> em necrose seca estável · A escara seca funciona como proteção biológica natural · Aguardar demarcação nítida (linha de transição entre tecido vivo e morto)</div>
+  <div class="grid2">
+    <div>
+      <div class="row"><strong>Fase inicial (escara seca estável):</strong> manter seca e limpa · Iodopovidona a 10% em solução pode ser usada para manter a escara desidratada e com barreira antimicrobiana · Não umedecer — umedecer necrose seca favorece infecção secundária</div>
+    </div>
+    <div>
+      <div class="row"><strong>Após demarcação clara:</strong> desbridamento cirúrgico seletivo da margem · Ou desbridamento autolítico nas bordas (hidrogel) para facilitar a delimitação · Avaliação vascular se isquemia extensa · Reconstrução cirúrgica após granulação do leito</div>
+    </div>
+  </div>
+  <div class="warn"><strong>Exceção — necrose seca com sinais de infecção:</strong> linha eritematosa progressiva + odor + flutuação → desbridamento urgente independentemente da demarcação. Escara seca nunca deve ser "aguardada" se houver infecção progredindo por baixo.</div>
+</div>
+
+<div class="ferida-card" style="border-left-color:#712B13">
+  <div class="card-title">Necrose úmida (necrose liquefativa)</div>
+  <div class="card-sub">Tecido amolecido, escurecido/acinzentado, com exsudato · Odor fétido frequente · Esfacelo presente</div>
+  <div class="row"><strong>Causa:</strong> infecção secundária de necrose · Isquemia venosa · Tecido inviável em via de liquefação · Mais grave que a seca pelo risco infeccioso</div>
+  <div class="row"><strong>Conduta:</strong> desbridamento imediato é obrigatório (ao contrário da seca) · Cirúrgico se extensa · Mecânico/enzimático em áreas menores · ATB sistêmico se sinais de infecção local/sistêmica</div>
+  <div class="grid2">
+    <div>
+      <div class="row"><strong>Limpeza:</strong> PHMB 0,1% abundante · Irrigation com seringa 20ml · Remover todo esfacelo acessível · Repetir até leito limpo</div>
+    </div>
+    <div>
+      <div class="row"><strong>Coberturas:</strong> Hidrofibra de prata (Aquacel Ag+) — excelente para necrose úmida infectada · alta absorção + antimicrobiano · Carvão ativado com prata se odor intenso · Alginato de cálcio em sangramento ativo associado</div>
+    </div>
+  </div>
+  <div class="danger"><strong>Necrose úmida extensa em retalho:</strong> retorno ao CC para desbridamento cirúrgico + avaliação de nova reconstrução. Não tentar conduzir conservadoramente necrose úmida extensa em retalho de mama — o tecido não é viável.</div>
+</div>
+
+<div class="sec">Soluções de limpeza — comparativo</div>
+<table>
+  <thead>
+    <tr>
+      <th style="width:20%">Solução</th>
+      <th style="width:20%">Mecanismo</th>
+      <th style="width:25%">Indicação</th>
+      <th style="width:20%">Vantagem</th>
+      <th style="width:15%">Cuidados</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong style="font-weight:500">SF 0,9%</strong></td>
+      <td>Limpeza mecânica por irrigação · Sem antimicrobiano</td>
+      <td>Ferida limpa sem colonização · Limpeza de rotina · Primeira linha universal</td>
+      <td>Segura · Não agride granulação · Barata · Universal</td>
+      <td>Não antimicrobiana · Não usar isolada em ferida infectada</td>
+    </tr>
+    <tr>
+      <td><strong style="font-weight:500">PHMB 0,1% (Curatec, Casex)</strong></td>
+      <td>Antimicrobiano de amplo espectro · Destrói membrana bacteriana · Remove biofilme · Não agride tecido humano</td>
+      <td>Feridas colonizadas · Infectadas · Biofilme · Odor · Colonização por MRSA</td>
+      <td>Não citotóxico para granulação · Reduz dor · Ativo contra MRSA · Controla odor</td>
+      <td>Aguardar 1–2 min no leito antes de remover · Não misturar com iodo</td>
+    </tr>
+    <tr>
+      <td><strong style="font-weight:500">PHMB 0,2% gel</strong></td>
+      <td>Mesmo mecanismo + hidratação do leito</td>
+      <td>Feridas com necrose seca (umedecer bordas) · Cavidades · Feridas com pouco exsudato</td>
+      <td>Permanece no leito entre trocas · Hidratação + antimicrobiano simultâneos</td>
+      <td>Não usar em necrose seca total (risco de infecção secundária)</td>
+    </tr>
+    <tr>
+      <td><strong style="font-weight:500">Dakin diluído (NaOCl 0,025%)</strong></td>
+      <td>Oxidante · Germicida de amplo espectro · Desbridamento autolítico</td>
+      <td>Surtos agudos de infecção grave · Anaeróbios · Feridas muito sujas</td>
+      <td>Alta eficácia antimicrobiana imediata · Barato</td>
+      <td>Citotóxico para granulação em uso prolongado · Apenas surtos agudos · Diluição correta obrigatória</td>
+    </tr>
+    <tr>
+      <td><strong style="font-weight:500">PVP-I (iodopovidona)</strong></td>
+      <td>Liberação de iodo livre · Germicida</td>
+      <td>Necrose seca (manutenção desidratada) · Prevenção de infecção em escara</td>
+      <td>Mantém escara seca · Antimicrobiano de contato</td>
+      <td>NUNCA usar em ferida com granulação (citotóxico) · Não misturar com PHMB</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="sec">Coberturas (curativos) — tabela de escolha</div>
+<table>
+  <thead>
+    <tr>
+      <th style="width:22%">Cobertura</th>
+      <th style="width:18%">Tipo / exemplos</th>
+      <th style="width:20%">Melhor indicação</th>
+      <th style="width:20%">Mecanismo</th>
+      <th style="width:20%">Trocar quando?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong style="font-weight:500">AGE (ácido graxo essencial)</strong></td>
+      <td>Rayon com AGE · Curatec AGE · Dersani</td>
+      <td>Leito limpo com granulação inicial · Epitelização · Pele íntegra em risco</td>
+      <td>Ácidos graxos estimulam granulação + epitelização · Lubrifica sem macerar · Não infecta</td>
+      <td>Diário ou em dias alternados</td>
+    </tr>
+    <tr>
+      <td><strong style="font-weight:500">Hidrofibra (Aquacel, Dressil)</strong></td>
+      <td>CMC (carboximetilcelulose) sódica · Absorve até 30x seu peso</td>
+      <td>Exsudato moderado a alto · Feridas com esfacelo · Cavidades superficiais</td>
+      <td>Absorve exsudato → forma gel coesivo → mantém ambiente úmido · Não adere ao leito</td>
+      <td>A cada 1–3 dias conforme exsudato</td>
+    </tr>
+    <tr>
+      <td><strong style="font-weight:500">Hidrofibra com prata (Aquacel Ag+)</strong></td>
+      <td>CMC + prata iônica · Aquacel Ag · Biatain Ag hidrofibra</td>
+      <td>Ferida infectada ou com alto risco · Necrose úmida · Exsudato purulento · Biofilme</td>
+      <td>Absorção + prata iônica com liberação sustentada → amplo espectro antimicrobiano · Elimina MRSA e Pseudomonas</td>
+      <td>A cada 2–3 dias (prata tem ação prolongada)</td>
+    </tr>
+    <tr>
+      <td><strong style="font-weight:500">Alginato de cálcio</strong></td>
+      <td>Alginato marinho · Algisite M · Sorbsan</td>
+      <td>Exsudato alto · Sangramento ativo (hemostático) · Feridas cavitárias profundas · Esfacelo</td>
+      <td>Troca iônica Ca²⁺ por Na⁺ → gel hemostático e absorvente · Desbridamento autolítico leve</td>
+      <td>Diário a cada 2 dias conforme saturação</td>
+    </tr>
+    <tr>
+      <td><strong style="font-weight:500">Carvão ativado com prata (CarboFlex, Acticoat)</strong></td>
+      <td>Carvão + prata · Absorção de odor</td>
+      <td>Feridas com odor intenso + infecção · Necrose úmida fétida · Feridas malignas</td>
+      <td>Carvão adsorve moléculas odoríferas · Prata antimicrobiana</td>
+      <td>A cada 2–3 dias</td>
+    </tr>
+    <tr>
+      <td><strong style="font-weight:500">Espuma (foam) poliuretano</strong></td>
+      <td>Mepilex · Allevyn · Biatain</td>
+      <td>Exsudato moderado · Leito em granulação · Pele perilesional frágil</td>
+      <td>Alta absorção · Mantém ambiente úmido · Não agride borda · Reduz dor na troca</td>
+      <td>A cada 2–4 dias</td>
+    </tr>
+    <tr>
+      <td><strong style="font-weight:500">Hidrogel (gel amorfo)</strong></td>
+      <td>Intrasite Gel · Purilon</td>
+      <td>Necrose seca ou esfacelo seco · Desbridamento autolítico · Ferida seca dolorosa</td>
+      <td>Cede água para o leito → reidrata tecido necrótico → facilita autólise (o próprio organismo digere a necrose)</td>
+      <td>Diário a cada 2 dias</td>
+    </tr>
+    <tr>
+      <td><strong style="font-weight:500">Colagenase (enzimático)</strong></td>
+      <td>Kollagenase Nycomed · Iruxol</td>
+      <td>Necrose com esfacelo aderido · Desbridamento enzimático sem cirurgia</td>
+      <td>Enzima colagenase digere colágeno desnaturado do esfacelo · Não agride colágeno nativo</td>
+      <td>Diário · Proteger pele perilesional com pasta de zinco</td>
+    </tr>
+    <tr>
+      <td><strong style="font-weight:500">NPWT (terapia por pressão negativa / VAC)</strong></td>
+      <td>VAC KCI · Renasys</td>
+      <td>Grandes deiscências · Feridas crônicas com boa granulação · Pós-desbridamento cirúrgico</td>
+      <td>Pressão negativa contínua ou intermitente → aumenta perfusão · Remove exsudato · Estimula granulação</td>
+      <td>A cada 48–72h</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="sec">Terapias complementares — hiperbárica e laserterapia</div>
+
+<div class="grid2">
+  <div class="card">
+    <div class="card-title">Oxigenioterapia Hiperbárica (OHB)</div>
+    <div class="card-sub">Câmara hiperbárica · 2–3 ATM de O₂ puro · 90 min/sessão</div>
+    <div class="row"><strong>Mecanismo:</strong> aumenta oferta de O₂ ao tecido hipóxico (necrose, isquemia pós-RT) · Estimula angiogênese · Ativa fibroblastos · Efeito bacteriostático em anaeróbios</div>
+    <div class="row"><strong>Indicações em mama:</strong> osteoradionecrose · Necrose tecidual extensa pós-RT em mama irradiada · Feridas hipóxicas que não granulam · Complicação grave em retalho pós-RT · Potencial uso em necrose pós-mastectomia com RT prévia</div>
+    <div class="row"><strong>Protocolo:</strong> 20–40 sessões · 5x/semana · Resultado em 4–8 semanas</div>
+    <div class="row"><strong>Evidência em mama:</strong> moderada · Mais robusta para osteoradionecrose de mandíbula (que serve de modelo) · Estudos em complicações mamárias pós-RT em crescimento · Indicação individualizada em centros especializados</div>
+    <div class="warn"><strong>Contraindicações:</strong> pneumotórax não drenado · Certos quimioterápicos (bleomicina, doxorrubicina em uso ativo — potencial aumento de toxicidade pulmonar/cardíaca) · Claustrofobia grave · Otite/sinusite não tratada</div>
+  </div>
+  <div class="card">
+    <div class="card-title">Laserterapia (LLLT — Low Level Laser Therapy)</div>
+    <div class="card-sub">Laser de baixa intensidade / fotobiomodulação</div>
+    <div class="row"><strong>Mecanismo:</strong> fótons com comprimento de onda específico (660–980nm) → absorção por citocromo C oxidase mitocondrial → aumento de ATP → estimula fibroblastos, queratinocitos e angiogênese · Efeito anti-inflamatório e analgésico</div>
+    <div class="row"><strong>Indicações em oncologia mamária:</strong> mucosite oral induzida por QT (evidência robusta — protocolo MASCC) · Cicatrização de feridas complexas · Linfedema (adjuvante ao DLM) · Fibrose pós-RT · Dor cicatricial pós-mastectomia · Neuralgia pós-mastectomia</div>
+    <div class="row"><strong>Linfedema:</strong> laser infravermelho sobre o sistema linfático → reduz fibrose · melhora drenagem · Estudos mostram redução de volume do membro superior comparável ao DLM em alguns protocolos</div>
+    <div class="row"><strong>Evidência:</strong> forte para mucosite (nível I) · Moderada para cicatrização e linfedema · Fraca para neuralgia · Uso crescente em fisioterapia oncológica</div>
+    <div class="warn"><strong>Contraindicações em mama:</strong> NUNCA aplicar laser diretamente sobre tecido tumoral ativo ou metástase · Área irradiada: usar com cautela e protocolos específicos · Fotossensibilidade por drogas</div>
+  </div>
+</div>
+
+<div class="sec">Resumo prático — qual conduta para cada situação</div>
+<table>
+  <thead>
+    <tr>
+      <th style="width:20%">Situação</th>
+      <th style="width:20%">Limpeza</th>
+      <th style="width:25%">Cobertura primária</th>
+      <th style="width:20%">Frequência troca</th>
+      <th style="width:15%">Complementar</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Deiscência limpa</td><td>SF 0,9%</td><td>Foam ou AGE</td><td>2–3 dias</td><td>—</td></tr>
+    <tr><td>Seroma/linfocele extravazando</td><td>SF 0,9%</td><td>Foam absorvente</td><td>Diário ou conforme saturação</td><td>Punção aspirativa</td></tr>
+    <tr><td>Ferida infectada exsudativa</td><td>PHMB 0,1%</td><td>Hidrofibra com prata (Aquacel Ag+)</td><td>A cada 2–3 dias</td><td>ATB sistêmico · Cultura</td></tr>
+    <tr><td>Necrose úmida com odor</td><td>PHMB 0,1%</td><td>Carvão com prata → após limpeza: hidrofibra Ag</td><td>Diário inicial</td><td>Desbridamento · ATB</td></tr>
+    <tr><td>Necrose seca estável</td><td>PVP-I 10% (manter seca)</td><td>Gaze seca estéril · NÃO umedecer</td><td>Diário (inspeção)</td><td>Aguardar demarcação</td></tr>
+    <tr><td>Esfacelo aderido seco</td><td>Hidrogel (reidrata)</td><td>Colagenase + gaze · ou hidrogel + foam</td><td>Diário</td><td>Desbridamento autolítico</td></tr>
+    <tr><td>Granulação presente</td><td>SF 0,9%</td><td>AGE ou foam não-aderente</td><td>2–3 dias</td><td>NPWT se grande defeito</td></tr>
+    <tr><td>Equimose</td><td>—</td><td>Compressão leve</td><td>—</td><td>Frio local 24h</td></tr>
+    <tr><td>Hematoma organizado grande</td><td>—</td><td>—</td><td>—</td><td>Drenagem cirúrgica/aspiração USG</td></tr>
+    <tr><td>Pós-RT com fibrose/isquemia</td><td>PHMB suave</td><td>Foam silicone ou AGE</td><td>2–3 dias</td><td>OHB · Laser · DLM</td></tr>
+  </tbody>
+</table>
+
+</div>
+</div>
+</div>
+
+<script>
+function showTab(id) {
+  // Esconde todos
+  document.querySelectorAll('.tab-panel').forEach(p => p.style.display = 'none');
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  
+  // Mostra o selecionado
+  document.getElementById('tab-' + id).style.display = 'block';
+  document.querySelector('[data-tab="' + id + '"]').classList.add('active');
+  
+  // Scroll para o topo
+  window.scrollTo(0, 0);
+  
+  // Re-executa scripts do painel (para drogas funcionar)
+  const panel = document.getElementById('tab-' + id);
+  panel.querySelectorAll('script').forEach(old => {
+    const s = document.createElement('script');
+    s.textContent = old.textContent;
+    old.replaceWith(s);
+  });
+}
+
+// Abre a primeira aba
+showTab('drogas');
+</script>
+</body>
+</html>
